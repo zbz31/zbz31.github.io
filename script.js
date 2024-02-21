@@ -6207,7 +6207,9 @@ button.classList.add('coolButton'); // Add a class for styling
 
 // Append the second button to the body
 document.getElementById('gridContainer').appendChild(button);
+button.addEventListener('click', handleClick);
 
+  
   function solved() {
     const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
     const gridCellsunsolved = document.querySelectorAll('.grid-cellunsolved');
