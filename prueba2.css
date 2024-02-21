@@ -26,15 +26,17 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-
 .grid-container {
+  position: absolute;
+  top: calc(20px + 30px); /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
   display: grid;
   grid-template-columns: repeat(4, 105px);
   grid-template-rows: repeat(4, 105px);
   justify-content: center;
   align-content: center;
 }
-
 .grid-cell {
   border: 0.05px solid black;
   width: 90px;
