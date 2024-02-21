@@ -5854,7 +5854,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     names.filter(item => item.name.toLowerCase().includes(filter.toLowerCase()))
       .forEach(item => {
-        if (count < 3) { // Limit to three names
+        if (count < 5) { // Limit to three names
           const li = document.createElement("li");
           const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag of Germany" style="width: 20px; height: auto; margin-right: 5px;">`;
 
