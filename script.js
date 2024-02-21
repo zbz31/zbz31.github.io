@@ -5939,12 +5939,12 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.opacity = '1';
 
     // Make the modal larger
-    modal.style.width = '60%'; // Set the width to 70% of the viewport width
-    modal.style.height = '40%'; // Set the height to 70% of the viewport height
+    modal.style.width = '65%'; // Set the width to 70% of the viewport width
+    modal.style.height = '65%'; // Set the height to 70% of the viewport height
 
     // Position modal in the center of the screen
-    modal.style.top = '50%';
-    modal.style.left = '50%';
+    modal.style.top = '60%';
+    modal.style.left = '60%';
     modal.style.transform = 'translate(-50%, -50%)';
 
     // Focus on the input field
