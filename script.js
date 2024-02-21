@@ -6153,20 +6153,7 @@ do{
   // Call function to create grid
   createGrid();
 
-  // Create the button element
-  var button = document.createElement('button');
-  button.textContent = 'GIVE UP';
-  button.id = 'clickMeButton';
 
-  // Style the button for positioning and appearance
-  button.style.position = 'fixed';
-  button.style.bottom = '5vh'; // Adjust as needed
-  button.style.right = '5vw'; // Adjust as needed
-  button.style.marginRight = '2px'; // Add some space before the edge
-  button.classList.add('coolButton'); // Add a class for styling
-
-  // Append the button to the grid container
-  document.body.appendChild(button);
 
   // Function to call when the button is clicked
   function handleClick() {
@@ -6186,23 +6173,40 @@ do{
     solved()
 
   }
-  // Add event listener to the button
-  button.addEventListener('click', handleClick);
+// Create the first button (left)
+var buttonreload = document.createElement('button');
+buttonreload.textContent = 'RELOAD';
+buttonreload.id = 'clickMeButton2';
 
-  var buttonreload = document.createElement('button');
-  buttonreload.textContent = 'RELOAD';
-  buttonreload.id = 'clickMeButton2';
-  // Style the button for positioning and appearance
-  buttonreload.style.position = 'fixed';
-  buttonreload.style.bottom = '5vh'; // Adjust as needed
-  buttonreload.style.left = '5vw'; // Adjust as needed
-  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
-  buttonreload.classList.add('coolButton'); // Add a class for styling
-  buttonreload.addEventListener('click', function () {
-    window.location.href = window.location.href;
-  });
-  document.body.appendChild(buttonreload);
+// Style the button for positioning and appearance
+buttonreload.style.position = 'fixed';
+buttonreload.style.bottom = '5vh'; // Adjust as needed
+buttonreload.style.left = '5vw'; // Adjust as needed
+buttonreload.style.marginLeft = '2px'; // Add some space before the edge
+buttonreload.classList.add('coolButton'); // Add a class for styling
 
+// Add event listener for the button
+buttonreload.addEventListener('click', function () {
+  window.location.href = window.location.href;
+});
+
+// Append the first button to the body
+document.body.appendChild(buttonreload);
+
+// Create the second button (right)
+var button = document.createElement('button');
+button.textContent = 'GIVE UP';
+button.id = 'clickMeButton';
+
+// Style the button for positioning and appearance
+button.style.position = 'fixed';
+button.style.bottom = '5vh'; // Adjust as needed
+button.style.right = '5vw'; // Adjust as needed
+button.style.marginRight = '2px'; // Add some space before the edge
+button.classList.add('coolButton'); // Add a class for styling
+
+// Append the second button to the body
+document.body.appendChild(button);
 
   function solved() {
     const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
