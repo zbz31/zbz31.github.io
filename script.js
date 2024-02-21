@@ -6191,7 +6191,7 @@ buttonreload.addEventListener('click', function () {
 });
 
 // Append the first button to the body
-document.body.appendChild(buttonreload);
+document.getElementById('gridContainer').appendChild(buttonreload);
 
 // Create the second button (right)
 var button = document.createElement('button');
@@ -6206,7 +6206,7 @@ button.style.marginRight = '2px'; // Add some space before the edge
 button.classList.add('coolButton'); // Add a class for styling
 
 // Append the second button to the body
-document.body.appendChild(button);
+document.getElementById('gridContainer').appendChild(button);
 
   function solved() {
     const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
