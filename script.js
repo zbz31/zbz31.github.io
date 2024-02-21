@@ -6189,22 +6189,20 @@ do{
   // Add event listener to the button
   button.addEventListener('click', handleClick);
 
-
  var buttonreload = document.createElement('button');
   buttonreload.textContent = 'RELOAD';
   buttonreload.id = 'clickMeButton2';
   // Style the button for positioning and appearance
-  button.style.position = 'absolute';
-  button.style.bottom = '25px'; // Adjust as needed
-  button.style.left = '20px'; // Adjust as needed
-  button.style.marginRight = '2px'; // Add some space before the edge
-  button.classList.add('coolButton'); // Add a class for styling
+  buttonreload.style.position = 'absolute';
+  buttonreload.style.bottom = '40px'; // Adjust as needed
+  buttonreload.style.left = '70px'; // Adjust as needed
+  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
+  buttonreload.classList.add('coolButton'); // Add a class for styling
   //document.getElementById('gridContainer').appendChild(buttonreload);
   buttonreload.addEventListener('click', function () {
-    window.location.reload();
+    window.history.forward(1);
   });
   document.body.appendChild(buttonreload);
-
 
   function solved() {
     const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
