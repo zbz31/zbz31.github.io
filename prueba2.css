@@ -10,7 +10,7 @@ body {
 
 .container {
   width: 80%; /* Adjust the width of the container */
-  max-width: 700px; /* Set a maximum width for larger screens */
+  max-width: 600px; /* Set a maximum width for larger screens */
 }
 
 #topText {
