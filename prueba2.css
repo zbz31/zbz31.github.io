@@ -237,7 +237,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #333; /* Text color */
@@ -255,7 +255,7 @@ body {
 #nameElement {
   list-style-type: none;
   padding: 0;
-  max-height: 200px; /* Adjust the maximum height as needed */
+  max-height: 150px; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Add vertical scroll when content overflows */
 }
 
@@ -300,8 +300,8 @@ body {
 
 .modal2-dialog {
   position: relative;
-  max-width: 800px;
-  max-height: 80vh;
+  max-width: 1000px;
+  max-height: 100vh;
   border-radius: 5px;
   background: var(--white);
   overflow: auto;
