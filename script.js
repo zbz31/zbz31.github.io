@@ -6191,19 +6191,19 @@ do{
 
 
  var buttonreload = document.createElement('button');
-buttonreload.textContent = 'RELOAD';
-buttonreload.id = 'clickMeButton2';
-// Style the button for positioning and appearance
-buttonreload.style.position = 'absolute';
-buttonreload.style.bottom = '5px'; // Adjust as needed
-buttonreload.style.left = '5px'; // Adjust as needed
-buttonreload.style.marginLeft = '2px'; // Add some space before the edge
-buttonreload.classList.add('coolButton'); // Add a class for styling
-//document.getElementById('gridContainer').appendChild(buttonreload);
-buttonreload.addEventListener('click', function () {
-  window.history.forward(1);
-});
-document.body.appendChild(buttonreload);
+  buttonreload.textContent = 'RELOAD';
+  buttonreload.id = 'clickMeButton2';
+  // Style the button for positioning and appearance
+  buttonreload.style.position = 'absolute';
+  buttonreload.style.bottom = '40px'; // Adjust as needed
+  buttonreload.style.left = '70px'; // Adjust as needed
+  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
+  buttonreload.classList.add('coolButton'); // Add a class for styling
+  //document.getElementById('gridContainer').appendChild(buttonreload);
+  buttonreload.addEventListener('click', function () {
+    window.history.forward(1);
+  });
+  document.body.appendChild(buttonreload);
 
 
   function solved() {
