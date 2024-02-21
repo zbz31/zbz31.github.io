@@ -6021,8 +6021,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-    } while ((Math.min(...totality) < 5));
-  } while (Math.max(...totality) > 500);
+    } while ((Math.min(...totality) < 2));
+  } while (Math.max(...totality) > 30);
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
 
