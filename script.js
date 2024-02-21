@@ -6180,7 +6180,7 @@ buttonreload.id = 'clickMeButton2';
 
 // Style the button for positioning and appearance
 buttonreload.style.position = 'fixed';
-buttonreload.style.bottom = '5vh'; // Adjust as needed
+buttonreload.style.bottom = '2vh'; // Adjust as needed
 buttonreload.style.left = '5vw'; // Adjust as needed
 buttonreload.style.marginLeft = '2px'; // Add some space before the edge
 buttonreload.classList.add('coolButton'); // Add a class for styling
@@ -6200,7 +6200,7 @@ button.id = 'clickMeButton';
 
 // Style the button for positioning and appearance
 button.style.position = 'fixed';
-button.style.bottom = '5vh'; // Adjust as needed
+button.style.bottom = '2vh'; // Adjust as needed
 button.style.right = '5vw'; // Adjust as needed
 button.style.marginRight = '2px'; // Add some space before the edge
 button.classList.add('coolButton'); // Add a class for styling
