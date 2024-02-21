@@ -28,7 +28,7 @@ body {
 
 .grid-container {
   position: absolute;
-  top: calc(10%); /* Adjust this value as needed */
+  top: calc(15%); /* Adjust this value as needed */
   left: 50%;
   transform: translateX(-50%);
   display: grid;
