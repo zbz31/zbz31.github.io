@@ -6160,8 +6160,8 @@ do{
 
   // Style the button for positioning and appearance
   button.style.position = 'absolute';
-  button.style.bottom = '5px'; // Adjust as needed
-  button.style.right = '5px'; // Adjust as needed
+  button.style.bottom = '25px'; // Adjust as needed
+  button.style.right = '20px'; // Adjust as needed
   button.style.marginRight = '2px'; // Add some space before the edge
   button.classList.add('coolButton'); // Add a class for styling
 
@@ -6189,7 +6189,7 @@ do{
   // Add event listener to the button
   button.addEventListener('click', handleClick);
 
- var buttonreload = document.createElement('button');
+  var buttonreload = document.createElement('button');
   buttonreload.textContent = 'RELOAD';
   buttonreload.id = 'clickMeButton2';
   // Style the button for positioning and appearance
