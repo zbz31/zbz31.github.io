@@ -5686,7 +5686,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
 
-        cell.textContent =  puzzle1[0].pcolumn[col - 1];
+        cell.textContent = puzzle1[0].pcolumn[col - 1];
 
 
       } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
@@ -5726,24 +5726,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (puzzle1[0].prow[row - 1].includes("Played WC")) {
 
-        cell.textContent =  puzzle1[0].prow[row - 1];
+        cell.textContent = puzzle1[0].prow[row - 1];
 
 
       } else if (puzzle1[0].prow[row - 1].includes("WC01")) {
-          
+
         cell.textContent = ' Won World Cup ';
 
 
-      } 
+      }
       else if (puzzle1[0].prow[row - 1].includes("WC02")) {
 
         cell.textContent = ' World Cup 2nd place ';
 
 
-      } 
+      }
 
       else if (puzzle1[0].prow[row - 1].length === 2) {
-        if (cell.textContent = puzzle1[0].prow[row - 1]=== "PO") {
+        if (cell.textContent = puzzle1[0].prow[row - 1] === "PO") {
           cell.textContent = "Position: Goalkeeper"
         } else if (cell.textContent = puzzle1[0].prow[row - 1] === "DF") {
           cell.textContent = "Position: Defense"
@@ -5758,7 +5758,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ;
 
       }
-      
+
       else if (puzzle1[0].prow[row - 1].length === 3) {
         img.src = countries.find(item => item.cname === puzzle1[0].prow[row - 1]).Flag;
         cell.appendChild(img);
@@ -5803,22 +5803,22 @@ document.addEventListener("DOMContentLoaded", function () {
     modal2Content.innerHTML = '';
     let playerCount = 0;
     if (playerCount < 15) {
-    // Create and append elements for each name
-    itemsWithBothTeams.forEach(item => {
-      const lio = document.createElement("li");
+      // Create and append elements for each name
+      itemsWithBothTeams.forEach(item => {
+        const lio = document.createElement("li");
 
-      const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag2" style="width: 20px; height: auto; margin-right: 5px;">`;
+        const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag2" style="width: 20px; height: auto; margin-right: 5px;">`;
 
 
-      lio.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
+        lio.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
 
-      playerCount++; 
-      lio.addEventListener('click', function () {
-        // Close modal when clicking on list item
-        modal2.style.display = 'none';
+        playerCount++;
+        lio.addEventListener('click', function () {
+          // Close modal when clicking on list item
+          modal2.style.display = 'none';
+        });
+        modal2Content.appendChild(lio);
       });
-      modal2Content.appendChild(lio);
-    });
     }
 
     else {
@@ -5869,9 +5869,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Clear the suggestion list
             nameList.innerHTML = "";
 
-            if ((item.Teams.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.Position.includes(puzzle1[0].prow[cell.dataset.row - 1]) ||  item.Country.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.Titles.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.WC.includes(puzzle1[0].prow[cell.dataset.row - 1].substring(puzzle1[0].prow[cell.dataset.row - 1].length - 4)))
+            if ((item.Teams.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.Position.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.Country.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.Titles.includes(puzzle1[0].prow[cell.dataset.row - 1]) || item.WC.includes(puzzle1[0].prow[cell.dataset.row - 1].substring(puzzle1[0].prow[cell.dataset.row - 1].length - 4)))
 
-              && (item.Teams.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.Position.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) ||  item.Country.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.Titles.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.WC.includes(puzzle1[0].pcolumn[cell.dataset.col - 1].substring(puzzle1[0].pcolumn[cell.dataset.col - 1].length - 4)))) {
+              && (item.Teams.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.Position.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.Country.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.Titles.includes(puzzle1[0].pcolumn[cell.dataset.col - 1]) || item.WC.includes(puzzle1[0].pcolumn[cell.dataset.col - 1].substring(puzzle1[0].pcolumn[cell.dataset.col - 1].length - 4)))) {
               cell.classList.remove("grid-cell");
               cell.classList.add("grid-cellsolved");
               addTextToCell(cell, `${item.name} `);
@@ -6010,19 +6010,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create the puzzle object
   //const puzzle1 = [{ prow, pcolumn }];
 
-do{
   do {
-    puzzle1 = RandomizePuzzle();
-    totality = [];
+    do {
+      puzzle1 = RandomizePuzzle();
+      totality = [];
 
-    for (let i = 0; i < puzzle1[0].prow.length; i++) {
-      for (let j = 0; j < puzzle1[0].pcolumn.length; j++) {
-        totality.push(chequeo([puzzle1[0].prow[i], puzzle1[0].pcolumn[j]]).length);
+      for (let i = 0; i < puzzle1[0].prow.length; i++) {
+        for (let j = 0; j < puzzle1[0].pcolumn.length; j++) {
+          totality.push(chequeo([puzzle1[0].prow[i], puzzle1[0].pcolumn[j]]).length);
+        }
       }
-    }
 
-  } while ((Math.min(...totality) < 5) ) ;
-} while (Math.max(...totality) > 500);
+    } while ((Math.min(...totality) < 5));
+  } while (Math.max(...totality) > 500);
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
 
@@ -6043,7 +6043,7 @@ do{
       );
 
 
-      
+
     }
 
 
@@ -6173,43 +6173,43 @@ do{
     solved()
 
   }
-// Create the first button (left)
-var buttonreload = document.createElement('button');
-buttonreload.textContent = 'RELOAD';
-buttonreload.id = 'clickMeButton2';
+  // Create the first button (left)
+  var buttonreload = document.createElement('button');
+  buttonreload.textContent = 'RELOAD';
+  buttonreload.id = 'clickMeButton2';
 
-// Style the button for positioning and appearance
-buttonreload.style.position = 'fixed';
-buttonreload.style.bottom = '0vh'; // Adjust as needed
-buttonreload.style.left = '5vw'; // Adjust as needed
-buttonreload.style.marginLeft = '2px'; // Add some space before the edge
-buttonreload.classList.add('coolButton'); // Add a class for styling
+  // Style the button for positioning and appearance
+  buttonreload.style.position = 'fixed';
+  buttonreload.style.bottom = '-16%'; // Adjust as needed
+  buttonreload.style.left = '1vw'; // Adjust as needed
+  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
+  buttonreload.classList.add('coolButton'); // Add a class for styling
 
-// Add event listener for the button
-buttonreload.addEventListener('click', function () {
-  window.location.href = window.location.href;
-});
+  // Add event listener for the button
+  buttonreload.addEventListener('click', function () {
+    window.location.href = window.location.href;
+  });
 
-// Append the first button to the body
-document.getElementById('gridContainer').appendChild(buttonreload);
+  // Append the first button to the body
+  document.getElementById('gridContainer').appendChild(buttonreload);
 
-// Create the second button (right)
-var button = document.createElement('button');
-button.textContent = 'GIVE UP';
-button.id = 'clickMeButton';
+  // Create the second button (right)
+  var button = document.createElement('button');
+  button.textContent = 'GIVE UP';
+  button.id = 'clickMeButton';
 
-// Style the button for positioning and appearance
-button.style.position = 'fixed';
-button.style.bottom = '0vh'; // Adjust as needed
-button.style.right = '5vw'; // Adjust as needed
-button.style.marginRight = '2px'; // Add some space before the edge
-button.classList.add('coolButton'); // Add a class for styling
+  // Style the button for positioning and appearance
+  button.style.position = 'fixed';
+  button.style.bottom = '-16%'; // Adjust as needed
+  button.style.right = '1vw'; // Adjust as needed
+  button.style.marginRight = '2px'; // Add some space before the edge
+  button.classList.add('coolButton'); // Add a class for styling
 
-// Append the second button to the body
-document.getElementById('gridContainer').appendChild(button);
-button.addEventListener('click', handleClick);
+  // Append the second button to the body
+  document.getElementById('gridContainer').appendChild(button);
+  button.addEventListener('click', handleClick);
 
-  
+
   function solved() {
     const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
     const gridCellsunsolved = document.querySelectorAll('.grid-cellunsolved');
