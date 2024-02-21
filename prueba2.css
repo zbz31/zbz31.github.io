@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0;
   position: relative; /* Ensure relative positioning for absolute positioning within */
   background-color: #f5f5f5; /* Very light background color */
