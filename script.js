@@ -6166,7 +6166,7 @@ do{
   button.classList.add('coolButton'); // Add a class for styling
 
   // Append the button to the grid container
-  document.getElementById('gridContainer').appendChild(button);
+  document.body.appendChild(button);
 
   // Function to call when the button is clicked
   function handleClick() {
