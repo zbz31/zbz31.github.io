@@ -6194,8 +6194,8 @@ do{
   buttonreload.id = 'clickMeButton2';
   // Style the button for positioning and appearance
   buttonreload.style.position = 'absolute';
-  buttonreload.style.bottom = '5%'; // Adjust as needed
-  buttonreload.style.left = '5%'; // Adjust as needed
+  buttonreload.style.bottom = '2%'; // Adjust as needed
+  buttonreload.style.left = '2%'; // Adjust as needed
   buttonreload.style.marginLeft = '2px'; // Add some space before the edge
   buttonreload.classList.add('coolButton'); // Add a class for styling
   //document.getElementById('gridContainer').appendChild(buttonreload);
