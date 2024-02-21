@@ -2,20 +2,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
   margin: 0;
   position: relative;
   background-color: #f5f5f5;
 }
 
 .container {
-  width: 80%; /* Adjust the width of the container */
-  max-width: 600px; /* Set a maximum width for larger screens */
+  width: 60%; /* Adjust the width of the container */
+  max-width: 700px; /* Set a maximum width for larger screens */
 }
 
 #topText {
   position: fixed;
-  top: 10px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 15px;
@@ -37,12 +37,12 @@ body {
 
 .grid-cell {
   border: 0.05px solid black;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1px; /* Adjust the value as needed */
+  border-radius: 5px; /* Adjust the value as needed */
   background-color: #ffffff; /* Added semicolon */
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
   font-size: 12px;
@@ -52,8 +52,8 @@ body {
 
 .grid-cell2 {
   border: 1px solid black;
-  width: 95px;
-  height: 95px;
+  width: 85px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ body {
   font-size: 12px; /* Increased font size for better visibility */
   text-align: center; /* Center-align text */
 
-  border-radius: 1px; /* Rounded corners */
+  border-radius: 5px; /* Rounded corners */
 
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
