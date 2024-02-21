@@ -6200,7 +6200,7 @@ do{
   buttonreload.classList.add('coolButton'); // Add a class for styling
   //document.getElementById('gridContainer').appendChild(buttonreload);
   buttonreload.addEventListener('click', function () {
-   window.location.reload();
+   window.location.href = window.location.href;
   });
   document.body.appendChild(buttonreload);
 
