@@ -6160,9 +6160,9 @@ do{
 
   // Style the button for positioning and appearance
   button.style.position = 'absolute';
-  button.style.bottom = '205px'; // Adjust as needed
+  button.style.bottom = '25px'; // Adjust as needed
   button.style.right = '20px'; // Adjust as needed
-  button.style.marginRight = '5px'; // Add some space before the edge
+  button.style.marginRight = '2px'; // Add some space before the edge
   button.classList.add('coolButton'); // Add a class for styling
 
   // Append the button to the grid container
@@ -6194,13 +6194,13 @@ do{
   buttonreload.id = 'clickMeButton2';
   // Style the button for positioning and appearance
   buttonreload.style.position = 'absolute';
-  buttonreload.style.bottom = '205px'; // Adjust as needed
-  buttonreload.style.left = '20px'; // Adjust as needed
-  buttonreload.style.marginLeft = '5px'; // Add some space before the edge
+  buttonreload.style.bottom = '5%'; // Adjust as needed
+  buttonreload.style.left = '5%'; // Adjust as needed
+  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
   buttonreload.classList.add('coolButton'); // Add a class for styling
   //document.getElementById('gridContainer').appendChild(buttonreload);
   buttonreload.addEventListener('click', function () {
-   window.location.href = window.location.href;
+    window.location.href = window.location.href;
   });
   document.body.appendChild(buttonreload);
 
