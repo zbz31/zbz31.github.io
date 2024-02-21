@@ -6010,9 +6010,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Create the puzzle object
   //const puzzle1 = [{ prow, pcolumn }];
 
-  do {
+  
     do {
       puzzle1 = RandomizePuzzle();
+
       totality = [];
 
       for (let i = 0; i < puzzle1[0].prow.length; i++) {
@@ -6021,70 +6022,48 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-    } while ((Math.min(...totality) < 2));
-  } while (Math.max(...totality) > 30);
+    } while ((Math.min(...totality) < 1));
+  
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
 
 
+  function analyzeCondition(conditn) {
+    if (conditn.length === 3) {
+      return "Country";
+    } else if (conditn.includes("Played WC")) {
+      return "WC";
+    } else if (conditn.includes("WC") && conditn.length === 4) {
+      return "Titles";
+    } else if (conditn.length === 2) {
+      return "Position";
+    } else {
+      return "Teams";
+    }
+  }
+
+
+
   function chequeo(condit) {
 
-    if (Math.min(condit[0].length, condit[1].length) === 3) {
-      if (condit[0].length === 3 && !condit.includes("WC")) {
-        itemisCountry = condit[0];
-        itemisTeam = condit[1];
-      } else {
-        itemisCountry = condit[1];
-        itemisTeam = condit[0];
-      }
-      checkd = names.filter(item =>
-        item.Country.includes(itemisCountry) &&
-        item.Teams.includes(itemisTeam)
-      );
+   
+    var x = analyzeCondition(condit[0])
+    var y = analyzeCondition(condit[1])
 
-
-
+    if (condit[0].includes("Played WC")){
+      condit[0]= condit[0].slice(-4)
     }
 
-
-
-    if (Math.min(condit[0].length, condit[1].length) === 2) {
-      if (condit[0].length === 2) {
-        itemisPos = condit[0];
-        itemisTeam = condit[1];
-      } else {
-        itemisPos = condit[1];
-        itemisTeam = condit[0];
-      }
-      checkd = names.filter(item =>
-        item.Position.includes(itemisPos) &&
-        item.Teams.includes(itemisTeam)
-      );
+    if (condit[1].includes("Played WC")) {
+      condit[1] = condit[1].slice(-4)
     }
+    checkd = names.filter(item =>
+      item[x].includes(condit[0]) &&
+      item[y].includes(condit[1])
+    )
 
 
-    else if (condit[0].includes("WC0") || condit[1].includes("WC0")) {
-      checkd = names.filter(item =>
-        (condit[0].includes("WC0") ? item.Titles.includes(condit[0]) : item.Titles.includes(condit[1])) &&
-        item.Teams.includes(condit[1])
-      );
-    }
 
-    else if (condit[1].includes("Played WC") || condit[0].includes("Played WC")) {
-      const wcCond = condit[1].includes("Played WC") ? condit[1] : condit[0];
-      const teamCond = condit[1].includes("Played WC") ? condit[0] : condit[1];
-
-      checkd = names.filter(item =>
-        item.WC.includes(wcCond.substring(wcCond.length - 4)) &&
-        item.Teams.includes(teamCond)
-      );
-    }
-    else {
-      checkd = names.filter(item =>
-        item.Teams.includes(condit[0]) &&
-        item.Teams.includes(condit[1])
-      );
-    }
 
     return checkd
 
