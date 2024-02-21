@@ -6194,14 +6194,14 @@ do{
   buttonreload.textContent = 'RELOAD';
   buttonreload.id = 'clickMeButton2';
   // Style the button for positioning and appearance
-  buttonreload.style.position = 'absolute';
-  buttonreload.style.bottom = '40px'; // Adjust as needed
-  buttonreload.style.left = '70px'; // Adjust as needed
-  buttonreload.style.marginLeft = '2px'; // Add some space before the edge
-  buttonreload.classList.add('coolButton'); // Add a class for styling
+  button.style.position = 'absolute';
+  button.style.bottom = '25px'; // Adjust as needed
+  button.style.left = '20px'; // Adjust as needed
+  button.style.marginRight = '2px'; // Add some space before the edge
+  button.classList.add('coolButton'); // Add a class for styling
   //document.getElementById('gridContainer').appendChild(buttonreload);
   buttonreload.addEventListener('click', function () {
-    window.history.forward(1);
+    window.location.reload();
   });
   document.body.appendChild(buttonreload);
 
