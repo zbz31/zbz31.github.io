@@ -4,28 +4,31 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  position: relative; /* Ensure relative positioning for absolute positioning within */
-  background-color: #f5f5f5; /* Very light background color */
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 80%; /* Adjust the width of the container */
+  max-width: 800px; /* Set a maximum width for larger screens */
 }
 
 #topText {
   position: absolute;
-  top: 20px; /* Adjust distance from the top */
-  left: 50%; /* Align at the center horizontally */
-  transform: translateX(-50%); /* Center the text horizontally */
-  font-size: 15px; /* Adjust font size */
-  font-family: 'Noto Sans', Arial, sans-serif; /* Use a modern font */
-  color: #666; /* Text color */
-  text-transform: uppercase; /* Uppercase text */
-  letter-spacing: 0px; /* Add letter spacing */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Add text shadow for depth */
-
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  font-family: 'Noto Sans', Arial, sans-serif;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .grid-container {
-  margin-top: 10px; /* Add margin to the top of the grid container */
+  margin-top: 10px;
 }
-
 
 
 .grid-container {
