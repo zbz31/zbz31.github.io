@@ -6022,7 +6022,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-    } while ((Math.min(...totality) < 1));
+    } while ((Math.min(...totality) < 3));
   
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
@@ -6074,8 +6074,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function RandomizePuzzle() {
     // Array to hold possible conditions
-    var CONDITIONS = ["teams", "countries", "WC", "Won", "Position"];
-    var CONDITIONS2 = ["teams", "WC"];
+    var CONDITIONS = ["teams", "countries", "WC", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position", "teams", "countries", "Won", "Position"];
+    var CONDITIONS2 = ["teams", "teams", "teams", "teams", "teams", "teams", "WC", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "countries"];
 
     var rpuzzle = [];
 
@@ -6099,14 +6099,11 @@ document.addEventListener("DOMContentLoaded", function () {
           return getRandomItem(teams);
         } else if (item === 'countries') {
           return getRandomItem(countrypossible);
-        }
-        else if (item === 'WC') {
+        } else if (item === 'WC') {
           return getRandomItem(WCpossible);
-        }
-        else if (item === 'Won') {
+        } else if (item === 'Won') {
           return getRandomItem(Wonpossible);
-        }
-        else if (item === 'Position') {
+        } else if (item === 'Position') {
           return getRandomItem(Positionpossible);
         }
       });
@@ -6115,15 +6112,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Break out of the loop if the maximum number of iterations is reached
       if (iterationCount >= maxIterations) {
-        console.log("Max iterations reached without finding a valid combination.");
-        break;
+         break;
       }
-
     } while (result.length !== new Set(result).size);
 
-
-    rpuzzle = [{ prow: [result[0], result[1], result[2]], pcolumn: [result[3], result[4], result[5]] },];
-    return rpuzzle
+    rpuzzle = [{
+      prow: [result[0], result[1], result[2]],
+      pcolumn: [result[3], result[4], result[5]]
+    },];
+    return rpuzzle;
   }
 
   function getRandomItem(array) {
