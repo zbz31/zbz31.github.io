@@ -9223,7 +9223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     iterations++; // Increment iteration counter
 
-    if (iterations >= 1000) {
+    if (iterations >= 10000) {
       console.log("Maximum iterations reached");
       break; // Exit the loop if maximum iterations reached
     }
@@ -9304,7 +9304,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function RandomizePuzzle() {
     // Array to hold possible conditions
-    var CONDITIONS = ["teams", "countries", "Position", "teams", "countries", "Position", "teams", "countries", "Position", "teams", "countries", "Position", "teams", "countries", "Position", "WC", "Won"];
+    var CONDITIONS = ["teams", "countries", "teams", "countries", "teams", "countries",  "teams", "countries", "Position", "teams", "countries", "Position", "WC", "Won"];
     var CONDITIONS2 = ["teams", "teams", "teams", "teams", "teams", "teams", "teams", "teams", "teams", "countries", "countries", "countries", "countries", "countries", "countries", "countries", "WC", "WC","Won"];
 
     var rpuzzle = [];
@@ -9320,7 +9320,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var result = [];
-    var maxIterations = 300; // Maximum number of iterations
+    var maxIterations = 3000; // Maximum number of iterations
     var iterationCount = 0; // Initialize iteration counter
 
     do {
