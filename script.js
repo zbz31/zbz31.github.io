@@ -9223,7 +9223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     iterations++; // Increment iteration counter
 
-    if (iterations >= 10000) {
+    if (iterations >= 5) {
       console.log("Maximum iterations reached");
       break; // Exit the loop if maximum iterations reached
     }
@@ -9254,21 +9254,33 @@ document.addEventListener("DOMContentLoaded", function () {
     var x = analyzeCondition(condit[0])
     var y = analyzeCondition(condit[1])
 
-
+    console.log(condit)
+    console.log(x,y)
     if (x.includes("Teams") && !y.includes("Teams")) {
+      console.log("Team + Country")
       checkd = names.filter(player =>
-        player.Teams.some(team => team.club.includes(condit[0])) && player[y].includes(condit[1])
+        player.Teams.some(team => team.club.includes(condit[0])) 
+        && 
+        player[y].includes(condit[1])
       );
+      console.log(checkd)
     }
     else if (y.includes("Teams") && !x.includes("Teams")) {
       checkd = names.filter(player =>
-        player.Teams.some(team => team.club.includes(condit[1])) && player[y].includes(condit[0])
-      );
+        player.Teams.some(team => team.club.includes(condit[1]))
+        && 
+        player[x].includes(condit[0])
+      
+      )  ;
+    
+    
     }
     else if (x.includes("Teams") && y.includes("Teams")) {
       checkd = names.filter(player =>
         player.Teams.some(team => team.club.includes(condit[0])) && player.Teams.some(team => team.club.includes(condit[1]))
-      );
+    
+      
+      ) ;
     }
 
     else {
@@ -9283,6 +9295,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item[y].includes(condit[1])
       )
     }
+
     return checkd
   }
 
@@ -9292,7 +9305,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function RandomizePuzzle() {
     // Array to hold possible conditions
     var CONDITIONS = ["teams", "countries", "Position"];
-    var CONDITIONS2 = ["teams"];
+    var CONDITIONS2 = ["teams", "countries"];
 
     var rpuzzle = [];
 
@@ -9307,7 +9320,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var result = [];
-    var maxIterations = 10000; // Maximum number of iterations
+    var maxIterations = 5; // Maximum number of iterations
     var iterationCount = 0; // Initialize iteration counter
 
     do {
