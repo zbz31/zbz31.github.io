@@ -9292,7 +9292,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function RandomizePuzzle() {
     // Array to hold possible conditions
     var CONDITIONS = ["teams", "countries", "Position"];
-    var CONDITIONS2 = ["teams", "countries"];
+    var CONDITIONS2 = ["teams", "Position"];
 
     var rpuzzle = [];
 
