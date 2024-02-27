@@ -9307,7 +9307,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var result = [];
-    var maxIterations = 1000; // Maximum number of iterations
+    var maxIterations = 10000; // Maximum number of iterations
     var iterationCount = 0; // Initialize iteration counter
 
     do {
