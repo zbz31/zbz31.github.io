@@ -8828,14 +8828,14 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   const teams = [
-    "Real Madrid", "FC Barcelona", "Villarreal", "Sevilla", "Valencia", "Atletico Madrid", 
+    "Real Madrid", "Barcelona", "Villarreal", "Sevilla", "Valencia", "Atletico", 
     //"Real Sociedad",
     "Getafe", "Celta", "Deportivo",
 
      "Milan", "Inter", "Roma", "Juventus", "Napoli",
     //"Paris S-G",
     "Liverpool", "Arsenal", "Chelsea", "Man City", "Tottenham", "Man Utd",
-    //"Bayern Munich", "Borussia Dortmund",
+    "Bayern", "Borussia",
     //"Porto", "Benfica",
   ];
 
@@ -9228,7 +9228,7 @@ document.addEventListener("DOMContentLoaded", function () {
       break; // Exit the loop if maximum iterations reached
     }
 
-  } while (Math.min(...totality) < 0 && iterations < 100);
+  } while (Math.min(...totality) < 3 && iterations < 100);
   
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
