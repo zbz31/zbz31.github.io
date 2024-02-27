@@ -9223,7 +9223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     iterations++; // Increment iteration counter
 
-    if (iterations >= 100) {
+    if (iterations >= 300) {
       console.log("Maximum iterations reached");
       break; // Exit the loop if maximum iterations reached
     }
@@ -9307,7 +9307,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var result = [];
-    var maxIterations = 100; // Maximum number of iterations
+    var maxIterations = 300; // Maximum number of iterations
     var iterationCount = 0; // Initialize iteration counter
 
     do {
