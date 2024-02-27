@@ -9137,7 +9137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     headline.textContent = (rowcondition + " / " + colcondition);
     headline.style.fontFamily = "'Roboto', sans-serif";
-    headline.style.fontSize = '12px'
+    headline.style.fontSize = '10px'
 
     modal.style.opacity = '0';
     modal.style.display = 'block';
@@ -9228,7 +9228,7 @@ document.addEventListener("DOMContentLoaded", function () {
       break; // Exit the loop if maximum iterations reached
     }
 
-  } while (Math.min(...totality) < 1);
+  } while (Math.min(...totality) < 3);
 
 
   // var puzzle1 = [{ prow: ["es FC Barcelona", "es Atletico Madrid", "eng Man Utd"], pcolumn: ["de Bayern Munich", "Played WC 2022", "Played WC 2018"] },];
