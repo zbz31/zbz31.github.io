@@ -8941,6 +8941,11 @@ document.addEventListener("DOMContentLoaded", function () {
         cell.textContent = ' World Cup 2nd place';
 
       }
+      else if (puzzle1[0].pcolumn[col - 1] === "PO") {
+        img.src = "https://ibb.co/5LtjQ2W"
+        cell.appendChild(img);
+
+      }
 
       else if (puzzle1[0].pcolumn[col - 1].length === 2) {
         cell.textContent = puzzle1[0].pcolumn[col - 1];
@@ -8990,16 +8995,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
       else if (puzzle1[0].prow[row - 1].length === 2) {
         if (cell.textContent = puzzle1[0].prow[row - 1] === "PO") {
-          cell.textContent = "Position: Goalkeeper"
+             
+          cell.textContent = ""
+          img.src = "https://i.ibb.co/hygjfhv/GK001.jpg"
+          img.style.width = "40px"; // Adjust the width as needed
+          img.style.height = "auto"; // Adjust the height as needed
+          img.style.borderRadius = "10%";
+          cell.appendChild(img);
         } else if (cell.textContent = puzzle1[0].prow[row - 1] === "DF") {
-          cell.textContent = "Position: Defense"
+          
+          cell.textContent = ""
+          img.src = "https://i.ibb.co/0rWVdwj/df01.jpg"
+          img.style.width = "40px"; // Adjust the width as needed
+          img.style.height = "auto"; // Adjust the height as needed
+          img.style.borderRadius = "10%";
+          cell.appendChild(img);
+          
+          //cell.textContent = "Position: Defense"
         }
 
         else if (cell.textContent = puzzle1[0].prow[row - 1] === "CC") {
-          cell.textContent = "Position: Midfielder"
+          cell.textContent = ""
+          img.src = "https://i.ibb.co/B4nF3H5/MC01.jpg"
+          img.style.width = "40px"; // Adjust the width as needed
+          img.style.height = "auto"; // Adjust the height as needed
+          img.style.borderRadius = "10%";
+          cell.appendChild(img);
+          
+          
+          //  cell.textContent = "Position: Midfielder"
         }
         else if (cell.textContent = puzzle1[0].prow[row - 1] === "DL") {
-          cell.textContent = "Position: Forward"
+          cell.textContent = ""
+          img.src = "https://i.ibb.co/CPjYcJ6/fw002.jpg"
+          img.style.width = "40px"; // Adjust the width as needed
+          img.style.height = "auto"; // Adjust the height as needed
+          img.style.borderRadius = "10%";
+          cell.appendChild(img);
+          
+          //cell.textContent = "Position: Forward"
         }
         ;
 
