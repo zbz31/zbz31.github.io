@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var answers = []
 
   const names = [
-  {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:"2022"},
+    {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:"2022"},
 {name:"Antonio Rüdiger", Country:"GER", Position:"DF",Teams: [{ club:"es Real Madrid", matches:81, goals:4, assists:1},{ club:"it Roma", matches:72, goals:2, assists:2},{ club:"de Stuttgart", matches:71, goals:2, assists:1},{ club:"en Chelsea", matches:201, goals:12, assists:3},], Titles:"", WC:"2022, 2018"},
 {name:"Rodrygo", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:199, goals:49, assists:35},], Titles:"", WC:"2022"},
 {name:"Jude Bellingham", Country:"ENG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:29, goals:20, assists:8},{ club:"de Leverkusen", matches:132, goals:24, assists:24},], Titles:"", WC:"2022"},
@@ -9072,7 +9072,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- function showModal2(cell) {
+  function showModal2(cell) {
     const condit = [puzzle1[0].prow[cell.dataset.row - 1], puzzle1[0].pcolumn[cell.dataset.col - 1]];
     const itemsWithBothTeams = chequeo(condit);
 
@@ -9121,42 +9121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to create grid cells
 
-  // Function to populate the name list
-  function levenshteinDistance(a, b) {
-    if (a.length === 0) return b.length;
-    if (b.length === 0) return a.length;
-
-    const matrix = [];
-
-    // Initialize matrix
-    for (let i = 0; i <= b.length; i++) {
-      matrix[i] = [i];
-    }
-
-    for (let j = 0; j <= a.length; j++) {
-      matrix[0][j] = j;
-    }
-
-    // Calculate Levenshtein distance
-    for (let i = 1; i <= b.length; i++) {
-      for (let j = 1; j <= a.length; j++) {
-        const cost = a[j - 1] === b[i - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j - 1] + cost
-        );
-      }
-    }
-
-    return matrix[b.length][a.length];
-  }
-
-  function approximateMatch(searchTerm, name) {
-    const similarityThreshold = 4; // Adjust as needed
-    return levenshteinDistance(searchTerm.toLowerCase(), name.toLowerCase()) <= similarityThreshold;
-  }
-
+  
 
   function populateNameList(filter, cell) {
     const nameList = document.getElementById("nameList");
@@ -9164,17 +9129,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let count = 0; // Counter for tracking the number of names added
 
-    //names.filter(item => item.name.toLowerCase().includes(filter.toLowerCase()))
-    names.filter(item => approximateMatch(filter, item.name))
+    // Normalize the filter term
+    const normalizedFilter = filter.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    names.filter(item => {
+      // Normalize each name for comparison
+      const normalizedName = item.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      return normalizedName.includes(normalizedFilter);
+    })
       .forEach(item => {
-        if (count < 5) { // Limit to three names
+        if (count < 15) { // Limit to three names
           const li = document.createElement("li");
           const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag of Germany" style="width: 20px; height: auto; margin-right: 5px;">`;
 
-
           li.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
-
-
 
           li.addEventListener('click', () => {
             // When a suggestion is clicked, populate the input field with the clicked name
@@ -9194,15 +9162,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             closeModal();
             solved()
-
-
           });
           nameList.appendChild(li);
           cell.addEventListener('click', () => {
             if (cell.textContent.trim() !== '') {
               showModal2(cell);
             }
-
           });
 
           count++; // Increment the count of added names
