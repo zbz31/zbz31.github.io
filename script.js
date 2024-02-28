@@ -8800,7 +8800,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { tname: "Villarreal", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_logo-en.svg/255px-Villarreal_CF_logo-en.svg.png" },
     { tname: "Malaga", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/M%C3%A1laga_CF.svg/150px-M%C3%A1laga_CF.svg.png" },
     { tname: "Sevilla", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/233px-Sevilla_FC_logo.svg.png" },
-    { tname: "Barcelona", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.pn" },
+    { tname: "Barcelona", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png" },
     { tname: "Betis", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/220px-Real_betis_logo.svg.png" },
     { tname: "Getafe", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Getafe_logo.svg/270px-Getafe_logo.svg.png" },
     { tname: "Deportivo", Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/RC_Deportivo_La_Coru%C3%B1a_logo.svg/255px-RC_Deportivo_La_Coru%C3%B1a_logo.svg.png" },
