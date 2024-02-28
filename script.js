@@ -9072,9 +9072,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  function showModal2(cell) {
+ function showModal2(cell) {
     const condit = [puzzle1[0].prow[cell.dataset.row - 1], puzzle1[0].pcolumn[cell.dataset.col - 1]];
-    const itemsWithBothTeams = chequeo(condit)
+    const itemsWithBothTeams = chequeo(condit);
 
     const modal2 = document.getElementById('modal2');
     const modal2Content = document.getElementById("nameElement");
@@ -9082,27 +9082,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear previous content
     modal2Content.innerHTML = '';
     let playerCount = 0;
-    if (playerCount < 15) {
-      // Create and append elements for each name
-      itemsWithBothTeams.forEach(item => {
-        const lio = document.createElement("li");
 
-        const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag2" style="width: 20px; height: auto; margin-right: 5px;">`;
+    // Iterate over each item and limit to 15 players
+    for (const item of itemsWithBothTeams) {
+      if (playerCount >= 30) {
+        break; // Exit the loop if 15 players have been processed
+      }
 
+      const lio = document.createElement("li");
+      const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag2" style="width: 20px; height: auto; margin-right: 5px;">`;
+      lio.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
 
-        lio.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
-
-        playerCount++;
-        lio.addEventListener('click', function () {
-          // Close modal when clicking on list item
-          modal2.style.display = 'none';
-        });
-        modal2Content.appendChild(lio);
+      lio.addEventListener('click', function () {
+        // Close modal when clicking on list item
+        modal2.style.display = 'none';
       });
-    }
 
-    else {
-      return; // Exit the loop if 15 players have been processed
+      modal2Content.appendChild(lio);
+      playerCount++;
     }
 
     // Show modal
@@ -9113,7 +9110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modal2.style.top = '50%';
     modal2.style.left = '50%';
     modal2.style.display = 'block';
-
 
     // Close modal when clicking outside of it
     window.onclick = function (event) {
