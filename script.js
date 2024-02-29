@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var answers = []
 
   const names = [
-  {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:""},
+ {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Antonio Rüdiger", Country:"GER", Position:"DF",Teams: [{ club:"es Real Madrid", matches:81, goals:4, assists:1},{ club:"it Roma", matches:72, goals:2, assists:2},{ club:"de Stuttgart", matches:71, goals:2, assists:1},{ club:"en Chelsea", matches:201, goals:12, assists:3},], Titles:"", WC:"2022, 2018"},
 {name:"Rodrygo", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:199, goals:49, assists:35},], Titles:"", WC:"2022"},
 {name:"Jude Bellingham", Country:"ENG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:29, goals:20, assists:8},{ club:"de Leverkusen", matches:132, goals:24, assists:24},], Titles:"2021EuroFinal", WC:"2022"},
@@ -8893,7 +8893,9 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 
   const WCpossible = ["Played WC 2022", "Played WC 2018", "Played WC 2014", "Played WC 2010", "Played WC 2006", "Played WC 2002"]
-  const Wonpossible = ["WC01", "WC02"]
+  const Wonpossible = [
+  "WC01", "WC02",
+  "Premier"]
 
   const Positionpossible = ["PO", "DF", "CC", "DL"]
 
@@ -8930,7 +8932,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cell.classList.add("grid-cell2");
       const img = document.createElement("img");
 
-      if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
+      if (puzzle1[0].pcolumn[col - 1].includes("Played WC")||puzzle1[0].pcolumn[col - 1].includes("Premier")) {
 
         cell.textContent = puzzle1[0].pcolumn[col - 1];
           cell.style.fontFamily = 'Rationale';
@@ -8999,7 +9001,7 @@ cell.style.fontFamily = 'Rationale';
       const img = document.createElement("img");
 
 
-      if (puzzle1[0].prow[row - 1].includes("Played WC")) {
+      if (puzzle1[0].prow[row - 1].includes("Played WC") ||puzzle1[0].prow[row - 1].includes("Premier") ) {
 
         cell.textContent = puzzle1[0].prow[row - 1];
       cell.style.fontFamily = 'Rationale';
@@ -9364,6 +9366,8 @@ cell.style.fontFamily = 'Rationale';
       return "WC";
     } else if (conditn.includes("WC") && conditn.length === 4) {
       return "Titles";
+    } else if (conditn.includes("Premier")) {
+      return "Titles";
     } else if (conditn.length === 2) {
       return "Position";
     } else {
@@ -9374,29 +9378,24 @@ cell.style.fontFamily = 'Rationale';
 
 
   function chequeo(condit) {
-
+	
     var x = analyzeCondition(condit[0])
     var y = analyzeCondition(condit[1])
 
 
     if (x.includes("Teams") && !y.includes("Teams")) {
-
       checkd = names.filter(player =>
         player.Teams.some(team => team.club.includes(condit[0]))
         &&
         player[y].includes(condit[1])
       );
-
     }
     else if (y.includes("Teams") && !x.includes("Teams")) {
       checkd = names.filter(player =>
         player.Teams.some(team => team.club.includes(condit[1]))
         &&
         player[x].includes(condit[0])
-
       );
-
-
     }
     else if (x.includes("Teams") && y.includes("Teams")) {
       checkd = names.filter(player =>
@@ -9449,9 +9448,9 @@ cell.style.fontFamily = 'Rationale';
     for (var i = 3; i < 6; i++) {
       rpuzzle.push(CONDITIONS2[Math.floor(Math.random() * CONDITIONS2.length)]);
     }
-
+		
     var result = [];
-    var maxIterations = 3000; // Maximum number of iterations
+    var maxIterations = 2000; // Maximum number of iterations
     var iterationCount = 0; // Initialize iteration counter
 
     do {
@@ -9483,7 +9482,6 @@ cell.style.fontFamily = 'Rationale';
       prow: [result[0], result[1], result[2]],
       pcolumn: [result[3], result[4], result[5]]
     },];
-
     return rpuzzle;
   }
 
