@@ -8932,14 +8932,25 @@ document.addEventListener("DOMContentLoaded", function () {
       cell.classList.add("grid-cell2");
       const img = document.createElement("img");
 
-      if (puzzle1[0].pcolumn[col - 1].includes("Played WC")||puzzle1[0].pcolumn[col - 1].includes("Premier")) {
+      if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
 
         cell.textContent = puzzle1[0].pcolumn[col - 1];
-          cell.style.fontFamily = 'Rationale';
+          cell.style.fontFamily = 'Strait';
   cell.style.fontWeight = 'bold'; // Make the text bolder
-    cell.style.fontSize = '0.8em';
+    cell.style.fontSize = '0.85em';
    
-      } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
+      }
+      
+      else if (puzzle1[0].pcolumn[col - 1].includes("Premier")){
+      cell.innerHTML = ' Won:<br>Premier League';
+          cell.style.fontFamily = 'Strait';
+  cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.85em';
+   
+      
+      }
+      
+      else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
        //img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
           //img.style.width = "2000px"; // Adjust the width as needed
          // img.style.height = "auto"; // Adjust the height as needed
@@ -8951,10 +8962,10 @@ document.addEventListener("DOMContentLoaded", function () {
       //    cell.appendChild(img);
 
 
-        cell.textContent = ' Won World Cup ';
-cell.style.fontFamily = 'Rationale';
+        cell.innerHTML = ' Won:<br>World Cup ';
+cell.style.fontFamily = 'Strait';
     cell.style.fontWeight = 'bold'; // Make the text bolder
-    cell.style.fontSize = '0.8em';
+    cell.style.fontSize = '0.85em';
  
        
        
@@ -8962,9 +8973,9 @@ cell.style.fontFamily = 'Rationale';
        // cell.textContent = ' Won World Cup ';
       } else if (puzzle1[0].pcolumn[col - 1].includes("WC02")) {
          cell.textContent = ' World Cup 2nd place ';
-   cell.style.fontFamily = 'Rationale';
+   cell.style.fontFamily = 'Strait';
     cell.style.fontWeight = 'bold'; // Make the text bolder
-    cell.style.fontSize = '0.8em';
+    cell.style.fontSize = '0.85em';
 
       }
       else if (puzzle1[0].pcolumn[col - 1] === "PO") {
@@ -9001,14 +9012,21 @@ cell.style.fontFamily = 'Rationale';
       const img = document.createElement("img");
 
 
-      if (puzzle1[0].prow[row - 1].includes("Played WC") ||puzzle1[0].prow[row - 1].includes("Premier") ) {
+      if (puzzle1[0].prow[row - 1].includes("Played WC") ) {
 
         cell.textContent = puzzle1[0].prow[row - 1];
-      cell.style.fontFamily = 'Rationale';
+      cell.style.fontFamily = 'Strait';
     cell.style.fontWeight = 'bold'; // Make the text bolder
     cell.style.fontSize = '0.8em';
-
-
+}
+else if (puzzle1[0].prow[row - 1].includes("Premier") ){
+      cell.innerHTML = ' Won:<br>Premier League';
+          cell.style.fontFamily = 'Strait';
+  cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.85em';
+   
+      
+      
       } else if (puzzle1[0].prow[row - 1].includes("WC01")) {
 				//img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
           //img.style.width = "2000px"; // Adjust the width as needed
@@ -9021,8 +9039,8 @@ cell.style.fontFamily = 'Rationale';
       //    cell.appendChild(img);
 
 
-        cell.textContent = ' Won World Cup ';
- cell.style.fontFamily = 'Rationale';
+        cell.innerHTML = ' Won:<br>World Cup ';
+ cell.style.fontFamily = 'Strait';
     cell.style.fontWeight = 'bold'; // Make the text bolder
     cell.style.fontSize = '0.8em';
 
@@ -9030,7 +9048,7 @@ cell.style.fontFamily = 'Rationale';
       else if (puzzle1[0].prow[row - 1].includes("WC02")) {
 
         cell.textContent = ' World Cup 2nd place ';
- cell.style.fontFamily = 'Rationale';
+ cell.style.fontFamily = 'Strait';
     cell.style.fontWeight = 'bold'; // Make the text bolder
     cell.style.fontSize = '0.8em';
 
