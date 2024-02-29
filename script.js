@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var answers = []
 
   const names = [
-{name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:"2022"},
+   {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:"2022"},
 {name:"Antonio Rüdiger", Country:"GER", Position:"DF",Teams: [{ club:"es Real Madrid", matches:81, goals:4, assists:1},{ club:"it Roma", matches:72, goals:2, assists:2},{ club:"de Stuttgart", matches:71, goals:2, assists:1},{ club:"en Chelsea", matches:201, goals:12, assists:3},], Titles:"", WC:"2022, 2018"},
 {name:"Rodrygo", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:199, goals:49, assists:35},], Titles:"", WC:"2022"},
 {name:"Jude Bellingham", Country:"ENG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:29, goals:20, assists:8},{ club:"de Leverkusen", matches:132, goals:24, assists:24},], Titles:"", WC:"2022"},
@@ -8933,26 +8933,37 @@ document.addEventListener("DOMContentLoaded", function () {
       if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
 
         cell.textContent = puzzle1[0].pcolumn[col - 1];
+          cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
 
 
       } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
-       	img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
-          img.style.width = "2000px"; // Adjust the width as needed
-          img.style.height = "auto"; // Adjust the height as needed
-          img.style.borderRadius = "10%";
-                 img.style.display = "block"; // Set display to block to apply margin auto
-    img.style.margin = "auto"; // Center the image horizontally
-    //img.style.marginRight = "-10px"; // Adjust the left margin as needed
-          cell.style.width = "100%";
-          cell.style.height = "110%";
-          cell.appendChild(img);
+       //img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
+          //img.style.width = "2000px"; // Adjust the width as needed
+         // img.style.height = "auto"; // Adjust the height as needed
+        //  img.style.borderRadius = "10%";
+        //   img.style.display = "block"; // Set display to block to apply margin auto
+  //  img.style.margin = "auto"; // Center the image horizontally
+         // cell.style.width = "100%";
+       //   cell.style.height = "80%";
+      //    cell.appendChild(img);
+
+
+        cell.textContent = ' Won World Cup ';
+ cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
        
        
        
        
        // cell.textContent = ' Won World Cup ';
       } else if (puzzle1[0].pcolumn[col - 1].includes("WC02")) {
-        cell.textContent = ' World Cup 2nd place';
+         cell.textContent = ' World Cup 2nd place ';
+         cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
 
       }
       else if (puzzle1[0].pcolumn[col - 1] === "PO") {
@@ -8992,27 +9003,35 @@ document.addEventListener("DOMContentLoaded", function () {
       if (puzzle1[0].prow[row - 1].includes("Played WC")) {
 
         cell.textContent = puzzle1[0].prow[row - 1];
+         cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
 
 
       } else if (puzzle1[0].prow[row - 1].includes("WC01")) {
-				img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
-          img.style.width = "2000px"; // Adjust the width as needed
-          img.style.height = "auto"; // Adjust the height as needed
-          img.style.borderRadius = "10%";
-           img.style.display = "block"; // Set display to block to apply margin auto
-    img.style.margin = "auto"; // Center the image horizontally
-          cell.style.width = "100%";
-          cell.style.height = "80%";
-          cell.appendChild(img);
+				//img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
+          //img.style.width = "2000px"; // Adjust the width as needed
+         // img.style.height = "auto"; // Adjust the height as needed
+        //  img.style.borderRadius = "10%";
+        //   img.style.display = "block"; // Set display to block to apply margin auto
+  //  img.style.margin = "auto"; // Center the image horizontally
+         // cell.style.width = "100%";
+       //   cell.style.height = "80%";
+      //    cell.appendChild(img);
 
 
-        //cell.textContent = ' Won World Cup ';
-
+        cell.textContent = ' Won World Cup ';
+ cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
 
       }
       else if (puzzle1[0].prow[row - 1].includes("WC02")) {
 
         cell.textContent = ' World Cup 2nd place ';
+         cell.style.fontFamily = 'Oswald';
+    cell.style.fontWeight = 'bold'; // Make the text bolder
+    cell.style.fontSize = '0.8em';
 
 
       }
