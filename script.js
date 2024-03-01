@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var answers = []
 
   const names = [
- {name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:""},
+{name:"Federico Valverde", Country:"URU", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:16, assists:19},{ club:"es Deportivo", matches:25, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Antonio Rüdiger", Country:"GER", Position:"DF",Teams: [{ club:"es Real Madrid", matches:81, goals:4, assists:1},{ club:"it Roma", matches:72, goals:2, assists:2},{ club:"de Stuttgart", matches:71, goals:2, assists:1},{ club:"en Chelsea", matches:201, goals:12, assists:3},], Titles:"", WC:"2022, 2018"},
 {name:"Rodrygo", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:199, goals:49, assists:35},], Titles:"", WC:"2022"},
 {name:"Jude Bellingham", Country:"ENG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:29, goals:20, assists:8},{ club:"de Leverkusen", matches:132, goals:24, assists:24},], Titles:"2021EuroFinal", WC:"2022"},
