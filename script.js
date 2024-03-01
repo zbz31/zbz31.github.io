@@ -10521,7 +10521,7 @@ document.addEventListener("DOMContentLoaded", function() {
   button.addEventListener('click', handleClick);
 
 const coolText = document.createElement("p");
-coolText.innerHTML = "This website does not own any of the club, league, or event logos depicted within this site. All logos contained within this site are properties of their respective leagues, clubs, ownership groups, and/or organizations.<br><br>";
+coolText.innerHTML = "<br>This website does not own any of the club, league, or event logos depicted within this site. All logos contained within this site are properties of their respective leagues, clubs, ownership groups, and/or organizations.<br>";
 
  // Appen   e first button to the bodylement after the grid container
 document.getElementById('gridContainer').appendChild(coolText);
