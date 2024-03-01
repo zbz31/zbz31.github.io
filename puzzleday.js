@@ -10496,7 +10496,8 @@ var puzzleselection = [
 [{prow:["Played WC 2010","Barcelona","Real Madrid"], pcolumn: ["ESP","NED","WC01"]},],
 [{prow:["Real Madrid","CC","Milan"], pcolumn: ["Man Utd","ARG","ChampionsWin"]},],
 [{prow:["Played WC 1998","Arsenal","Inter"], pcolumn: ["NED","ARG","Ajax"]},],
-[{prow:["PO","ARG","CC"], pcolumn: ["Bayern","Valencia","Played WC 2002"]},],
+[{prow:["PO","ARG","Played WC 2002"], pcolumn: ["Bayern","Valencia","ChampionsWin"]},],
+
 ];
     
 
