@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple SPA</title>
+  <style>
+    /* CSS styles for hiding/showing pages */
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button id="button1">Page 1</button>
+  <button id="button2">Page 2</button>
+
+  <!-- Page 1 -->
+  <div id="page1" class="page active">
+    <h1>This is Page 1</h1>
+    <p>Welcome to Page 1 content</p>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page">
+    <h1>This is Page 2</h1>
+    <p>Welcome to Page 2 content</p>
+  </div>
+
+  <script>
+    // JavaScript to handle button clicks and show/hide pages
+    document.getElementById('button1').addEventListener('click', function() {
+      document.getElementById('page1').classList.add('active');
+      document.getElementById('page2').classList.remove('active');
+    });
+
+    document.getElementById('button2').addEventListener('click', function() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    });
+  </script>
+</body>
+</html>
