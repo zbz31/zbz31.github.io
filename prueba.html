@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid with Image</title>
@@ -8,32 +9,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Strait:wght@400;700&display=swap">
     <link rel="stylesheet" href="prueba2.css">
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="headline">
+      <a href="subprueba.html">
+        <!-- Add this line -->
         <span class="icon" id="congratsIcon">⚽</span>
-        <span class="headline-text">FUTDOKU</span>
+      </a> <!-- Add this line -->
+      <span class="headline-text">FUTDOKU</span>
     </header>
 
     <div class="grid-container" id="gridContainer">
 
-        <div id="modal" class="modal">
-            <header class="modal-header">
-                <h2 id="modal-headline">Modal Headline</h2>
-            </header>
-            <input type="text" id="textInput" placeholder="Search player...">
-            <ul id="nameList"></ul>
+      <div id="modal" class="modal">
+        <header class="modal-header">
+          <h2 id="modal-headline">Modal Headline</h2>
+        </header>
+        <input type="text" id="textInput" placeholder="Search player...">
+        <ul id="nameList"></ul>
 
-        </div>
+      </div>
 
-        <div id="modal2" class="modal">
-            <ul id="nameElement"></ul>
+      <div id="modal2" class="modal">
+        <ul id="nameElement"></ul>
 
-        </div>
+      </div>
 
     </div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/dist/canvas-confetti.min.js"></script>
-</body>
+  </body>
+
 </html>
