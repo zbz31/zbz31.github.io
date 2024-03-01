@@ -10481,6 +10481,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   } while (Math.min(...totality) < 5);
 
+
 var puzzleselection = [
     [
         { 
@@ -10491,10 +10492,10 @@ var puzzleselection = [
             prow: ["Played WC 1998", "Real Madrid", "Juventus"], 
             pcolumn: ["BRA", "FRA", "WC01"] 
         }],
-        [{prow:["BRA","URU","PO"], 
-        pcolumn: ["Real Madrid","Valencia","ChampionsWin"]
-        }],
+      
 [{prow:["Played WC 2010","Barcelona","Real Madrid"], pcolumn: ["ESP","NED","WC01"]},],
+[{prow:["Real Madrid","CC","Milan"], pcolumn: ["Man Utd","ARG","ChampionsWin"]},],
+[{prow:["Played WC 1998","Arsenal","Inter"], pcolumn: ["NED","ARG","Ajax"]},],
 
     
 ];
