@@ -1,3 +1,30 @@
+.headline {
+    background-color: #333; /* Background color of the headline bar */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding to create space around the text */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-weight: 700; /* Bold font weight */
+    position: fixed; /* Fix the header at the top of the page */
+    top: 0; /* Position at the top of the page */
+    left: 0; /* Align left */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+.headline .icon {
+    cursor: pointer;
+    margin-right: 10px; /* Add some spacing between the icon and the text */
+}
+
+.headline-text {
+    flex-grow: 1; /* Allow the text to take up remaining space */
+    text-align: center; /* Center the text horizontally */
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -55,8 +82,8 @@ body {
 
 .grid-cell2 {
   border: 1px solid black;
-  width: 85px;
-  height: 85px;
+  width: 95px;
+  height: 95px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,8 +97,8 @@ body {
 }
 
 .grid-cell2 img {
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 50%;
+  max-height: 50%;
   display: block;
   justify-content: center; /* horizontally center */
   align-items: center; /* vertically center */
