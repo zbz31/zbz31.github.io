@@ -10511,11 +10511,11 @@ var puzzleselection = [
 [{prow:["LaLigaWin","BRA","DL"], pcolumn: ["Deportivo","Milan","ChampionsWin"]},],
 [{prow:["Bayern","ARG","NED"], pcolumn: ["Inter","ChampionsWin","Real Madrid"]},],
 
-[{prow:["DF","CC","DL"], pcolumn: ["Malaga","Borussia","Porto"]},],
+
 [{prow:["ChampionsWin","Premier","DF"], pcolumn: ["Man Utd","Chelsea","ENG"]},],
 [{prow:["ChampionsWin","Premier","DL"], pcolumn: ["Man Utd","Bayern","NOR"]},],
 
-[{prow:["Played WC 2010","DL","Barcelona"], pcolumn: ["URU","GHA","LaLigaWin"]},],
+[{prow:["Played WC 2010","DL","Barcelona"], pcolumn: ["URU","GHA","WC02"]},],
 [{prow:["Villarreal","ChampionsWin","CC"], pcolumn: ["Arsenal","ARG","Played WC 2006"]},],
 
 
