@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Diego López", Country:"ESP", Position:"PO",Teams: [{ club:"es Real Madrid", matches:63, goals:0, assists:0},{ club:"es Villarreal", matches:215, goals:0, assists:0},{ club:"es Sevilla", matches:8, goals:0, assists:0},{ club:"es Espanyol", matches:207, goals:0, assists:0},{ club:"it Milan", matches:37, goals:0, assists:0},], Titles:"2014ChampionsWin", WC:""},
 {name:"Ángel Di María", Country:"ARG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:163, goals:30, assists:64},{ club:"it Juventus", matches:40, goals:8, assists:7},{ club:"fr ParisSG", matches:293, goals:91, assists:110},{ club:"pt Benfica", matches:129, goals:22, assists:30},{ club:"en Man Utd", matches:32, goals:4, assists:11},], Titles:"2022WC01, 2014WC02,2020ChampionsFinal, 2014ChampionsWin", WC:"2022, 2018, 2014, 2010"},
 {name:"Xabi Alonso", Country:"ESP", Position:"CC",Teams: [{ club:"es Real Madrid", matches:205, goals:4, assists:23},{ club:"de Bayern", matches:117, goals:9, assists:12},], Titles:"2010WC01,2012EuroFinal, 2008EuroWin,2014ChampionsWin, 2007ChampionsFinal, 2005ChampionsWin", WC:"2014, 2010, 2006"},
-{name:"Mesut Özil", Country:"GER", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:136, goals:23, assists:60},{ club:"en Arsenal", matches:247, goals:43, assists:70},], Titles:"", WC:"2018, 2014, 2010"},
+{name:"Mesut Özil", Country:"GER", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:136, goals:23, assists:60},{ club:"en Arsenal", matches:247, goals:43, assists:70},], Titles:"2014WC01", WC:"2018, 2014, 2010"},
 {name:"Willian José", Country:"BRA", Position:"DL",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},{ club:"es Betis", matches:114, goals:27, assists:9},], Titles:"", WC:""},
 {name:"Gonzalo Higuaín", Country:"ARG", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:238, goals:115, assists:38},{ club:"it Milan", matches:22, goals:8, assists:2},{ club:"it Juventus", matches:149, goals:66, assists:17},{ club:"it Napoli", matches:138, goals:86, assists:25},{ club:"en Chelsea", matches:18, goals:5, assists:0},], Titles:"2014WC02,2017ChampionsFinal", WC:"2018, 2014, 2010"},
 {name:"Michael Essien", Country:"GHA", Position:"DF,CC",Teams: [{ club:"es Real Madrid", matches:28, goals:2, assists:1},{ club:"it Milan", matches:22, goals:0, assists:0},{ club:"fr Lyon", matches:89, goals:12, assists:2},{ club:"en Chelsea", matches:217, goals:23, assists:16},], Titles:"2012ChampionsWin, 2008ChampionsFinal,2010Premier, 2006Premier", WC:"2014, 2006"},
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Kaká", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:109, goals:28, assists:26},{ club:"it Milan", matches:288, goals:102, assists:67},], Titles:"2022WC01,2007ChampionsWin, 2005ChampionsFinal", WC:"2010, 2006, 2002"},
 {name:"Ricardo Carvalho", Country:"POR", Position:"DF",Teams: [{ club:"es Real Madrid", matches:62, goals:3, assists:2},{ club:"fr Monaco", matches:106, goals:2, assists:3},{ club:"pt Porto", matches:100, goals:4, assists:2},{ club:"en Chelsea", matches:182, goals:9, assists:6},], Titles:"2016EuroWin, 2004EuroFinal,2008ChampionsFinal, 2004ChampionsWin,2010Premier, 2006Premier, 2005Premier", WC:"2010, 2006"},
 {name:"Antonio Adán", Country:"ESP", Position:"PO",Teams: [{ club:"es Real Madrid", matches:11, goals:0, assists:0},{ club:"es Betis", matches:165, goals:0, assists:2},{ club:"es Atletico", matches:7, goals:0, assists:0},{ club:"pt Sporting", matches:141, goals:0, assists:2},], Titles:"", WC:""},
-{name:"Lassana Diarra", Country:"FRA", Position:"CC",Teams: [{ club:"es Real Madrid", matches:109, goals:1, assists:5},{ club:"fr ParisSG", matches:19, goals:0, assists:1},{ club:"fr Marseille", matches:44, goals:1, assists:1},{ club:"en Arsenal", matches:10, goals:0, assists:0},{ club:"en Chelsea", matches:20, goals:0, assists:1},], Titles:"", WC:""},
+{name:"Lassana Diarra", Country:"FRA", Position:"CC",Teams: [{ club:"es Real Madrid", matches:109, goals:1, assists:5},{ club:"fr ParisSG", matches:19, goals:0, assists:1},{ club:"fr Marseille", matches:44, goals:1, assists:1},{ club:"en Arsenal", matches:10, goals:0, assists:0},{ club:"en Chelsea", matches:20, goals:0, assists:1},], Titles:"2006Premier", WC:""},
 {name:"Jesús", Country:"ESP", Position:"PO",Teams: [{ club:"es Real Madrid", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"José Rodríguez", Country:"ESP", Position:"CC",Teams: [{ club:"es Real Madrid", matches:2, goals:0, assists:0},{ club:"es Malaga", matches:6, goals:0, assists:0},{ club:"es Deportivo", matches:27, goals:2, assists:1},], Titles:"", WC:""},
 {name:"Fabinho", Country:"BRA", Position:"DF,CC",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:1},{ club:"fr Monaco", matches:211, goals:26, assists:11},], Titles:"2022ChampionsWin, 2019ChampionsWin,2020Premier", WC:"2022"},
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Juanfran", Country:"ESP", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},{ club:"es Malaga", matches:16, goals:0, assists:0},{ club:"es Betis", matches:44, goals:1, assists:3},{ club:"es Getafe", matches:2, goals:0, assists:0},{ club:"es Deportivo", matches:143, goals:2, assists:11},], Titles:"", WC:"2014, 2002"},
 {name:"Marcos Alonso", Country:"ESP", Position:"DF,CC,DL",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},{ club:"es Barcelona", matches:44, goals:3, assists:0},{ club:"en Chelsea", matches:211, goals:29, assists:19},], Titles:"2021ChampionsWin,2017Premier", WC:""},
 {name:"Pedro Mosquera", Country:"ESP", Position:"CC",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},{ club:"es Getafe", matches:42, goals:0, assists:1},{ club:"es Deportivo", matches:109, goals:3, assists:5},], Titles:"", WC:""},
-{name:"Fabio Cannavaro", Country:"ITA", Position:"DF",Teams: [{ club:"es Real Madrid", matches:113, goals:0, assists:1},{ club:"it Inter", matches:70, goals:3, assists:3},{ club:"it Juventus", matches:124, goals:7, assists:1},], Titles:"", WC:"2010, 2006, 2002, 1998"},
+{name:"Fabio Cannavaro", Country:"ITA", Position:"DF",Teams: [{ club:"es Real Madrid", matches:113, goals:0, assists:1},{ club:"it Inter", matches:70, goals:3, assists:3},{ club:"it Juventus", matches:124, goals:7, assists:1},], Titles:"2006WC01,2000EuroFinal", WC:"2010, 2006, 2002, 1998"},
 {name:"Gabriel Heinze", Country:"ARG", Position:"DF",Teams: [{ club:"es Real Madrid", matches:55, goals:3, assists:1},{ club:"it Roma", matches:30, goals:0, assists:0},{ club:"fr ParisSG", matches:109, goals:4, assists:7},{ club:"fr Marseille", matches:73, goals:10, assists:2},{ club:"en Man Utd", matches:68, goals:1, assists:2},], Titles:"2007Premier", WC:"2010, 2006"},
 {name:"Arjen Robben", Country:"NED", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:61, goals:12, assists:9},{ club:"nl PSV", matches:68, goals:20, assists:19},{ club:"de Bayern", matches:287, goals:127, assists:69},{ club:"en Chelsea", matches:86, goals:17, assists:18},], Titles:"", WC:"2014, 2010, 2006"},
 {name:"Wesley Sneijder", Country:"NED", Position:"CC",Teams: [{ club:"es Real Madrid", matches:61, goals:11, assists:9},{ club:"it Inter", matches:101, goals:19, assists:24},{ club:"nl Ajax", matches:151, goals:46, assists:40},], Titles:"2010WC02,2010ChampionsWin", WC:"2014, 2010, 2006"},
@@ -167,8 +167,8 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Jordi Codina", Country:"ESP", Position:"PO",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},{ club:"es Getafe", matches:72, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Emerson", Country:"BRA", Position:"CC",Teams: [{ club:"es Real Madrid", matches:34, goals:1, assists:4},{ club:"it Milan", matches:35, goals:0, assists:0},{ club:"it Roma", matches:136, goals:18, assists:10},{ club:"it Juventus", matches:85, goals:5, assists:5},{ club:"de Leverkusen", matches:100, goals:15, assists:10},], Titles:"1998WC02", WC:"2006, 1998"},
 {name:"Roberto Carlos", Country:"BRA", Position:"DF",Teams: [{ club:"es Real Madrid", matches:440, goals:59, assists:62},], Titles:"2022WC01, 1998WC02,2002ChampionsWin, 2000ChampionsWin, 1998ChampionsWin", WC:"2006, 2002, 1998"},
-{name:"Iván Helguera", Country:"ESP", Position:"DF,CC",Teams: [{ club:"es Real Madrid", matches:307, goals:34, assists:11},{ club:"es Valencia", matches:34, goals:1, assists:0},{ club:"es Espanyol", matches:37, goals:2, assists:0},{ club:"it Roma", matches:9, goals:0, assists:0},], Titles:"", WC:"2002"},
-{name:"David Beckham", Country:"ENG", Position:"CC",Teams: [{ club:"es Real Madrid", matches:142, goals:15, assists:41},{ club:"it Milan", matches:33, goals:2, assists:6},{ club:"fr ParisSG", matches:12, goals:0, assists:2},{ club:"en Man Utd", matches:258, goals:58, assists:84},], Titles:"", WC:"2006, 2002, 1998"},
+{name:"Iván Helguera", Country:"ESP", Position:"DF,CC",Teams: [{ club:"es Real Madrid", matches:307, goals:34, assists:11},{ club:"es Valencia", matches:34, goals:1, assists:0},{ club:"es Espanyol", matches:37, goals:2, assists:0},{ club:"it Roma", matches:9, goals:0, assists:0},], Titles:"2002ChampionsWin, 2000ChampionsWin", WC:"2002"},
+{name:"David Beckham", Country:"ENG", Position:"CC",Teams: [{ club:"es Real Madrid", matches:142, goals:15, assists:41},{ club:"it Milan", matches:33, goals:2, assists:6},{ club:"fr ParisSG", matches:12, goals:0, assists:2},{ club:"en Man Utd", matches:258, goals:58, assists:84},], Titles:"1999ChampionsWin,2003Premier, 2001Premier, 2000Premier, 1999Premier", WC:"2006, 2002, 1998"},
 {name:"José Antonio Reyes", Country:"ESP", Position:"CC,DL",Teams: [{ club:"es Real Madrid", matches:34, goals:7, assists:2},{ club:"es Sevilla", matches:233, goals:38, assists:38},{ club:"es Espanyol", matches:23, goals:4, assists:4},{ club:"es Atletico", matches:132, goals:9, assists:22},{ club:"pt Benfica", matches:29, goals:5, assists:0},{ club:"en Arsenal", matches:89, goals:17, assists:25},], Titles:"2006ChampionsFinal,2004Premier", WC:"2006"},
 {name:"Álvaro Mejía", Country:"ESP", Position:"DF",Teams: [{ club:"es Real Madrid", matches:45, goals:1, assists:0},], Titles:"", WC:""},
 {name:"Antonio Cassano", Country:"ITA", Position:"DL",Teams: [{ club:"es Real Madrid", matches:24, goals:2, assists:3},{ club:"it Inter", matches:36, goals:8, assists:11},{ club:"it Milan", matches:36, goals:8, assists:15},{ club:"it Roma", matches:145, goals:49, assists:23},], Titles:"2012EuroWin", WC:"2014"},
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Fernando Morientes", Country:"ESP", Position:"DL",Teams: [{ club:"es Real Madrid", matches:240, goals:89, assists:14},{ club:"es Valencia", matches:87, goals:29, assists:3},{ club:"fr Monaco", matches:40, goals:19, assists:6},{ club:"fr Marseille", matches:17, goals:1, assists:0},], Titles:"2004ChampionsFinal, 2002ChampionsWin, 2000ChampionsWin, 1998ChampionsWin", WC:"2002, 1998"},
 {name:"Borja Fernández", Country:"ESP", Position:"CC",Teams: [{ club:"es Real Madrid", matches:27, goals:0, assists:0},{ club:"es Mallorca", matches:15, goals:0, assists:0},{ club:"es Getafe", matches:62, goals:1, assists:2},{ club:"es Deportivo", matches:22, goals:2, assists:0},], Titles:"", WC:""},
 {name:"César Sánchez", Country:"ESP", Position:"PO",Teams: [{ club:"es Real Madrid", matches:35, goals:0, assists:0},{ club:"es Villarreal", matches:2, goals:0, assists:0},{ club:"es Valencia", matches:76, goals:0, assists:0},], Titles:"2002ChampionsWin", WC:""},
-{name:"Javier Portillo", Country:"ESP", Position:"DL",Teams: [{ club:"es Real Madrid", matches:43, goals:8, assists:0},], Titles:"", WC:""},
+{name:"Javier Portillo", Country:"ESP", Position:"DL",Teams: [{ club:"es Real Madrid", matches:43, goals:8, assists:0},], Titles:"2002ChampionsWin", WC:""},
 {name:"Miguel Palencia", Country:"ESP", Position:"DF",Teams: [{ club:"es Real Madrid", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Juanfran", Country:"ESP", Position:"DF,CC",Teams: [{ club:"es Real Madrid", matches:6, goals:0, assists:1},{ club:"es Espanyol", matches:33, goals:1, assists:3},{ club:"es Atletico", matches:330, goals:6, assists:28},], Titles:"2016ChampionsFinal, 2014ChampionsFinal", WC:"2014, 2002"},
 {name:"Jotha", Country:"ESP", Position:"CC",Teams: [{ club:"es Real Madrid", matches:1, goals:0, assists:0},], Titles:"", WC:""},
@@ -1795,7 +1795,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Álvaro Jurado", Country:"ESP", Position:"CC",Teams: [{ club:"es Sevilla", matches:3, goals:0, assists:0},{ club:"es Getafe", matches:18, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Mario Cotelo", Country:"ESP", Position:"CC",Teams: [{ club:"es Sevilla", matches:5, goals:0, assists:0},{ club:"es Getafe", matches:173, goals:6, assists:15},], Titles:"", WC:""},
 {name:"Frode Olsen", Country:"NOR", Position:"PO",Teams: [{ club:"es Sevilla", matches:19, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Vasilios Tsiartas", Country:"GRE", Position:"CC",Teams: [{ club:"es Sevilla", matches:33, goals:10, assists:9},], Titles:"", WC:""},
+{name:"Vasilios Tsiartas", Country:"GRE", Position:"CC",Teams: [{ club:"es Sevilla", matches:33, goals:10, assists:9},], Titles:"2004EuroWin", WC:""},
 {name:"Nando", Country:"ESP", Position:"DF",Teams: [{ club:"es Sevilla", matches:30, goals:0, assists:0},{ club:"es Deportivo", matches:9, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Juan Carlos", Country:"ESP", Position:"DL",Teams: [{ club:"es Sevilla", matches:34, goals:12, assists:3},{ club:"es Getafe", matches:23, goals:4, assists:1},], Titles:"", WC:""},
 {name:"Mirsad Hibić", Country:"BIH", Position:"DF",Teams: [{ club:"es Sevilla", matches:29, goals:0, assists:0},{ club:"es Atletico", matches:61, goals:3, assists:1},], Titles:"", WC:""},
@@ -1905,7 +1905,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Neymar", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Barcelona", matches:180, goals:103, assists:56},{ club:"fr ParisSG", matches:173, goals:118, assists:69},], Titles:"2020ChampionsFinal, 2015ChampionsWin", WC:"2022, 2018, 2014"},
 {name:"Arda Turan", Country:"TUR", Position:"CC,DL",Teams: [{ club:"es Barcelona", matches:55, goals:15, assists:9},{ club:"es Atletico", matches:163, goals:20, assists:25},], Titles:"2014ChampionsFinal", WC:""},
 {name:"Jérémy Mathieu", Country:"FRA", Position:"DF",Teams: [{ club:"es Barcelona", matches:90, goals:4, assists:3},{ club:"es Valencia", matches:162, goals:7, assists:8},{ club:"pt Sporting", matches:87, goals:7, assists:2},], Titles:"2015ChampionsWin", WC:""},
-{name:"Claudio Bravo", Country:"CHI", Position:"PO",Teams: [{ club:"es Barcelona", matches:73, goals:0, assists:0},{ club:"es Betis", matches:74, goals:0, assists:0},{ club:"en Man City", matches:61, goals:0, assists:1},], Titles:"", WC:"2014, 2010"},
+{name:"Claudio Bravo", Country:"CHI", Position:"PO",Teams: [{ club:"es Barcelona", matches:73, goals:0, assists:0},{ club:"es Betis", matches:74, goals:0, assists:0},{ club:"en Man City", matches:61, goals:0, assists:1},], Titles:"2018Premier", WC:"2014, 2010"},
 {name:"Marlon", Country:"BRA", Position:"DF,CC",Teams: [{ club:"es Barcelona", matches:3, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Borja López", Country:"ESP", Position:"DF",Teams: [{ club:"es Barcelona", matches:1, goals:0, assists:0},{ club:"fr Monaco", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Àlex Carbonell", Country:"ESP", Position:"CC",Teams: [{ club:"es Barcelona", matches:1, goals:0, assists:0},], Titles:"", WC:""},
@@ -1952,7 +1952,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Oier Olazábal", Country:"ESP", Position:"PO",Teams: [{ club:"es Barcelona", matches:1, goals:0, assists:0},{ club:"es Espanyol", matches:9, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Albert Jorquera", Country:"ESP", Position:"PO",Teams: [{ club:"es Barcelona", matches:10, goals:0, assists:0},], Titles:"2009ChampionsWin, 2006ChampionsWin", WC:""},
 {name:"Abraham González", Country:"ESP", Position:"CC",Teams: [{ club:"es Barcelona", matches:1, goals:0, assists:0},{ club:"es Espanyol", matches:70, goals:2, assists:3},], Titles:"", WC:""},
-{name:"Gianluca Zambrotta", Country:"ITA", Position:"DF",Teams: [{ club:"es Barcelona", matches:71, goals:3, assists:3},{ club:"it Milan", matches:104, goals:2, assists:1},{ club:"it Juventus", matches:268, goals:6, assists:29},], Titles:"", WC:"2010, 2006, 2002"},
+{name:"Gianluca Zambrotta", Country:"ITA", Position:"DF",Teams: [{ club:"es Barcelona", matches:71, goals:3, assists:3},{ club:"it Milan", matches:104, goals:2, assists:1},{ club:"it Juventus", matches:268, goals:6, assists:29},], Titles:"2006WC01,2000EuroFinal,2003ChampionsFinal", WC:"2010, 2006, 2002"},
 {name:"Lilian Thuram", Country:"FRA", Position:"DF",Teams: [{ club:"es Barcelona", matches:51, goals:0, assists:0},{ club:"it Juventus", matches:189, goals:1, assists:8},], Titles:"2006WC02, 1998WC01,2000EuroWin,2003ChampionsFinal", WC:"2006, 2002, 1998"},
 {name:"Ronaldinho", Country:"BRA", Position:"CC,DL",Teams: [{ club:"es Barcelona", matches:187, goals:88, assists:46},{ club:"it Milan", matches:94, goals:26, assists:23},{ club:"fr ParisSG", matches:65, goals:20, assists:15},], Titles:"2022WC01,2006ChampionsWin", WC:"2006, 2002"},
 {name:"Deco", Country:"POR", Position:"CC",Teams: [{ club:"es Barcelona", matches:145, goals:19, assists:37},{ club:"pt Porto", matches:176, goals:38, assists:32},{ club:"en Chelsea", matches:51, goals:5, assists:5},], Titles:"2004EuroFinal,2006ChampionsWin, 2004ChampionsWin,2010Premier", WC:"2010, 2006"},
@@ -2185,7 +2185,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Paolo Castellini", Country:"ITA", Position:"DF",Teams: [{ club:"es Betis", matches:14, goals:0, assists:0},{ club:"it Roma", matches:11, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Juanlu", Country:"ESP", Position:"CC",Teams: [{ club:"es Betis", matches:3, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Juan José Cañas", Country:"ESP", Position:"CC",Teams: [{ club:"es Betis", matches:133, goals:4, assists:0},], Titles:"", WC:""},
-{name:"Denílson", Country:"BRA", Position:"CC",Teams: [{ club:"es Betis", matches:174, goals:13, assists:23},], Titles:"", WC:"2002, 1998"},
+{name:"Denílson", Country:"BRA", Position:"CC",Teams: [{ club:"es Betis", matches:174, goals:13, assists:23},], Titles:"2022WC01, 1998WC02", WC:"2002, 1998"},
 {name:"Washington Tais", Country:"URU", Position:"DF",Teams: [{ club:"es Betis", matches:42, goals:1, assists:2},], Titles:"", WC:""},
 {name:"Benjamín Zarandona", Country:"EQG", Position:"CC",Teams: [{ club:"es Betis", matches:150, goals:9, assists:2},], Titles:"", WC:""},
 {name:"Pablo Niño", Country:"ESP", Position:"CC",Teams: [{ club:"es Betis", matches:6, goals:0, assists:0},], Titles:"", WC:""},
@@ -2931,7 +2931,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Nikola Žigić", Country:"SRB", Position:"DL",Teams: [{ club:"es Valencia", matches:41, goals:8, assists:1},], Titles:"", WC:"2010, 2006"},
 {name:"Joel Johnson", Country:"LBR", Position:"DF,CC",Teams: [{ club:"es Valencia", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Lillo", Country:"ESP", Position:"DF",Teams: [{ club:"es Valencia", matches:1, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Emiliano Moretti", Country:"ITA", Position:"DF",Teams: [{ club:"es Valencia", matches:154, goals:4, assists:3},{ club:"it Juventus", matches:3, goals:0, assists:0},], Titles:"", WC:""},
+{name:"Emiliano Moretti", Country:"ITA", Position:"DF",Teams: [{ club:"es Valencia", matches:154, goals:4, assists:3},{ club:"it Juventus", matches:3, goals:0, assists:0},], Titles:"2003ChampionsFinal", WC:""},
 {name:"Renan Brito Soares", Country:"BRA", Position:"PO",Teams: [{ club:"es Valencia", matches:22, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Edu Gaspar", Country:"BRA", Position:"CC",Teams: [{ club:"es Valencia", matches:58, goals:1, assists:3},{ club:"en Arsenal", matches:100, goals:11, assists:4},], Titles:"2004Premier, 2002Premier", WC:""},
 {name:"Miguel Ángel Angulo", Country:"ESP", Position:"CC,DL",Teams: [{ club:"es Valencia", matches:386, goals:54, assists:25},{ club:"pt Sporting", matches:7, goals:0, assists:0},], Titles:"2001ChampionsFinal, 2000ChampionsFinal", WC:""},
@@ -2963,7 +2963,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"David Rangel Pastor", Country:"ESP", Position:"PO",Teams: [{ club:"es Valencia", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"John Carew", Country:"NOR", Position:"DL",Teams: [{ club:"es Valencia", matches:122, goals:28, assists:13},{ club:"it Roma", matches:25, goals:7, assists:1},{ club:"fr Lyon", matches:48, goals:14, assists:2},], Titles:"2001ChampionsFinal", WC:""},
 {name:"Anthony Réveillère", Country:"FRA", Position:"DF",Teams: [{ club:"es Valencia", matches:24, goals:1, assists:1},{ club:"it Napoli", matches:15, goals:0, assists:0},{ club:"fr Lyon", matches:360, goals:5, assists:18},], Titles:"", WC:""},
-{name:"Kily González", Country:"ARG", Position:"CC,DL",Teams: [{ club:"es Valencia", matches:133, goals:14, assists:17},{ club:"it Inter", matches:61, goals:0, assists:5},], Titles:"", WC:"2002"},
+{name:"Kily González", Country:"ARG", Position:"CC,DL",Teams: [{ club:"es Valencia", matches:133, goals:14, assists:17},{ club:"it Inter", matches:61, goals:0, assists:5},], Titles:"2001ChampionsFinal, 2000ChampionsFinal", WC:"2002"},
 {name:"Miroslav Đukić", Country:"SRB", Position:"DF",Teams: [{ club:"es Valencia", matches:196, goals:6, assists:0},], Titles:"2001ChampionsFinal, 2000ChampionsFinal", WC:""},
 {name:"Borja Criado", Country:"ESP", Position:"DL",Teams: [{ club:"es Valencia", matches:3, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Ximo Enguix", Country:"ESP", Position:"CC",Teams: [{ club:"es Valencia", matches:2, goals:0, assists:0},], Titles:"", WC:""},
@@ -3187,7 +3187,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Jan Oblak", Country:"SVN", Position:"PO",Teams: [{ club:"es Atletico", matches:429, goals:0, assists:0},{ club:"pt Benfica", matches:20, goals:0, assists:0},], Titles:"2016ChampionsFinal", WC:""},
 {name:"Axel Witsel", Country:"BEL", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:79, goals:1, assists:1},{ club:"pt Benfica", matches:42, goals:1, assists:4},{ club:"de Leverkusen", matches:145, goals:13, assists:6},], Titles:"", WC:"2022, 2018, 2014"},
 {name:"Koke", Country:"ESP", Position:"CC",Teams: [{ club:"es Atletico", matches:596, goals:47, assists:99},], Titles:"2016ChampionsFinal, 2014ChampionsFinal", WC:"2022, 2018, 2014"},
-{name:"Nahuel Molina", Country:"ARG", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:77, goals:6, assists:8},], Titles:"", WC:"2022"},
+{name:"Nahuel Molina", Country:"ARG", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:77, goals:6, assists:8},], Titles:"2022WC01", WC:"2022"},
 {name:"Saúl Ñíguez", Country:"ESP", Position:"DF,CC,DL",Teams: [{ club:"es Atletico", matches:409, goals:47, assists:21},{ club:"en Chelsea", matches:22, goals:1, assists:0},], Titles:"2016ChampionsFinal", WC:""},
 {name:"Stefan Savić", Country:"MNE", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:285, goals:3, assists:3},{ club:"en Man City", matches:14, goals:1, assists:0},], Titles:"2016ChampionsFinal,2012Premier", WC:""},
 {name:"José María Giménez", Country:"URU", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:309, goals:11, assists:11},], Titles:"2016ChampionsFinal", WC:"2022, 2018, 2014"},
@@ -3210,7 +3210,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Antonio Gomis", Country:"ESP", Position:"PO",Teams: [{ club:"es Atletico", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Renan Lodi", Country:"BRA", Position:"DF,DL",Teams: [{ club:"es Atletico", matches:118, goals:6, assists:9},{ club:"fr Marseille", matches:21, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Šime Vrsaljko", Country:"CRO", Position:"DF,CC",Teams: [{ club:"es Atletico", matches:100, goals:3, assists:9},{ club:"it Inter", matches:13, goals:0, assists:2},{ club:"gr Olympiakos", matches:7, goals:0, assists:0},], Titles:"2018WC02", WC:"2018, 2014"},
-{name:"Kieran Trippier", Country:"ENG", Position:"DF,DL",Teams: [{ club:"es Atletico", matches:86, goals:0, assists:11},{ club:"en Tottenham", matches:114, goals:2, assists:22},], Titles:"", WC:"2022, 2018"},
+{name:"Kieran Trippier", Country:"ENG", Position:"DF,DL",Teams: [{ club:"es Atletico", matches:86, goals:0, assists:11},{ club:"en Tottenham", matches:114, goals:2, assists:22},], Titles:"2021EuroFinal,2019ChampionsFinal", WC:"2022, 2018"},
 {name:"Héctor Herrera", Country:"MEX", Position:"CC",Teams: [{ club:"es Atletico", matches:78, goals:1, assists:4},{ club:"pt Porto", matches:208, goals:32, assists:21},], Titles:"", WC:"2022, 2018, 2014"},
 {name:"Javier Serrano", Country:"ESP", Position:"DL",Teams: [{ club:"es Atletico", matches:7, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Lucas Torreira", Country:"URU", Position:"CC",Teams: [{ club:"es Atletico", matches:26, goals:1, assists:1},{ club:"en Arsenal", matches:89, goals:4, assists:5},], Titles:"", WC:"2018"},
@@ -3287,7 +3287,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Víctor Bravo", Country:"ESP", Position:"CC",Teams: [{ club:"es Atletico", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Rufino", Country:"ESP", Position:"DL",Teams: [{ club:"es Atletico", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Pollo", Country:"ESP", Position:"CC",Teams: [{ club:"es Atletico", matches:1, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Mateja Kežman", Country:"SRB", Position:"DL",Teams: [{ club:"es Atletico", matches:30, goals:8, assists:2},{ club:"fr ParisSG", matches:44, goals:8, assists:2},{ club:"nl PSV", matches:162, goals:117, assists:17},{ club:"en Chelsea", matches:34, goals:4, assists:2},], Titles:"", WC:"2006"},
+{name:"Mateja Kežman", Country:"SRB", Position:"DL",Teams: [{ club:"es Atletico", matches:30, goals:8, assists:2},{ club:"fr ParisSG", matches:44, goals:8, assists:2},{ club:"nl PSV", matches:162, goals:117, assists:17},{ club:"en Chelsea", matches:34, goals:4, assists:2},], Titles:"2005Premier", WC:"2006"},
 {name:"José Zahínos", Country:"ESP", Position:"CC",Teams: [{ club:"es Atletico", matches:18, goals:1, assists:0},], Titles:"", WC:""},
 {name:"José García Calvo", Country:"ESP", Position:"DF",Teams: [{ club:"es Atletico", matches:105, goals:4, assists:1},], Titles:"", WC:""},
 {name:"Pablo Sicilia", Country:"ESP", Position:"DF",Teams: [{ club:"es Atletico", matches:1, goals:0, assists:0},], Titles:"", WC:""},
@@ -3661,7 +3661,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Mattia De Sciglio", Country:"ITA", Position:"DF,CC",Teams: [{ club:"it Milan", matches:102, goals:0, assists:4},{ club:"it Juventus", matches:116, goals:2, assists:4},{ club:"fr Lyon", matches:33, goals:0, assists:3},], Titles:"", WC:"2014"},
 {name:"Keisuke Honda", Country:"JPN", Position:"CC,DL",Teams: [{ club:"it Milan", matches:81, goals:9, assists:12},], Titles:"", WC:"2018, 2014, 2010"},
 {name:"Juraj Kucka", Country:"SVK", Position:"CC",Teams: [{ club:"it Milan", matches:34, goals:1, assists:4},], Titles:"", WC:"2010"},
-{name:"Alex", Country:"BRA", Position:"DF",Teams: [{ club:"it Milan", matches:48, goals:4, assists:1},{ club:"fr ParisSG", matches:86, goals:8, assists:1},{ club:"nl PSV", matches:110, goals:15, assists:5},{ club:"en Chelsea", matches:110, goals:9, assists:2},], Titles:"", WC:""},
+{name:"Alex", Country:"BRA", Position:"DF",Teams: [{ club:"it Milan", matches:48, goals:4, assists:1},{ club:"fr ParisSG", matches:86, goals:8, assists:1},{ club:"nl PSV", matches:110, goals:15, assists:5},{ club:"en Chelsea", matches:110, goals:9, assists:2},], Titles:"2012ChampionsWin, 2008ChampionsFinal,2010Premier", WC:""},
 {name:"Luiz Adriano", Country:"BRA", Position:"DL",Teams: [{ club:"it Milan", matches:29, goals:6, assists:0},], Titles:"", WC:""},
 {name:"M'Baye Niang", Country:"SEN", Position:"CC,DL",Teams: [{ club:"it Milan", matches:56, goals:8, assists:6},], Titles:"", WC:"2018"},
 {name:"Philippe Mexès", Country:"FRA", Position:"DF",Teams: [{ club:"it Milan", matches:105, goals:7, assists:1},{ club:"it Roma", matches:226, goals:12, assists:5},], Titles:"", WC:""},
@@ -5066,7 +5066,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Bouna Sarr", Country:"SEN", Position:"DF,CC,DL",Teams: [{ club:"fr Marseille", matches:179, goals:8, assists:10},{ club:"de Bayern", matches:33, goals:1, assists:3},], Titles:"", WC:""},
 {name:"Christopher Rocchia", Country:"FRA", Position:"DF,DL",Teams: [{ club:"fr Marseille", matches:5, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Cheick Souaré", Country:"FRA", Position:"CC",Teams: [{ club:"fr Marseille", matches:1, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Luiz Gustavo", Country:"BRA", Position:"DF,CC",Teams: [{ club:"fr Marseille", matches:94, goals:10, assists:1},{ club:"de Bayern", matches:86, goals:6, assists:1},{ club:"de Wolfsburg", matches:136, goals:12, assists:4},], Titles:"", WC:"2014"},
+{name:"Luiz Gustavo", Country:"BRA", Position:"DF,CC",Teams: [{ club:"fr Marseille", matches:94, goals:10, assists:1},{ club:"de Bayern", matches:86, goals:6, assists:1},{ club:"de Wolfsburg", matches:136, goals:12, assists:4},], Titles:"2013ChampionsWin, 2012ChampionsFinal", WC:"2014"},
 {name:"Isaac Lihadji", Country:"FRA", Position:"CC",Teams: [{ club:"fr Marseille", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Florian Chabrolle", Country:"FRA", Position:"CC",Teams: [{ club:"fr Marseille", matches:3, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Kostas Mitroglou", Country:"GRE", Position:"CC,DL",Teams: [{ club:"fr Marseille", matches:50, goals:16, assists:1},{ club:"pt Benfica", matches:74, goals:39, assists:7},{ club:"nl PSV", matches:15, goals:1, assists:0},{ club:"gr Olympiakos", matches:146, goals:70, assists:9},], Titles:"", WC:"2014"},
@@ -6503,7 +6503,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Harry Kane", Country:"ENG", Position:"DL",Teams: [{ club:"de Bayern", matches:31, goals:31, assists:8},{ club:"en Leicester", matches:13, goals:2, assists:0},{ club:"en Tottenham", matches:424, goals:270, assists:57},], Titles:"2021EuroFinal,2019ChampionsFinal", WC:"2022, 2018"},
 {name:"Leroy Sané", Country:"GER", Position:"DF,CC,DL",Teams: [{ club:"de Bayern", matches:164, goals:47, assists:45},{ club:"en Man City", matches:135, goals:39, assists:41},], Titles:"2019Premier, 2018Premier", WC:"2022"},
 {name:"Alphonso Davies", Country:"CAN", Position:"DF,DL",Teams: [{ club:"de Bayern", matches:178, goals:9, assists:28},], Titles:"2020ChampionsWin", WC:"2022"},
-{name:"Joshua Kimmich", Country:"GER", Position:"DF,CC",Teams: [{ club:"de Bayern", matches:372, goals:41, assists:92},], Titles:"", WC:"2022, 2018"},
+{name:"Joshua Kimmich", Country:"GER", Position:"DF,CC",Teams: [{ club:"de Bayern", matches:372, goals:41, assists:92},], Titles:"2020ChampionsWin", WC:"2022, 2018"},
 {name:"Jamal Musiala", Country:"GER", Position:"CC,DL",Teams: [{ club:"de Bayern", matches:150, goals:39, assists:24},], Titles:"", WC:"2022"},
 {name:"Dayot Upamecano", Country:"FRA", Position:"DF",Teams: [{ club:"de Bayern", matches:106, goals:3, assists:7},], Titles:"2022WC02", WC:"2022"},
 {name:"Leon Goretzka", Country:"GER", Position:"DF,CC",Teams: [{ club:"de Bayern", matches:206, goals:36, assists:34},], Titles:"2020ChampionsWin", WC:"2022, 2018"},
@@ -7028,7 +7028,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Ulf Kirsten", Country:"GER", Position:"DL",Teams: [{ club:"de Leverkusen", matches:181, goals:94, assists:12},], Titles:"2002ChampionsFinal", WC:"1998"},
 {name:"Hüzeyfe Doğan", Country:"TUR", Position:"CC",Teams: [{ club:"de Leverkusen", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Anel Džaka", Country:"GER", Position:"CC",Teams: [{ club:"de Leverkusen", matches:3, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Markus Daun", Country:"GER", Position:"DL",Teams: [{ club:"de Leverkusen", matches:5, goals:0, assists:0},], Titles:"", WC:""},
+{name:"Markus Daun", Country:"GER", Position:"DL",Teams: [{ club:"de Leverkusen", matches:5, goals:0, assists:0},], Titles:"2002ChampionsFinal", WC:""},
 {name:"Thorsten Wittek", Country:"GER", Position:"CC",Teams: [{ club:"de Leverkusen", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Paulo Rink", Country:"GER", Position:"CC,DL",Teams: [{ club:"de Leverkusen", matches:105, goals:31, assists:9},], Titles:"", WC:""},
 {name:"Pascal Zuberbühler", Country:"SUI", Position:"PO",Teams: [{ club:"de Leverkusen", matches:18, goals:0, assists:0},], Titles:"", WC:"2006"},
@@ -7777,7 +7777,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Michael Golding", Country:"ENG", Position:"CC",Teams: [{ club:"en Chelsea", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Mason Mount", Country:"ENG", Position:"CC,DL",Teams: [{ club:"en Chelsea", matches:193, goals:33, assists:33},{ club:"en Man Utd", matches:12, goals:0, assists:1},], Titles:"2021EuroFinal,2021ChampionsWin", WC:"2022"},
 {name:"Wesley Fofana", Country:"FRA", Position:"DF",Teams: [{ club:"en Chelsea", matches:20, goals:2, assists:0},{ club:"en Leicester", matches:52, goals:1, assists:0},], Titles:"", WC:""},
-{name:"Edouard Mendy", Country:"SEN", Position:"PO",Teams: [{ club:"en Chelsea", matches:104, goals:0, assists:0},], Titles:"", WC:"2022"},
+{name:"Edouard Mendy", Country:"SEN", Position:"PO",Teams: [{ club:"en Chelsea", matches:104, goals:0, assists:0},], Titles:"2021ChampionsWin", WC:"2022"},
 {name:"Lewis Hall", Country:"ENG", Position:"CC",Teams: [{ club:"en Chelsea", matches:12, goals:0, assists:1},], Titles:"", WC:""},
 {name:"N'Golo Kanté", Country:"FRA", Position:"CC",Teams: [{ club:"en Chelsea", matches:267, goals:13, assists:16},{ club:"en Leicester", matches:40, goals:1, assists:4},], Titles:"2018WC01,2016EuroFinal,2021ChampionsWin,2017Premier, 2016Premier", WC:"2018"},
 {name:"David Datro Fofana", Country:"CIV", Position:"DL",Teams: [{ club:"en Chelsea", matches:4, goals:0, assists:0},], Titles:"", WC:""},
@@ -7898,7 +7898,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Hamza Choudhury", Country:"ENG", Position:"DF,CC",Teams: [{ club:"en Leicester", matches:114, goals:2, assists:2},], Titles:"", WC:""},
 {name:"Kasey McAteer", Country:"ENG", Position:"CC,DL",Teams: [{ club:"en Leicester", matches:27, goals:6, assists:0},], Titles:"", WC:""},
 {name:"Callum Doyle", Country:"ENG", Position:"DF",Teams: [{ club:"en Leicester", matches:16, goals:0, assists:2},], Titles:"", WC:""},
-{name:"Jamie Vardy", Country:"ENG", Position:"DL",Teams: [{ club:"en Leicester", matches:445, goals:181, assists:54},], Titles:"", WC:"2018"},
+{name:"Jamie Vardy", Country:"ENG", Position:"DL",Teams: [{ club:"en Leicester", matches:445, goals:181, assists:54},], Titles:"2016Premier", WC:"2018"},
 {name:"Kelechi Iheanacho", Country:"NGA", Position:"CC,DL",Teams: [{ club:"en Leicester", matches:227, goals:61, assists:32},{ club:"en Man City", matches:63, goals:21, assists:6},], Titles:"", WC:"2018"},
 {name:"Patson Daka", Country:"ZAM", Position:"DL",Teams: [{ club:"en Leicester", matches:87, goals:22, assists:13},], Titles:"", WC:""},
 {name:"Yunus Akgün", Country:"TUR", Position:"CC,DL",Teams: [{ club:"en Leicester", matches:19, goals:2, assists:2},], Titles:"", WC:""},
@@ -7948,7 +7948,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Ahmed Musa", Country:"NGA", Position:"CC,DL",Teams: [{ club:"en Leicester", matches:33, goals:5, assists:1},], Titles:"", WC:"2018, 2014"},
 {name:"Josh Knight", Country:"ENG", Position:"DF,CC",Teams: [{ club:"en Leicester", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Jeffrey Schlupp", Country:"GHA", Position:"DF,CC,DL",Teams: [{ club:"en Leicester", matches:136, goals:11, assists:8},], Titles:"2016Premier", WC:""},
-{name:"Marcin Wasilewski", Country:"POL", Position:"DF",Teams: [{ club:"en Leicester", matches:73, goals:2, assists:0},], Titles:"", WC:""},
+{name:"Marcin Wasilewski", Country:"POL", Position:"DF",Teams: [{ club:"en Leicester", matches:73, goals:2, assists:0},], Titles:"2016Premier", WC:""},
 {name:"Bartosz Kapustka", Country:"POL", Position:"CC",Teams: [{ club:"en Leicester", matches:3, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Molla Wagué", Country:"MLI", Position:"DF",Teams: [{ club:"en Leicester", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Ritchie De Laet", Country:"BEL", Position:"DF",Teams: [{ club:"en Leicester", matches:120, goals:4, assists:5},{ club:"en Man Utd", matches:3, goals:0, assists:0},], Titles:"2016Premier, 2009Premier", WC:""},
@@ -8180,9 +8180,9 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"James Mcatee", Country:"ENG", Position:"CC",Teams: [{ club:"en Man City", matches:7, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Josh Wilson-Esbrand", Country:"ENG", Position:"DF",Teams: [{ club:"en Man City", matches:3, goals:0, assists:1},], Titles:"2023ChampionsWin", WC:""},
 {name:"Shea Charles", Country:"NIR", Position:"DF,CC",Teams: [{ club:"en Man City", matches:1, goals:0, assists:0},], Titles:"2023Premier", WC:""},
-{name:"Máximo Perrone", Country:"ARG", Position:"CC",Teams: [{ club:"en Man City", matches:2, goals:0, assists:0},], Titles:"", WC:""},
+{name:"Máximo Perrone", Country:"ARG", Position:"CC",Teams: [{ club:"en Man City", matches:2, goals:0, assists:0},], Titles:"2023Premier", WC:""},
 {name:"Fernandinho", Country:"BRA", Position:"DF,CC",Teams: [{ club:"en Man City", matches:376, goals:26, assists:26},], Titles:"2021ChampionsFinal,2022Premier, 2021Premier, 2019Premier, 2018Premier, 2014Premier", WC:"2018, 2014"},
-{name:"Zack Steffen", Country:"USA", Position:"PO",Teams: [{ club:"en Man City", matches:21, goals:0, assists:0},], Titles:"", WC:""},
+{name:"Zack Steffen", Country:"USA", Position:"PO",Teams: [{ club:"en Man City", matches:21, goals:0, assists:0},], Titles:"2021ChampionsFinal,2022Premier, 2021Premier", WC:""},
 {name:"CJ Egan-Riley", Country:"ENG", Position:"DF",Teams: [{ club:"en Man City", matches:3, goals:0, assists:0},], Titles:"2022Premier", WC:""},
 {name:"Luke Mbete-Tatu", Country:"ENG", Position:"DF",Teams: [{ club:"en Man City", matches:3, goals:0, assists:1},], Titles:"", WC:""},
 {name:"Finley Burns", Country:"ENG", Position:"DF",Teams: [{ club:"en Man City", matches:1, goals:0, assists:0},], Titles:"", WC:""},
@@ -8290,7 +8290,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Pape Matar Sarr", Country:"SEN", Position:"CC",Teams: [{ club:"en Tottenham", matches:36, goals:3, assists:3},], Titles:"", WC:"2022"},
 {name:"Yves Bissouma", Country:"MLI", Position:"CC",Teams: [{ club:"en Tottenham", matches:45, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Brennan Johnson", Country:"WAL", Position:"DL",Teams: [{ club:"en Tottenham", matches:21, goals:3, assists:4},], Titles:"", WC:"2022"},
-{name:"Ben Davies", Country:"WAL", Position:"DF,CC",Teams: [{ club:"en Tottenham", matches:322, goals:9, assists:19},], Titles:"", WC:"2022"},
+{name:"Ben Davies", Country:"WAL", Position:"DF,CC",Teams: [{ club:"en Tottenham", matches:322, goals:9, assists:19},], Titles:"2019ChampionsFinal", WC:"2022"},
 {name:"Oliver Skipp", Country:"ENG", Position:"CC,DL",Teams: [{ club:"en Tottenham", matches:102, goals:1, assists:2},], Titles:"", WC:""},
 {name:"Manor Solomon", Country:"ISR", Position:"DL",Teams: [{ club:"en Tottenham", matches:6, goals:0, assists:2},], Titles:"", WC:""},
 {name:"Fraser Forster", Country:"ENG", Position:"PO",Teams: [{ club:"en Tottenham", matches:21, goals:0, assists:0},], Titles:"", WC:""},
@@ -8501,7 +8501,7 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Marnick Vermijl", Country:"BEL", Position:"DF",Teams: [{ club:"en Man Utd", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Saidy Janko", Country:"GAM", Position:"DF,CC",Teams: [{ club:"en Man Utd", matches:1, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Tom Thorpe", Country:"ENG", Position:"DF",Teams: [{ club:"en Man Utd", matches:1, goals:0, assists:0},], Titles:"", WC:""},
-{name:"Rio Ferdinand", Country:"ENG", Position:"DF",Teams: [{ club:"en Man Utd", matches:400, goals:8, assists:6},], Titles:"", WC:"2006, 2002"},
+{name:"Rio Ferdinand", Country:"ENG", Position:"DF",Teams: [{ club:"en Man Utd", matches:400, goals:8, assists:6},], Titles:"2011ChampionsFinal, 2009ChampionsFinal, 2008ChampionsWin,2013Premier, 2011Premier, 2009Premier, 2008Premier, 2007Premier, 2003Premier", WC:"2006, 2002"},
 {name:"Ryan Giggs", Country:"WAL", Position:"CC,DL",Teams: [{ club:"en Man Utd", matches:599, goals:96, assists:163},], Titles:"2011ChampionsFinal, 2009ChampionsFinal, 2008ChampionsWin, 1999ChampionsWin,2013Premier, 2011Premier, 2009Premier, 2008Premier, 2007Premier, 2003Premier, 2001Premier, 2000Premier, 1999Premier", WC:""},
 {name:"Alexander Büttner", Country:"NED", Position:"DF,CC",Teams: [{ club:"en Man Utd", matches:19, goals:2, assists:1},], Titles:"2013Premier", WC:""},
 {name:"Fábio", Country:"BRA", Position:"DF",Teams: [{ club:"en Man Utd", matches:38, goals:1, assists:0},], Titles:"2011ChampionsFinal,2011Premier", WC:""},
@@ -8570,7 +8570,6 @@ document.addEventListener("DOMContentLoaded", function() {
 {name:"Kevin Pilkington", Country:"ENG", Position:"PO",Teams: [{ club:"en Man Utd", matches:2, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Ben Thornley", Country:"ENG", Position:"CC",Teams: [{ club:"en Man Utd", matches:5, goals:0, assists:0},], Titles:"", WC:""},
 {name:"Philip Mulryne", Country:"NIR", Position:"CC",Teams: [{ club:"en Man Utd", matches:1, goals:0, assists:0},], Titles:"", WC:""},
-
 
   ];
 
@@ -9871,7 +9870,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const WCpossible = ["Played WC 2022", "Played WC 2018", "Played WC 2014", "Played WC 2010", "Played WC 2006", "Played WC 2002"]
   const Wonpossible = [
     "WC01", "WC02",
-    "Premier", "ChampionsWin"
+    "Premier", "ChampionsWin", "LaLigaWin"
   ]
 
   const Positionpossible = ["PO", "DF", "CC", "DL"]
@@ -9933,7 +9932,11 @@ document.addEventListener("DOMContentLoaded", function() {
         cell.style.fontFamily = 'Strait';
         cell.style.fontWeight = 'bold'; // Make the text bolder
         cell.style.fontSize = '0.8em';
-
+} else if (puzzle1[0].pcolumn[col - 1].includes("LaLigaWin")) {
+        cell.innerHTML = ' Won:<br>La Liga';
+        cell.style.fontFamily = 'Strait';
+        cell.style.fontWeight = 'bold'; // Make the text bolder
+        cell.style.fontSize = '0.8em';
 
       } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
         //img.src = "https://i.ibb.co/prgP9Tp/wwc2.jpg"
@@ -10002,9 +10005,16 @@ document.addEventListener("DOMContentLoaded", function() {
         cell.style.fontFamily = 'Strait';
         cell.style.fontWeight = 'bold'; // Make the text bolder
         cell.style.fontSize = '0.8em';
+        
+        
 
  } else if (puzzle1[0].prow[row - 1].includes("ChampionsWin")) {
         cell.innerHTML = ' Won:<br>Champions League';
+        cell.style.fontFamily = 'Strait';
+        cell.style.fontWeight = 'bold'; // Make the text bolder
+        cell.style.fontSize = '0.8em';
+ } else if (puzzle1[0].prow[row - 1].includes("LaLigaWin")) {
+        cell.innerHTML = ' Won:<br>La Liga';
         cell.style.fontFamily = 'Strait';
         cell.style.fontWeight = 'bold'; // Make the text bolder
         cell.style.fontSize = '0.8em';
@@ -10339,7 +10349,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return "WC";
     } else if (conditn.includes("WC") && conditn.length === 4) {
       return "Titles";
-    } else if (conditn.includes("Premier") ||conditn.includes("ChampionsWin") ) {
+    } else if (conditn.includes("Premier") ||conditn.includes("ChampionsWin")||conditn.includes("LaLigaWin") ) {
       return "Titles";
     } else if (conditn.length === 2) {
       return "Position";
@@ -10495,8 +10505,10 @@ var puzzleselection = [
       
 [{prow:["Played WC 2010","Barcelona","Real Madrid"], pcolumn: ["ESP","NED","WC01"]},],
 [{prow:["Real Madrid","CC","Milan"], pcolumn: ["Man Utd","ARG","ChampionsWin"]},],
-[{prow:["Played WC 1998","Arsenal","Inter"], pcolumn: ["NED","ARG","Ajax"]},],
+[{prow:["Played WC 1998","Premier","Inter"], pcolumn: ["NED","ARG","Arsenal"]},],
+
 [{prow:["PO","ARG","Played WC 2002"], pcolumn: ["Bayern","Valencia","ChampionsWin"]},],
+[{prow:["LaLigaWin","BRA","DL"], pcolumn: ["Deportivo","Milan","ChampionsWin"]},],
 
 ];
     
