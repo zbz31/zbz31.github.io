@@ -10524,7 +10524,7 @@ var puzzleselection = [
     
 
 
-puzzle1= getRandomItem(puzzleselection)
+//puzzle1= getRandomItem(puzzleselection)
   
   createGrid();
   
