@@ -10520,6 +10520,16 @@ var puzzleselection = [
 
 
 
+
+
+[{prow:["Arsenal","CMR","Chelsea"], pcolumn: ["Barcelona","ChampionsWin","Premier"]},],
+
+
+[{prow:["Leverkusen","PO","FRA"], pcolumn: ["Real Madrid","BRA","Played WC 2002"]},],
+
+
+[{prow:["ChampionsWin","PO","DF"], pcolumn: ["Milan","Juventus","ITA"]},],
+
 ];
     
 
