@@ -11849,7 +11849,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
 
-//puzzle1= getRandomItem(puzzleselection)
+puzzle1= getRandomItem(puzzleselection)
   
   createGrid();
   
