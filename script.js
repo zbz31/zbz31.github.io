@@ -11055,6 +11055,10 @@ document.addEventListener("DOMContentLoaded", function() {
       Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/285px-Manchester_United_FC_crest.svg.png"
     },
 
+  {
+      tname: "Liverpool",
+      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/270px-Liverpool_FC.svg.png"
+    },
 
   ];
 
