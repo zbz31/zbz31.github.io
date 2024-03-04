@@ -11736,32 +11736,113 @@ document.addEventListener("DOMContentLoaded", function() {
   } while (Math.min(...totality) < 5);
 
 
-var puzzleselection = [
-    [
-        { 
-            prow: ["WC01", "Played WC 2022", "Barcelona"], 
-            pcolumn: ["ARG", "FRA", "ParisSG"] 
-        }],
-        [{ 
-            prow: ["Played WC 1998", "Real Madrid", "Juventus"], 
-            pcolumn: ["BRA", "FRA", "WC01"] 
-        }],
-      
-[{prow:["Played WC 2010","Barcelona","Real Madrid"], pcolumn: ["ESP","NED","WC01"]},],
-[{prow:["Real Madrid","CC","Milan"], pcolumn: ["Man Utd","ARG","ChampionsWin"]},],
-[{prow:["Played WC 1998","Premier","Inter"], pcolumn: ["NED","ARG","Arsenal"]},],
 
-[{prow:["PO","ARG","Played WC 2002"], pcolumn: ["Bayern","Valencia","ChampionsWin"]},],
-[{prow:["LaLigaWin","BRA","DL"], pcolumn: ["Deportivo","Milan","ChampionsWin"]},],
-[{prow:["Bayern","ARG","NED"], pcolumn: ["Inter","ChampionsWin","Real Madrid"]},],
+  var puzzleselection = [
+    [{
+      prow: ["WC01", "Played WC 2022", "Barcelona"],
+      pcolumn: ["ARG", "FRA", "ParisSG"]
+    }],
+    [{
+      prow: ["Played WC 1998", "Real Madrid", "Juventus"],
+      pcolumn: ["BRA", "FRA", "WC01"]
+    }],
 
-[{prow:["DF","CC","DL"], pcolumn: ["Malaga","Borussia","Porto"]},],
-[{prow:["ChampionsWin","Premier","DF"], pcolumn: ["Man Utd","Chelsea","ENG"]},],
-[{prow:["ChampionsWin","Premier","DL"], pcolumn: ["Man Utd","Bayern","NOR"]},],
+    [{
+      prow: ["Played WC 2010", "Barcelona", "Real Madrid"],
+      pcolumn: ["ESP", "NED", "WC01"]
+    }, ],
+    [{
+      prow: ["Real Madrid", "CC", "Milan"],
+      pcolumn: ["Man Utd", "ARG", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["Played WC 1998", "Premier", "Inter"],
+      pcolumn: ["NED", "ARG", "Arsenal"]
+    }, ],
 
-[{prow:["Played WC 2010","DL","Barcelona"], pcolumn: ["URU","GHA","LaLigaWin"]},],
-[{prow:["Villarreal","ChampionsWin","CC"], pcolumn: ["Arsenal","ARG","Played WC 2006"]},],
+    [{
+      prow: ["PO", "ARG", "Played WC 2002"],
+      pcolumn: ["Bayern", "Valencia", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["LaLigaWin", "BRA", "DL"],
+      pcolumn: ["Deportivo", "Milan", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["Bayern", "ARG", "NED"],
+      pcolumn: ["Inter", "ChampionsWin", "Real Madrid"]
+    }, ],
 
+    [{
+      prow: ["DF", "CC", "DL"],
+      pcolumn: ["Malaga", "Borussia", "Porto"]
+    }, ],
+    [{
+      prow: ["ChampionsWin", "Premier", "DF"],
+      pcolumn: ["Man Utd", "Chelsea", "ENG"]
+    }, ],
+    [{
+      prow: ["ChampionsWin", "Premier", "DL"],
+      pcolumn: ["Man Utd", "Bayern", "NOR"]
+    }, ],
+
+    [{
+      prow: ["Played WC 2010", "DL", "Barcelona"],
+      pcolumn: ["URU", "GHA", "LaLigaWin"]
+    }, ],
+    [{
+      prow: ["Villarreal", "ChampionsWin", "CC"],
+      pcolumn: ["Arsenal", "ARG", "Played WC 2006"]
+    }, ],
+
+
+
+
+
+    [{
+      prow: ["Arsenal", "CMR", "Chelsea"],
+      pcolumn: ["Barcelona", "ChampionsWin", "Premier"]
+    }, ],
+
+
+    [{
+      prow: ["Leverkusen", "PO", "FRA"],
+      pcolumn: ["Real Madrid", "BRA", "Played WC 2002"]
+    }, ],
+    [{
+      prow: ["ChampionsWin", "PO", "DF"],
+      pcolumn: ["Milan", "Juventus", "ITA"]
+    }, ],
+
+    [{
+      prow: ["ChampionsWin", "GER", "FRA"],
+      pcolumn: ["Chelsea", "Man City", "Premier"]
+    }, ],
+    [{
+      prow: ["Played WC 2014", "Premier", "Man Utd"],
+      pcolumn: ["NED", "ESP", "Arsenal"]
+    }, ],
+
+    [{
+      prow: ["Tottenham", "FRA", "PO"],
+      pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["CRO", "URU", "BRA"],
+      pcolumn: ["Barcelona", "Juventus", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["Juventus", "ChampionsWin", "LaLigaWin"],
+      pcolumn: ["Real Madrid", "CRO", "POR"]
+    }, ],
+    [{
+      prow: ["PO", "BRA", "URU"],
+      pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"]
+    }, ],
+    [{
+      prow: ["Bayern", "ChampionsWin", "DL"],
+      pcolumn: ["Borussia", "NED", "CRO"]
+    }, ],
 
 
 ];
