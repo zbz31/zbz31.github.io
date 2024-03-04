@@ -10888,7 +10888,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const teamslog = [{
       tname: "Real Madrid",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/7/70/RealMadrid.png"
+      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/240px-Real_Madrid_CF.svg.png"
     },
     {
       tname: "Athletic",
