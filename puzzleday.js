@@ -11426,7 +11426,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return normalizedName.includes(normalizedFilter);
     })
       .forEach(item => {
-        if (count < 30) { // Limit to three names
+        if (count < 10) { // Limit to three names
           const li = document.createElement("li");
           const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag of Germany" style="width: 20px; height: auto; margin-right: 5px;">`;
 
