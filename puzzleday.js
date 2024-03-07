@@ -11870,9 +11870,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const checkdate = date.getDate()
       // Format the date as "1/March/2024" without the dot at the beginning
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
-
+      limit2 = getTheDate(dateStringToDate(dateString));
+      const dateString2 = `(${limit2}) ${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       // Set the text content of the list item to the formatted date
-      listItem.textContent = dateString
+      listItem.textContent = dateString2
       // Add class for styling
       listItem.classList.add('dateItem');
 
