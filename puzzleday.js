@@ -11858,7 +11858,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     // Set the start date to March 1, 2024
-    const startDate = new Date('2024-02-15');
+    const startDate = new Date('2024-02-04');
 
     // Set the end date to March 7, 2024
     const endDate = new Date('2024-03-07');
