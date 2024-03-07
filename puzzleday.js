@@ -9762,7 +9762,7 @@ document.addEventListener("DOMContentLoaded", function () {
 {name:"Osman Üstünel", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:2, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mutlu Topçu", Country:"TUR", Position:"DF,CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mustafa Öztürk", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
-  
+
   ];
 
   const countries = [{
@@ -11832,7 +11832,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
- function showModal4() {
+
+  function showModal4() {
     const modal = document.getElementById('modalarchive');
     const headline = document.getElementById('modal-headline-arc');
     const modal3dates = document.getElementById("nameElementarc");
@@ -11868,12 +11869,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const listItem = document.createElement('li');
       const checkdate = date.getDate()
       // Format the date as "1/March/2024" without the dot at the beginning
-  
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
-      limit = getTheDate(dateStringToDate(dateString));
-      const dateString2 = `(${limit}) ${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
+
       // Set the text content of the list item to the formatted date
-      listItem.textContent = dateString2
+      listItem.textContent = dateString
       // Add class for styling
       listItem.classList.add('dateItem');
 
@@ -11883,7 +11882,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = 'none';
 
         // Assuming getTheDate() returns a date, not clear from the provided code
-      
+        limit = getTheDate(dateStringToDate(dateString));
 
         for (var i = 0; i < puzzleselection.length; i++) {
           if (limit - puzzleselection[i][0].order === 0) {
