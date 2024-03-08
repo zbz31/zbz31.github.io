@@ -11954,6 +11954,12 @@ document.addEventListener("DOMContentLoaded", function () {
               cell.classList.add("grid-cellsolved");
               addTextToCell(cell, `${item.name} `);
               answers.push(item.name)
+
+                            preserveGameState();
+
+
+
+              
             } else {
               addTexttoCellWRONG(cell, `${item.name}`);
             }
@@ -12348,3 +12354,28 @@ function createDisclaimer(){
   }
 });
 
+
+
+
+
+let currentBoard=[];
+function initLocalStorage(){
+  const storedCurrentBoard= window.localStorage.getItem('currentBoard')
+  if (!storedCurrentBoard){
+    window.localStorage.setItem('currentBoard', currentBoard)
+  }
+  else{
+  currentBoard = Number(storedCurrentBoard)
+}
+}
+
+
+
+initLocalStorage()
+
+
+function preserveGameState(){
+  const actualGridContainer = document.getElementById('grid-Container')
+  window.localStorage.setItem('actualGridContainer', gridContainer.innerHTML)
+
+}
