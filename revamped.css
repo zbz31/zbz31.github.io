@@ -35,7 +35,7 @@
 
 /*This corresponds to the HELP Modal */
 
-.modal {
+.modalhelp {
   display: none;
   position: fixed;
   z-index: 1;
@@ -48,7 +48,7 @@
   transition: opacity 0.6s ease; /* Smooth transition for opacity */
 }
 
-.modal-content {
+.modalhelp-content {
   background-color: rgb(55, 55, 56); /* Background color of the textbox */
   margin: 5% auto;
   padding: 20px;
@@ -62,10 +62,10 @@
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
-.modal-content.show {
+.modalhelp-content.show {
   opacity: 1; /* Show modal content with smooth transition */
 }
-.modal-content hr {
+.modalhelp-content hr {
   border: 1px solid rgb(58, 58, 60);
 }
 
@@ -179,6 +179,107 @@
   font-size: 12px;
 } /* Added closing curly brace */
 
+
+.grid-cellunsolved {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+  font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #990000;; /* Text color */
+  border-radius: 5px; /* Adjust the value as needed */
+  background-color: rgb(248, 204, 204);
+  text-align: center; /* Justify text horizontally */
+  animation: starAnimation 1s forwards;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  text-decoration: line-through;
+  border: 2px solid #990000; /* Darker and less fluorescent red color */
+  box-shadow: 0 0 10px #990000; /* Darker and less fluorescent red shadow */
+  margin-left: 3px; /* Adjust the margin as needed */
+}
+
+
+.grid-cellsolved {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+   font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #006600; /* Text color */
+  border-radius: 5px; /* Adjust the value as needed */
+  background-color: rgb(220, 246, 218);
+  text-align: center; /* Justify text horizontally */
+  /*animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
+  animation: starAnimation 1s forwards;
+    overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+ border: 2px solid #006600; /* Darker and less intense fluorescent green color */
+  box-shadow: 0 0 10px #006600; /* Darker and less intense fluorescent green shadow */
+margin-left: 3px; /* Adjust the margin as needed */
+}
+
+
+@keyframes cellFill {
+  0% {
+    transform: scale(0.75); /* Start with smaller size */
+    opacity: 0; /* Initially hide the text */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly increase size */
+    opacity: 1; /* Show the text */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+@keyframes cellVibrate {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(2px, -2px), scale(0.85);
+  }
+}
+
+@keyframes starAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.92);
+  }
+}
+
+
+
+
 .grid-puzzlecell {
   border: 0.05px solid black;
   width: 90px;
@@ -230,4 +331,98 @@
 
 .coolButton:hover {
     background-color: #0d0345; /* Darker green on hover */
+}
+
+
+
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
+.modal-content {
+  width: 100%;
+  padding: 80px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal input[type="text"] {
+  width: 75%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 5px solid #ccc;
+  border-radius: 3px;
+  transition: $opacity-transition;
+  font-family: "Inter", sans-serif;
+}
+
+/* Style for the suggestion list */
+#nameList,
+#nameElement {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Add this line to remove default margin */
+  max-height: 200px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add vertical scroll when content overflows */
+}
+
+/* Style for each suggestion item */
+#nameList li,
+#nameElement li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333; /* Text color */
+  border-bottom: 1px solid #ccc; /* Add a fine line below each item */
+}
+
+#nameList li:last-child,
+#nameElement li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+#nameList li:hover,
+#nameElement li:hover {
+  background-color: #f0f0f0; /* Background color change on hover */
+}
+
+#nameElement {
+  list-style-type: none;
+  padding: 0;
+  max-height: 150px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add vertical scroll when content overflows */
+}
+
+/* Style for each suggestion item */
+#nameElement li {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333; /* Text color */
+  border-bottom: 1px solid #ccc; /* Add a fine line below each item */
+}
+#nameList li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
 }
