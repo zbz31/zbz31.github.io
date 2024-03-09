@@ -1662,20 +1662,31 @@ function manyRandomPuzzle(){
 
 function initHelpModal() {
   const modal = document.getElementById("help-modal");
-  const btn = document.getElementById("icon02help"); // Get the button that opens the modal
+  const btn = document.getElementById("help-button"); // Get the button that opens the modal
   const span = document.getElementById("close-help");  // Get the <span> element that closes the modal
+  const modalContent = document.querySelector(".modal-content"); // Get modal content
 
-  btn.addEventListener("click", function () {   // When the user clicks on the button, open the modal
+  function openModal() {
     modal.style.display = "block";
-  });
+    setTimeout(() => {
+      modalContent.classList.add("show"); // Add class to show modal content with smooth transition
+    }, 30);
+  }
 
-  span.addEventListener("click", function () {  // When the user clicks on <span> (x), close the modal
-    modal.style.display = "none";
-  });
+  function closeModal() {
+    modalContent.classList.remove("show"); // Remove class to hide modal content with smooth transition
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 300); // Delay hiding the modal to ensure smooth transition completion
+  }
+
+  btn.addEventListener("click", openModal);
+
+  span.addEventListener("click", closeModal);
 
   window.addEventListener("click", function (event) {   // When the user clicks anywhere outside of the modal, close it
     if (event.target == modal) {
-      modal.style.display = "none";
+      closeModal();
     }
   });
 }
