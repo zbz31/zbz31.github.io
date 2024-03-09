@@ -1187,9 +1187,8 @@ document.addEventListener("DOMContentLoaded", () => {
       Flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/383px-Flag_of_Zimbabwe.svg.png"
     },
 
-    ]
-
-  });
+   
+  ];
   const teamslog = [{
       tname: "Real Madrid",
       Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/240px-Real_Madrid_CF.svg.png"
@@ -1430,12 +1429,13 @@ document.addEventListener("DOMContentLoaded", () => {
   initLocalStorage();
   loadLocalStorage();
   initHelpModal();
-
+  console.log()
+  createGrid(manyRandomPuzzle());
 
 //This function starts the parameters of Local Storage
 
   function initLocalStorage(){
-
+  
   }
 
 
@@ -1694,6 +1694,164 @@ function initHelpModal() {
 
 
 
+  function createGrid(puzzle1) {
+    let gridCells=[];
+    const gridContainer = document.getElementById('gridContainer'); // Assuming you have a div with id 'grid-container' in your HTML
+    gridContainer.innerHTML = ''; // Clear existing grid if any
+
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 4; col++) {
+        const cell = document.createElement("div");
+        cell.dataset.row = row;
+        cell.dataset.col = col;
+        formatGridCell(puzzle1,row,col,cell)
+        gridContainer.appendChild(cell);
+        gridCells.push(cell);
+
+      }
+    }
+    createbuttonGiveUp();
+    createDisclaimer();
+  }
+
+
+
+function formatGridCell(puzzle1,row,col,cell){
+  
+  row = row * 1;
+  col = col * 1;
+  if (row > 0 && col > 0) {
+
+    cell.classList.add("grid-playercell");
+
+    } 
+
+
+ // These lines create the columns
+  
+  if ((row === 0 && col === 1) || (row === 0 && col === 2) || (row === 0 && col === 3)) {
+    cell.classList.add("grid-puzzlecell");
+    const img = document.createElement("img");
+
+    if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
+      cell.textContent = puzzle1[0].pcolumn[col - 1];
+    } else if (puzzle1[0].pcolumn[col - 1].includes("Premier")) {
+      cell.innerHTML = ' Won:<br>Premier League';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("ChampionsWin")) {
+      cell.innerHTML = ' Won:<br>Champions League';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("EuropaWin")) {
+      cell.innerHTML = ' Won:<br>Europa League';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("LaLigaWin")) {
+      cell.innerHTML = ' Won:<br>La Liga';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("SerieAWin")) {
+      cell.innerHTML = ' Won:<br>Serie A';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("Played Euro")) {
+      cell.textContent = puzzle1[0].pcolumn[col - 1];
+    } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
+      cell.innerHTML = ' Won:<br>World Cup ';
+    } else if (puzzle1[0].pcolumn[col - 1].includes("WC02")) {
+      cell.textContent = ' World Cup 2nd place ';
+    } else if (puzzle1[0].pcolumn[col - 1].length === 2) {
+      cell.textContent = puzzle1[0].pcolumn[col - 1];
+    } else if (puzzle1[0].pcolumn[col - 1].length === 3) {
+      img.src = countries.find(item => item.cname === puzzle1[0].pcolumn[col - 1]).Flag;
+      cell.appendChild(img);
+    } else {
+      img.src = teamslog.find(item => item.tname === puzzle1[0].pcolumn[col - 1]).Logo;
+      cell.appendChild(img);
+    }
+
+    cell.style.border = 'none';
+  }
+
+
+// These lines create the rows
+
+  if ((row === 1 && col === 0) || (row === 2 && col === 0) || (row === 3 && col === 0)) {
+    cell.classList.add("grid-puzzlecell");
+    const img = document.createElement("img");
+
+    if (puzzle1[0].prow[row - 1].includes("Played WC")) {
+      cell.textContent = puzzle1[0].prow[row - 1];
+    } else if (puzzle1[0].prow[row - 1].includes("Premier")) {
+      cell.innerHTML = ' Won:<br>Premier League';
+    } else if (puzzle1[0].prow[row - 1].includes("ChampionsWin")) {
+      cell.innerHTML = ' Won:<br>Champions League';
+    } else if (puzzle1[0].prow[row - 1].includes("EuropaWin")) {
+      cell.innerHTML = ' Won:<br>Europa League';
+    } else if (puzzle1[0].prow[row - 1].includes("LaLigaWin")) {
+      cell.innerHTML = ' Won:<br>La Liga';
+    } else if (puzzle1[0].prow[row - 1].includes("SerieAWin")) {
+      cell.innerHTML = ' Won:<br>Serie A';
+    } else if (puzzle1[0].prow[row - 1].includes("Played Euro")) {
+      cell.textContent = puzzle1[0].prow[row - 1];
+    } else if (puzzle1[0].prow[row - 1].includes("WC01")) {
+      cell.innerHTML = ' Won:<br>World Cup ';
+    } else if (puzzle1[0].prow[row - 1].includes("WC02")) {
+      cell.textContent = ' World Cup 2nd place ';
+    } else if (puzzle1[0].prow[row - 1].length === 2) {
+      if (puzzle1[0].prow[row - 1] === "PO") {
+        img.src = "https://i.ibb.co/hygjfhv/GK001.jpg";
+      } else if (puzzle1[0].prow[row - 1] === "DF") {
+        img.src = "https://i.ibb.co/0rWVdwj/df01.jpg";
+      } else if (puzzle1[0].prow[row - 1] === "CC") {
+        img.src = "https://i.ibb.co/B4nF3H5/MC01.jpg";
+      } else if (puzzle1[0].prow[row - 1] === "DL") {
+        cell.textContent = "";
+        img.src = "https://i.ibb.co/CPjYcJ6/fw002.jpg";
+      }
+      img.style.width = "40px";
+      img.style.height = "auto";
+      img.style.borderRadius = "10%";
+      cell.appendChild(img);
+    } else if (puzzle1[0].prow[row - 1].length === 3) {
+      img.src = countries.find(item => item.cname === puzzle1[0].prow[row - 1]).Flag;
+      cell.appendChild(img);
+    } else {
+      img.src = teamslog.find(item => item.tname === puzzle1[0].prow[row - 1]).Logo;
+      cell.appendChild(img);
+    }
+
+    cell.style.border = 'none';
+  }
+
+}
+
+
+
+
+
+
+
+  function createbuttonGiveUp() {
+    var button = document.createElement('button');
+    button.textContent = 'GIVE UP';
+    button.id = 'clickMeButton';
+
+    // Style the button for positioning and appearance
+    button.style.position = 'fixed';
+    button.style.bottom = '-16%'; // Adjust as needed
+    button.style.right = '1vw'; // Adjust as needed
+    button.style.marginRight = '2px'; // Add some space before the edge
+    button.classList.add('coolButton'); // Add a class for styling
+    document.getElementById('gridContainer').appendChild(button);
+    // Append the second button to the body
+    //document.getElementById('gridContainer').appendChild(button);
+    //button.addEventListener('click', handleClick);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function createDisclaimer() {
   const coolText = document.createElement("p");
@@ -1712,3 +1870,4 @@ function createDisclaimer() {
   coolText.style.marginBottom = '50px'; // Adjust as needed
 }
 
+});
