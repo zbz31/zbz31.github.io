@@ -11105,22 +11105,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   let guessedWordCount = 0;
-
-  //initLocalStorage();
+  let currentPuzzle = todayPuzzle()[0].order;
+  console.log(currentPuzzle)
+  initLocalStorage();
   //loadLocalStorage();
   initHelpModal();
+  initHelpModal2();
   //console.log().
   //createGrid(manyRandomPuzzle());
+
+ 
   puzzle1 = getRandomItem(puzzleselection)
+
+  puzzle1=getItemByOrder(currentPuzzle);
   createGrid(puzzle1);
+  window.localStorage.setItem('currentPuzzle', todayPuzzle()[0].order)
 
 //This function starts the parameters of Local Storage
 
   function initLocalStorage(){
-  
+    const storedcurrentPuzzle = window.localStorage.getItem('currentPuzzle')
+    if (!storedcurrentPuzzle){
+      window.localStorage.setItem('currentPuzzle', currentPuzzle)
+    }  else {
+  currentPuzzle = storedcurrentPuzzle
+    }
   }
 
-
+  function getItemByOrder(order) {
+    // Loop through each element in the puzzleselection array
+    for (let i = 0; i < puzzleselection.length; i++) {
+      // Check if the order of the current item matches the provided order
+      if (puzzleselection[i][0].order === order) {
+        // Return the item if found
+        return puzzleselection[i][0];
+      }
+    }
+    // Return null if no item with the provided order is found
+    return null;
+  }
 
 
 //This function loads whatever we have stored in Local Storage
@@ -11412,7 +11435,6 @@ function initHelpModal() {
  
 
   function formatGridCell(puzzle1,row,col,cell){
-    
     row = row * 1;
     col = col * 1;
     if (row > 0 && col > 0) {
@@ -11426,37 +11448,48 @@ function initHelpModal() {
       } 
 
 
+    if ((row === 0 && col === 0)) {
+      cell.classList.add("grid-cellnumber");
+      cell.textContent = '#' + puzzle1.order;
+      cell.style.fontWeight = 'bold'; // Make the text bolder
+      cell.style.fontSize = '1.1em';
+      cell.style.textAlign = 'center'; // Center the text horizontally
+      cell.style.lineHeight = '50px'; // Center the text vertically by matching the cell height
+      cell.style.padding = '0'; // Remove padding to fill the entire cell
+    }
+
+
   // These lines create the columns
     
     if ((row === 0 && col === 1) || (row === 0 && col === 2) || (row === 0 && col === 3)) {
       cell.classList.add("grid-puzzlecell");
       const img = document.createElement("img");
 
-      if (puzzle1[0].pcolumn[col - 1].includes("Played WC")) {
-        cell.textContent = puzzle1[0].pcolumn[col - 1];
-      } else if (puzzle1[0].pcolumn[col - 1].includes("Premier")) {
+      if (puzzle1.pcolumn[col - 1].includes("Played WC")) {
+        cell.textContent = puzzle1.pcolumn[col - 1];
+      } else if (puzzle1.pcolumn[col - 1].includes("Premier")) {
         cell.innerHTML = ' Won:<br>Premier League';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("ChampionsWin")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("ChampionsWin")) {
         cell.innerHTML = ' Won:<br>Champions League';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("EuropaWin")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("EuropaWin")) {
         cell.innerHTML = ' Won:<br>Europa League';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("LaLigaWin")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("LaLigaWin")) {
         cell.innerHTML = ' Won:<br>La Liga';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("SerieAWin")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("SerieAWin")) {
         cell.innerHTML = ' Won:<br>Serie A';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("Played Euro")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("Played Euro")) {
         cell.textContent = puzzle1[0].pcolumn[col - 1];
-      } else if (puzzle1[0].pcolumn[col - 1].includes("WC01")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("WC01")) {
         cell.innerHTML = ' Won:<br>World Cup ';
-      } else if (puzzle1[0].pcolumn[col - 1].includes("WC02")) {
+      } else if (puzzle1.pcolumn[col - 1].includes("WC02")) {
         cell.textContent = ' World Cup 2nd place ';
-      } else if (puzzle1[0].pcolumn[col - 1].length === 2) {
-        cell.textContent = puzzle1[0].pcolumn[col - 1];
-      } else if (puzzle1[0].pcolumn[col - 1].length === 3) {
-        img.src = countries.find(item => item.cname === puzzle1[0].pcolumn[col - 1]).Flag;
+      } else if (puzzle1.pcolumn[col - 1].length === 2) {
+        cell.textContent = puzzle1.pcolumn[col - 1];
+      } else if (puzzle1.pcolumn[col - 1].length === 3) {
+        img.src = countries.find(item => item.cname === puzzle1.pcolumn[col - 1]).Flag;
         cell.appendChild(img);
       } else {
-        img.src = teamslog.find(item => item.tname === puzzle1[0].pcolumn[col - 1]).Logo;
+        img.src = teamslog.find(item => item.tname === puzzle1.pcolumn[col - 1]).Logo;
         cell.appendChild(img);
       }
 
@@ -11470,32 +11503,32 @@ function initHelpModal() {
       cell.classList.add("grid-puzzlecell");
       const img = document.createElement("img");
 
-      if (puzzle1[0].prow[row - 1].includes("Played WC")) {
-        cell.textContent = puzzle1[0].prow[row - 1];
-      } else if (puzzle1[0].prow[row - 1].includes("Premier")) {
+      if (puzzle1.prow[row - 1].includes("Played WC")) {
+        cell.textContent = puzzle1.prow[row - 1];
+      } else if (puzzle1.prow[row - 1].includes("Premier")) {
         cell.innerHTML = ' Won:<br>Premier League';
-      } else if (puzzle1[0].prow[row - 1].includes("ChampionsWin")) {
+      } else if (puzzle1.prow[row - 1].includes("ChampionsWin")) {
         cell.innerHTML = ' Won:<br>Champions League';
-      } else if (puzzle1[0].prow[row - 1].includes("EuropaWin")) {
+      } else if (puzzle1.prow[row - 1].includes("EuropaWin")) {
         cell.innerHTML = ' Won:<br>Europa League';
-      } else if (puzzle1[0].prow[row - 1].includes("LaLigaWin")) {
+      } else if (puzzle1.prow[row - 1].includes("LaLigaWin")) {
         cell.innerHTML = ' Won:<br>La Liga';
-      } else if (puzzle1[0].prow[row - 1].includes("SerieAWin")) {
+      } else if (puzzle1.prow[row - 1].includes("SerieAWin")) {
         cell.innerHTML = ' Won:<br>Serie A';
-      } else if (puzzle1[0].prow[row - 1].includes("Played Euro")) {
+      } else if (puzzle1.prow[row - 1].includes("Played Euro")) {
         cell.textContent = puzzle1[0].prow[row - 1];
-      } else if (puzzle1[0].prow[row - 1].includes("WC01")) {
+      } else if (puzzle1.prow[row - 1].includes("WC01")) {
         cell.innerHTML = ' Won:<br>World Cup ';
-      } else if (puzzle1[0].prow[row - 1].includes("WC02")) {
+      } else if (puzzle1.prow[row - 1].includes("WC02")) {
         cell.textContent = ' World Cup 2nd place ';
-      } else if (puzzle1[0].prow[row - 1].length === 2) {
-        if (puzzle1[0].prow[row - 1] === "PO") {
+      } else if (puzzle1.prow[row - 1].length === 2) {
+        if (puzzle1.prow[row - 1] === "PO") {
           img.src = "https://i.ibb.co/hygjfhv/GK001.jpg";
-        } else if (puzzle1[0].prow[row - 1] === "DF") {
+        } else if (puzzle1.prow[row - 1] === "DF") {
           img.src = "https://i.ibb.co/0rWVdwj/df01.jpg";
-        } else if (puzzle1[0].prow[row - 1] === "CC") {
+        } else if (puzzle1.prow[row - 1] === "CC") {
           img.src = "https://i.ibb.co/B4nF3H5/MC01.jpg";
-        } else if (puzzle1[0].prow[row - 1] === "DL") {
+        } else if (puzzle1.prow[row - 1] === "DL") {
           cell.textContent = "";
           img.src = "https://i.ibb.co/CPjYcJ6/fw002.jpg";
         }
@@ -11503,11 +11536,11 @@ function initHelpModal() {
         img.style.height = "auto";
         img.style.borderRadius = "10%";
         cell.appendChild(img);
-      } else if (puzzle1[0].prow[row - 1].length === 3) {
-        img.src = countries.find(item => item.cname === puzzle1[0].prow[row - 1]).Flag;
+      } else if (puzzle1.prow[row - 1].length === 3) {
+        img.src = countries.find(item => item.cname === puzzle1.prow[row - 1]).Flag;
         cell.appendChild(img);
       } else {
-        img.src = teamslog.find(item => item.tname === puzzle1[0].prow[row - 1]).Logo;
+        img.src = teamslog.find(item => item.tname === puzzle1.prow[row - 1]).Logo;
         cell.appendChild(img);
       }
 
@@ -11638,10 +11671,10 @@ function createDisclaimer() {
             // Clear the suggestion list
             nameList.innerHTML = "";
 
-            if ((item.Teams.some(team => team.club.includes(puzzle1[0].prow[row - 1])) || item.Position.includes(puzzle1[0].prow[row - 1]) || item.Country.includes(puzzle1[0].prow[row - 1]) || item.Titles.includes(puzzle1[0].prow[row - 1]) || item.WC.includes(puzzle1[0].prow[row - 1].substring(puzzle1[0].prow[row - 1].length - 4)) || item.Euro.includes(puzzle1[0].prow[row - 1].substring(puzzle1[0].prow[row - 1].length - 4)))
+            if ((item.Teams.some(team => team.club.includes(puzzle1.prow[row - 1])) || item.Position.includes(puzzle1.prow[row - 1]) || item.Country.includes(puzzle1.prow[row - 1]) || item.Titles.includes(puzzle1.prow[row - 1]) || item.WC.includes(puzzle1.prow[row - 1].substring(puzzle1.prow[row - 1].length - 4)) || item.Euro.includes(puzzle1.prow[row - 1].substring(puzzle1.prow[row - 1].length - 4)))
 
               &&
-              (item.Teams.some(team => team.club.includes(puzzle1[0].pcolumn[col - 1])) || item.Position.includes(puzzle1[0].pcolumn[col - 1]) || item.Country.includes(puzzle1[0].pcolumn[col - 1]) || item.Titles.includes(puzzle1[0].pcolumn[col - 1]) || item.WC.includes(puzzle1[0].pcolumn[col - 1].substring(puzzle1[0].pcolumn[col - 1].length - 4)) || item.Euro.includes(puzzle1[0].pcolumn[col - 1].substring(puzzle1[0].pcolumn[col - 1].length - 4)))) {
+              (item.Teams.some(team => team.club.includes(puzzle1.pcolumn[col - 1])) || item.Position.includes(puzzle1.pcolumn[col - 1]) || item.Country.includes(puzzle1.pcolumn[col - 1]) || item.Titles.includes(puzzle1.pcolumn[col - 1]) || item.WC.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)) || item.Euro.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)))) {
               cell.classList.remove("grid-playercell");
               cell.classList.add("grid-cellsolved");
 
@@ -11676,8 +11709,8 @@ function createDisclaimer() {
       handleSearchInput(puzzle1, row, col, cell);
     });
     textInput.value = ''; // Retrieve stored text for this cell
-    rowcondition = puzzle1[0].prow[row - 1]
-    colcondition = puzzle1[0].pcolumn[col - 1]
+    rowcondition = puzzle1.prow[row - 1]
+    colcondition = puzzle1.pcolumn[col - 1]
     if (rowcondition.length === 3) {
 
       rowcondition = countries.find(country => country.cname === rowcondition).cfullname
@@ -11752,7 +11785,8 @@ function createDisclaimer() {
   }
 
   function showModal2(puzzle1, row, col, cell) {
-    const condit = [puzzle1[0].prow[row - 1], puzzle1[0].pcolumn[col - 1]];
+
+    const condit = [puzzle1.prow[row - 1], puzzle1.pcolumn[col - 1]];
     
     const itemsWithBothTeams = chequeo(condit);
 
@@ -11799,6 +11833,154 @@ function createDisclaimer() {
     };
   }
 
+
+
+
+
+
+
+  function initHelpModal2() {
+    const modal = document.getElementById('modalarchive');
+
+    const btn2 = document.getElementById("archive-button"); // Get the button that opens the modal
+    const span = document.getElementById("close-archive");  // Get the <span> element that closes the modal
+    btn2.addEventListener("click", showModal4);
+
+    span.addEventListener("click", function () {
+      modal.style.display = 'none';
+    });
+
+  }
+
+
+
+
+  function getTheDate(whatdate) {
+    // puzzle1 = [{ prow: ["PO", "BRA", "Played WC 2022"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"], category: "Champions" }],
+
+
+
+    // Create the originalDate with Spanish locale
+    let originalDate = new Date(2024, 1, 3); // Month is 0-indexed, so 2 represents March
+    let originalDateString = originalDate.toLocaleDateString("es-ES");
+
+
+    // Calculate the difference in milliseconds
+    let diffInMilliseconds = whatdate - originalDate;
+
+    // Convert milliseconds to days and round up
+    let diffInDays = Math.floor(diffInMilliseconds / (1000 * 60 * 60 * 24));
+    return Math.abs(diffInDays);
+  }
+
+  function dateStringToDate(dateString) {
+    // Split the dateString into day, month, and year parts
+    const parts = dateString.split('/');
+
+    // Extract day, month, and year from parts
+    const day = parseInt(parts[0], 10);
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    const monthIndex = months.findIndex(month => month === parts[1]);
+    const year = parseInt(parts[2], 10);
+
+    // Create a new Date object
+    const date = new Date(year, monthIndex, day);
+
+    return date;
+  }
+
+
+
+  function showModal4(puzzle1) {
+    const modal = document.getElementById('modalarchive');
+    const headline = document.getElementById('modal-headline-arc');
+    const modal3dates = document.getElementById("nameElementarc");
+
+    headline.textContent = ("ARCHIVED GAMES");
+    headline.style.fontFamily = "'Roboto', sans-serif";
+    headline.style.fontSize = '14px'
+    modal.style.opacity = '0';
+    modal.style.display = 'block';
+    modal.offsetHeight;
+    modal.style.transition = 'opacity 0.65s';
+    modal.style.opacity = '1';
+    modal.style.width = '95%'; // Set the width to 70% of the viewport width
+    modal.style.height = '100%'; // Set the height to 70% of the viewport height
+    modal.style.top = '50%';
+    modal.style.left = '60%';
+    modal.style.overflow = 'auto'; // Add scroll bar when content overflow
+    modal3dates.innerHTML = '';
+
+    // Array of month names for better readability
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    // Set the start date to March 1, 2024
+    const startDate = new Date('2024-02-04');
+
+    // Set the end date to March 7, 2024
+    const today = new Date();
+    const endDate = new Date(today);
+    endDate.setDate(today.getDate() - 1);
+
+    // Loop through each day from end date to start date in reverse order
+    for (let date = endDate; date >= startDate; date.setDate(date.getDate() - 1)) {
+      // Create a new list item
+      const listItem = document.createElement('li');
+      const checkdate = date.getDate()
+      // Format the date as "1/March/2024" without the dot at the beginning
+      const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
+      limit2 = getTheDate(dateStringToDate(dateString));
+      const dateString2 = `(${limit2}) ${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
+      // Set the text content of the list item to the formatted date
+      listItem.textContent = dateString2
+      // Add class for styling
+      listItem.classList.add('dateItem');
+
+      // Add an event listener to the list item
+      listItem.addEventListener('click', function () {
+        // Handle click event here (e.g., navigate to a specific date)
+        modal.style.display = 'none';
+
+        // Assuming getTheDate() returns a date, not clear from the provided code
+        limit = getTheDate(dateStringToDate(dateString));
+
+        for (var i = 0; i < puzzleselection.length; i++) {
+          if (limit - puzzleselection[i][0].order === 0) {
+            puzzle1 = puzzleselection[i];
+            break;
+          }
+        }
+
+    currentPuzzle = puzzle1[0].order;
+    window.localStorage.setItem('currentPuzzle', currentPuzzle)
+        window.location.href = window.location.href;
+
+      });
+
+      // Append the list item to modal3dates
+      modal3dates.appendChild(listItem);
+    }
+
+    modal.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+
+  function todayPuzzle() {
+    let puzzle1;
+    let currentDate = new Date();
+    limit = getTheDate(currentDate);
+    for (var i = 0; i < puzzleselection.length; i++) {
+      if (limit - puzzleselection[i][0].order === 0) {
+        puzzle1 = puzzleselection[i];
+        break;
+      }
+    }
+    return puzzle1;
+  }
 
 });
 
