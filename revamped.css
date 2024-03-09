@@ -14,7 +14,6 @@
     display: flex; /* Use a flexible layout to arrange elements */
     justify-content: center; /* Center the text horizontally within the header */
     align-items: center; /* Center the text vertically within the header */
-    
 }
 
 /* Style for the first icon */
@@ -101,12 +100,12 @@
 #random-button {
 
 
-    margin-left: 20px;
+    margin-left: 5px;
     font-family: 'Roboto', sans-serif; /* Change the font family */
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(111, 83, 238); /* Green background */
+    background-color: rgb(222, 221, 224); /* Green background */
     color: white;
     border: none;
     border-radius: 5px;
@@ -121,12 +120,12 @@
 #archive-button {
 
 
-    margin-left: 20px;
+    margin-left: 10px;
     font-family: 'Roboto', sans-serif; /* Change the font family */
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(111, 83, 238); /* Green background */
+    background-color: rgb(222, 221, 224); /* Green background */
     color: white;
     border: none;
     border-radius: 5px;
@@ -135,4 +134,21 @@
 
 #archive-button:hover {
     background-color: #0d0345; /* Darker green on hover */
+}
+
+
+#help-button {
+
+
+    margin-left: 10px;
+    padding: 5px 8px;
+    background-color: rgb(108, 106, 112); /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#help-button:hover {
+    background-color: #cccccc; /* Light gray on hover */
 }
