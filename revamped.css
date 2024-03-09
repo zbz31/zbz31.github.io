@@ -16,17 +16,6 @@
     align-items: center; /* Center the text vertically within the header */
 }
 
-/* Style for the first icon */
-.headline .icon01 {
-    cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
-    margin-left: 10px; /* Add 10 pixels of space between the icon and the text */
-}
-
-/* Style for the second icon */
-.headline .icon02{
-    cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
-    margin-right: 10px; /* Add 10 pixels of space between the icon and the text */
-}
 
 /* Style for the text within the headline */
 .headline-text {
@@ -55,23 +44,27 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-
-
   color: #333; /* Change the font color */
+  transition: opacity 0.6s ease; /* Smooth transition for opacity */
 }
 
 .modal-content {
-  background-color: rgb(55, 55, 56); /*background of the textbox*/
+  background-color: rgb(55, 55, 56); /* Background color of the textbox */
   margin: 5% auto;
   padding: 20px;
   width: 80%;
-    font-family: 'Roboto', sans-serif; /* Change the font family */
+  font-family: 'Roboto', sans-serif; /* Change the font family */
   font-size: 14px; /* Change the font size */
   font-weight: normal; /* Change the font weight */
-  color: rgb(206, 203, 203); /*text of the textbox*/
+  color: rgb(206, 203, 203); /* Text color of the textbox */
   max-width: 500px;
+  opacity: 0; /* Initially hide the modal content */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
+.modal-content.show {
+  opacity: 1; /* Show modal content with smooth transition */
+}
 .modal-content hr {
   border: 1px solid rgb(58, 58, 60);
 }
@@ -105,7 +98,7 @@
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(222, 221, 224); /* Green background */
+    background-color: rgb(188, 186, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,7 +106,7 @@
 }
 
 #random-button:hover {
-    background-color: #0d0345; /* Darker green on hover */
+    background-color: #f8f8f8; /* Light gray on hover */
 }
 
 
@@ -125,7 +118,7 @@
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(222, 221, 224); /* Green background */
+    background-color: rgb(188, 186, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -133,16 +126,18 @@
 }
 
 #archive-button:hover {
-    background-color: #0d0345; /* Darker green on hover */
+    background-color: #f8f8f8; /* Light gray on hover */
 }
 
 
 #help-button {
-
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+    font-size: 12px; /* Change the font size */
+    font-weight: normal; /* Change the font weight */
 
     margin-left: 10px;
     padding: 5px 8px;
-    background-color: rgb(108, 106, 112); /* Green background */
+    background-color: rgb(188, 186, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -150,5 +145,5 @@
 }
 
 #help-button:hover {
-    background-color: #cccccc; /* Light gray on hover */
+    background-color: #f8f8f8; /* Light gray on hover */
 }
