@@ -2,7 +2,7 @@
 .headline {
     background-color: #333; /* Dark background color for the headline bar */
     color: #fff; /* White text color for better contrast */
-    padding: 15px; /* 15 pixels padding on the top and bottom*/
+    padding: 8px; /* 15 pixels padding on the top and bottom*/
     font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
     font-weight: 700; /* Make the text bold */
     position: fixed; /* Keep the header fixed at the top of the page */
@@ -21,7 +21,7 @@
 .headline-text {
     flex-grow: 1; /* Allow the text to expand and fill the remaining space */
     text-align: center; /* Center the text horizontally within the header */
-    font-size: 18px; /* Adjust the font size to your preference */
+    font-size: 14px; /* Adjust the font size to your preference */
 }
 
 
@@ -146,4 +146,88 @@
 
 #help-button:hover {
     background-color: #f8f8f8; /* Light gray on hover */
+}
+
+
+
+
+
+
+
+.grid-container {
+  position: absolute;
+  top: calc(15%); /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 105px);
+  grid-template-rows: repeat(4, 105px);
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-playercell {
+  border: 0.05px solid black;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; /* Adjust the value as needed */
+  background-color: #ffffff; /* Added semicolon */
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+} /* Added closing curly brace */
+
+.grid-puzzlecell {
+  border: 0.05px solid black;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Added to center the text horizontally */
+  border-radius: 5px; /* Adjust the value as needed */
+  background-color: #ffffff; /* Added semicolon */
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-weight : 700;
+  font-size : 0.8em;
+}
+
+
+
+.grid-puzzlecell img {
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  filter: contrast(100%) brightness(90%) blur(0);
+  
+}
+
+
+
+
+
+
+.coolButton {
+    background-color: rgb(111, 83, 238); /* Green background */
+    border: none; /* Remove borders */
+    font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+
+    color: white; /* White text */
+    padding: 10px 14px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as a block element */
+    font-size: 12px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 8px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition duration */
+}
+
+.coolButton:hover {
+    background-color: #0d0345; /* Darker green on hover */
 }
