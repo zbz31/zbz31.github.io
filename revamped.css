@@ -426,3 +426,57 @@ margin-left: 3px; /* Adjust the margin as needed */
 #nameList li:last-child {
   border-bottom: none; /* Remove the border from the last item */
 }
+
+
+
+
+
+
+
+
+
+
+
+.modalarchive {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.dateItem {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Strait', sans-serif; /* Use a cool font */
+    font-size: 14px; /* Adjust font size */
+
+}
+
+.dateItem:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+
+
+
+.grid-cellnumber{
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px; /* Increased font size for better visibility */
+  text-align: center; /* Center-align text */
+  border-radius: 5px; /* Rounded corners */
+background-color: rgb(209, 234, 224)
+}
