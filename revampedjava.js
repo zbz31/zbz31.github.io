@@ -11478,7 +11478,7 @@ function initHelpModal() {
       } else if (puzzle1.pcolumn[col - 1].includes("SerieAWin")) {
         cell.innerHTML = ' Won:<br>Serie A';
       } else if (puzzle1.pcolumn[col - 1].includes("Played Euro")) {
-        cell.textContent = puzzle1[0].pcolumn[col - 1];
+        cell.textContent = puzzle1.pcolumn[col - 1];
       } else if (puzzle1.pcolumn[col - 1].includes("WC01")) {
         cell.innerHTML = ' Won:<br>World Cup ';
       } else if (puzzle1.pcolumn[col - 1].includes("WC02")) {
@@ -11516,7 +11516,7 @@ function initHelpModal() {
       } else if (puzzle1.prow[row - 1].includes("SerieAWin")) {
         cell.innerHTML = ' Won:<br>Serie A';
       } else if (puzzle1.prow[row - 1].includes("Played Euro")) {
-        cell.textContent = puzzle1[0].prow[row - 1];
+        cell.textContent = puzzle1.prow[row - 1];
       } else if (puzzle1.prow[row - 1].includes("WC01")) {
         cell.innerHTML = ' Won:<br>World Cup ';
       } else if (puzzle1.prow[row - 1].includes("WC02")) {
