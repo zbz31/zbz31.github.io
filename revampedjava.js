@@ -11902,22 +11902,43 @@ function createDisclaimer() {
     const headline = document.getElementById('modal-headline-arc');
     const modal3dates = document.getElementById("nameElementarc");
 
-    headline.textContent = ("ARCHIVED GAMES");
+    headline.textContent = "ARCHIVED GAMES";
     headline.style.fontFamily = "'Roboto', sans-serif";
-    headline.style.fontSize = '14px'
+    headline.style.fontSize = '16px'; // Increase font size for better emphasis
+    headline.style.fontWeight = 'bold'; // Add bold font weight for prominence
+    headline.style.color = '#333'; // Set text color to a darker shade for better contrast
+    headline.style.textTransform = 'uppercase'; // Transform text to uppercase for a more formal appearance
+    headline.style.textAlign = 'center'; // Center-align the text for better visual balance
+    headline.style.marginBottom = '30px'; // Add some bottom margin for spacing
+
+
     modal.style.opacity = '0';
     modal.style.display = 'block';
     modal.offsetHeight;
     modal.style.transition = 'opacity 0.65s';
     modal.style.opacity = '1';
-    modal.style.width = '95%'; // Set the width to 70% of the viewport width
-    modal.style.height = '100%'; // Set the height to 70% of the viewport height
+    modal.style.width = '80%'; // Adjusted width for better visibility
+    modal.style.maxWidth = '600px'; // Added maximum width to prevent it from getting too wide
+    modal.style.height = '100%'; // Adjusted height to auto
     modal.style.top = '50%';
     modal.style.left = '60%';
-    modal.style.overflow = 'auto'; // Add scroll bar when content overflow
+    modal.style.transform = 'translate(-50%, -50%)'; // Center the modal horizontally and vertically
+    modal.style.background = '#ffffff'; // Set background color to white
+    modal.style.borderRadius = '8px'; // Added border radius for a softer appearance
+    modal.style.padding = '20px'; // Added padding for better spacing
+    modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)'; // Added subtle shadow for depth
+    modal.style.overflow = 'auto'; // Add scroll bar when content overflows
+
+
+
+
     modal3dates.innerHTML = '';
     modal3dates.style.listStyleType = 'none'; // Remove bullet points
     modal3dates.style.marginRight = '5px';
+    modal3dates.style.padding = '0'; // Remove any default padding
+    modal3dates.style.margin = '15'; // Remove any default margin
+    modal3dates.style.position = 'absolute'; // Position it absolutely
+    modal3dates.style.left = '0'; // Align it to the left edge of its containing element (in this case, modal)
 
 
 
