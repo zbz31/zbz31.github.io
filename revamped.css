@@ -383,6 +383,7 @@ margin-left: 3px; /* Adjust the margin as needed */
 /* Style for each suggestion item */
 #nameList li,
 #nameElement li {
+  
   padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -413,6 +414,7 @@ margin-left: 3px; /* Adjust the margin as needed */
 
 /* Style for each suggestion item */
 #nameElement li {
+  list-style-type: none; /* Remove default bullet points */
   padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -437,32 +439,34 @@ margin-left: 3px; /* Adjust the margin as needed */
 
 
 
-.modalarchive {
+.modalarchive  {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 10px 10px; 
   border: 1px solid #ccc;
   border-radius: 5px;
   z-index: 9999;
 }
 
-.dateItem {
+.modalarchive li {
+    list-style-type: none; /* Remove default bullet points */
+}
+.dateItem  {
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-bottom: 1px solid #ccc;
-    font-family: 'Strait', sans-serif; /* Use a cool font */
-    font-size: 14px; /* Adjust font size */
+    font-family: 'Arial', sans-serif; /* Use a cool font */
+    font-size: 12px; /* Adjust font size */
 
 }
 
 .dateItem:hover {
     background-color: #f0f0f0; /* Change background color on hover */
 }
-
 
 
 
