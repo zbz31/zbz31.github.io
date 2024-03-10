@@ -4,42 +4,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const puzzleselection = [
 
-    [{ order: "1", year: "2006", category: "World Cup", prow: ["Played WC 2006", "Inter", "Juventus"], pcolumn: ["ITA", "FRA", "WC01"] }],
-    [{ order: "2", year: "2000–01", category: "Premier League", prow: ["NED", "FRA", "Played Euro 2000"], pcolumn: ["Man Utd", "Arsenal", "Premier"] }],
-    [{ order: "3", year: "2022", category: "World Cup", prow: ["Played WC 2022", "WC01", "Barcelona"], pcolumn: ["ARG", "FRA", "ParisSG"] }],
-    [{ order: "4", year: "1998", category: "World Cup", prow: ["Played WC 1998", "Real Madrid", "Juventus"], pcolumn: ["BRA", "FRA", "WC01"] }],
-    [{ order: "5", year: "1998–99", category: "Champions", prow: ["ChampionsWin", "Premier", "DL"], pcolumn: ["Man Utd", "Bayern", "NOR"] }],
-    [{ order: "6", year: "2014", category: "World Cup", prow: ["Played WC 2014", "Premier", "Man Utd"], pcolumn: ["NED", "ESP", "Arsenal"] }],
-    [{ order: "7", year: "2015–16", category: "Premier League", prow: ["Premier", "Played Euro 2016", "DL"], pcolumn: ["Leicester", "Arsenal", "Tottenham"] }],
-    [{ order: "8", year: "2016–17", category: "Champions", prow: ["Juventus", "ChampionsWin", "LaLigaWin"], pcolumn: ["Real Madrid", "CRO", "POR"] }],
-    [{ order: "9", year: "2018", category: "World Cup", prow: ["Played WC 2018", "Atletico", "Tottenham"], pcolumn: ["FRA", "CRO", "WC01"] }],
-    [{ order: "10", year: "2020–21", category: "Champions", prow: ["ChampionsWin", "GER", "FRA"], pcolumn: ["Chelsea", "Man City", "Premier"] }],
-    [{ order: "11", year: "2012–13", category: "Champions", prow: ["Bayern", "DL", "ChampionsWin"], pcolumn: ["Borussia", "NED", "CRO"] }],
-    [{ order: "12", year: "2002", category: "World Cup", prow: ["Played WC 2002", "WC01", "SerieAWin"], pcolumn: ["BRA", "GER", "Real Madrid"] }],
-    [{ order: "13", year: "2013–14", category: "Champions", prow: ["ChampionsWin", "DF", "Sevilla"], pcolumn: ["Real Madrid", "Atletico", "Played WC 2014"] }],
-    [{ order: "14", year: "1997–98", category: "Champions", prow: ["Played WC 1998", "ChampionsWin", "Valencia"], pcolumn: ["Real Madrid", "Juventus", "LaLigaWin"] }],
-    [{ order: "15", year: "2018", category: "World Cup", prow: ["LaLigaWin", "ChampionsWin", "CC"], pcolumn: ["CRO", "ARG", "Played WC 2018"] }],
-    [{ order: "16", year: "2014–15", category: "Champions", prow: ["CRO", "URU", "BRA"], pcolumn: ["Barcelona", "Juventus", "ChampionsWin"] }],
-    [{ order: "17", year: "2021–22", category: "Champions", prow: ["PO", "BRA", "Played WC 2022"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"] }],
-    [{ order: "18", year: "2018–19", category: "Europa League", prow: ["EuropaWin", "Premier", "Real Madrid"], pcolumn: ["Chelsea", "Arsenal", "BEL"] }],
-    [{ order: "19", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ESP", "IRL", "Valencia"] }],
-    [{ order: "20", year: "2006–07", category: "Champions", prow: ["ChampionsWin", "DL", "NED"], pcolumn: ["Milan", "Liverpool", "SerieAWin"] }],
-    [{ order: "21", year: "2017–18", category: "Champions", prow: ["Tottenham", "FRA", "PO"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"] }],
-    [{ order: "22", year: "2002–03", category: "Europa League", prow: ["Barcelona", "DL", "DF"], pcolumn: ["Celtic", "Porto", "EuropaWin"] }],
-    [{ order: "23", year: "2011", category: "Other", prow: ["PO", "DL", "Inter"], pcolumn: ["CHI", "ARG", "LaLigaWin"] }],
-    [{ order: "24", year: "2002–03", category: "Champions", prow: ["ChampionsWin", "PO", "DF"], pcolumn: ["Milan", "Juventus", "ITA"] }],
-    [{ order: "25", year: "2001–02", category: "Champions", prow: ["Real Madrid", "CC", "Played WC 2002"], pcolumn: ["Leverkusen", "ChampionsWin", "FRA"] }],
-    [{ order: "26", year: "", category: "World Cup", prow: ["Played WC 2014", "DF", "Atletico"], pcolumn: ["URU", "ITA", "Juventus"] }],
-    [{ order: "27", year: "2003–04", category: "Champions", prow: ["ChampionsWin", "POR", "DL"], pcolumn: ["Porto", "Monaco", "Played Euro 2004"] }],
-    [{ order: "28", year: "", category: "World Cup", prow: ["Played WC 2006", "CC", "DF"], pcolumn: ["ARG", "MEX", "Atletico"] }],
-    [{ order: "29", year: "2015–16", category: "Champions", prow: ["Played WC 2016", "DF", "ChampionsWin"], pcolumn: ["Liverpool", "Borussia", "CRO"] }],
-    [{ order: "30", year: "2020–21", category: "Europa League", prow: ["PO", "EuropaWin", "Played WC 2022"], pcolumn: ["Villarreal", "Man Utd", "ESP"] }],
-    [{ order: "31", year: "2004–05", category: "Champions", prow: ["ChampionsWin", "Premier", "PO"], pcolumn: ["Liverpool", "Milan", "Galatasaray"] }],
-    [{ order: "32", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ITA", "KOR", "WC01"] }],
-    [{ order: "33", year: "2005–06", category: "Champions", prow: ["Arsenal", "CMR", "Chelsea"], pcolumn: ["Barcelona", "ChampionsWin", "Premier"] }],
-    [{ order: "34", year: "", category: "World Cup", prow: ["Played WC 2002", "ChampionsWin", "LaLigaWin"], pcolumn: ["BRA", "ENG", "Barcelona"] }],
-    [{ order: "35", year: "2018–19", category: "Champions", prow: ["ChampionsWin", "Premier", "NED"], pcolumn: ["Liverpool", "Tottenham", "Atletico"] }],
-    [{ order: "36", year: "2011", category: "Other", prow: ["CC", "DL", "DF"], pcolumn: ["ENG", "GRE", "Played WC 2002"] }],
+    [{ order: "1", result: "Italy 1-1 France", year: "2006", category: "World Cup", prow: ["Played WC 2006", "Inter", "Juventus"], pcolumn: ["ITA", "FRA", "WC01"] }],
+    [{ order: "2", result: "Man Utd 0-0 Arsenal", year: "2000–01", category: "Premier League", prow: ["NED", "FRA", "Played Euro 2000"], pcolumn: ["Man Utd", "Arsenal", "Premier"] }],
+    [{ order: "3", result: "Francia 4-4 Argentina", year: "2022", category: "World Cup", prow: ["Played WC 2022", "WC01", "Barcelona"], pcolumn: ["ARG", "FRA", "ParisSG"] }],
+    [{ order: "4", result: "Brazil  2–0  Germany", year: "1998", category: "World Cup", prow: ["Played WC 1998", "Real Madrid", "Juventus"], pcolumn: ["BRA", "FRA", "WC01"] }],
+    [{ order: "5", result: "Manchester United 2–1 Bayern Munich", year: "1998–99", category: "Champions", prow: ["ChampionsWin", "Premier", "DL"], pcolumn: ["Man Utd", "Bayern", "NOR"] }],
+    [{ order: "6", result: "Netherlands 5-1 Spain", year: "2014", category: "World Cup", prow: ["Played WC 2014", "Premier", "Man Utd"], pcolumn: ["NED", "ESP", "Arsenal"] }],
+    [{ order: "7", result: "Leicester Premier Title", year: "2015–16", category: "Premier League", prow: ["Premier", "Played Euro 2016", "DL"], pcolumn: ["Leicester", "Arsenal", "Tottenham"] }],
+    [{ order: "8", result: "Real Madrid 4–1 Juventus", year: "2016–17", category: "Champions", prow: ["Juventus", "ChampionsWin", "LaLigaWin"], pcolumn: ["Real Madrid", "CRO", "POR"] }],
+    [{ order: "9", result: "France 4-2 Croatia", year: "2018", category: "World Cup", prow: ["Played WC 2018", "Atletico", "Tottenham"], pcolumn: ["FRA", "CRO", "WC01"] }],
+    [{ order: "10", result: "", year: "2020–21", category: "Champions", prow: ["ChampionsWin", "GER", "FRA"], pcolumn: ["Chelsea", "Man City", "Premier"] }],
+    [{ order: "11", result: "Bayern Munich 2–1 Borussia Dortmund", year: "2012–13", category: "Champions", prow: ["Bayern", "DL", "ChampionsWin"], pcolumn: ["Borussia", "NED", "CRO"] }],
+    [{ order: "12", result: "Brazil  2–0  Germany", year: "2002", category: "World Cup", prow: ["Played WC 2002", "WC01", "SerieAWin"], pcolumn: ["BRA", "GER", "Real Madrid"] }],
+    [{ order: "13", result: "Real Madrid 4–1† Atlético Madrid", year: "2013–14", category: "Champions", prow: ["ChampionsWin", "DF", "Sevilla"], pcolumn: ["Real Madrid", "Atletico", "Played WC 2014"] }],
+    [{ order: "14", result: "Real Madrid 1–0 Juventus", year: "1997–98", category: "Champions", prow: ["Played WC 1998", "ChampionsWin", "Valencia"], pcolumn: ["Real Madrid", "Juventus", "LaLigaWin"] }],
+    [{ order: "15", result: "Argentina 0-3 Croatia", year: "2018", category: "World Cup", prow: ["LaLigaWin", "ChampionsWin", "CC"], pcolumn: ["CRO", "ARG", "Played WC 2018"] }],
+    [{ order: "16", result: "Barcelona 3–1 Juventus", year: "2014–15", category: "Champions", prow: ["CRO", "URU", "BRA"], pcolumn: ["Barcelona", "Juventus", "ChampionsWin"] }],
+    [{ order: "17", result: "", year: "2021–22", category: "Champions", prow: ["PO", "BRA", "Played WC 2022"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"] }],
+    [{ order: "18", result: "Chelsea 4–1 Arsenal", year: "2018–19", category: "Europa League", prow: ["EuropaWin", "Premier", "Real Madrid"], pcolumn: ["Chelsea", "Arsenal", "BEL"] }],
+    [{ order: "19", result: "Spain 1-1 Ireland", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ESP", "IRL", "Valencia"] }],
+    [{ order: "20", result: "Milan 2–1 Liverpool", year: "2006–07", category: "Champions", prow: ["ChampionsWin", "DL", "NED"], pcolumn: ["Milan", "Liverpool", "SerieAWin"] }],
+    [{ order: "21", result: "Real Madrid 3–1 Liverpool", year: "2017–18", category: "Champions", prow: ["Tottenham", "FRA", "PO"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"] }],
+    [{ order: "22", result: "Porto 3–2†[f] Celtic (UCL)", year: "2002–03", category: "Europa League", prow: ["Barcelona", "DL", "DF"], pcolumn: ["Celtic", "Porto", "EuropaWin"] }],
+    [{ order: "23", result: "Chile 0-0 Argentina", year: "2011", category: "Other", prow: ["PO", "DL", "Inter"], pcolumn: ["CHI", "ARG", "LaLigaWin"] }],
+    [{ order: "24", result: "Milan 0-0 Juventus", year: "2002–03", category: "Champions", prow: ["ChampionsWin", "PO", "DF"], pcolumn: ["Milan", "Juventus", "ITA"] }],
+    [{ order: "25", result: "Real Madrid 2–1 Bayer Leverkusen", year: "2001–02", category: "Champions", prow: ["Real Madrid", "CC", "Played WC 2002"], pcolumn: ["Leverkusen", "ChampionsWin", "FRA"] }],
+    [{ order: "26", result: "Uruguay 1-0 Italy", year: "2014", category: "World Cup", prow: ["Played WC 2014", "DF", "Atletico"], pcolumn: ["URU", "ITA", "Juventus"] }],
+    [{ order: "27", result: "Porto 3–0 Monaco", year: "2004", category: "Champions", prow: ["ChampionsWin", "POR", "DL"], pcolumn: ["Porto", "Monaco", "Played Euro 2004"] }],
+    [{ order: "28", result: "Argentina 2-1 Mexico", year: "2006", category: "World Cup", prow: ["Played WC 2006", "CC", "DF"], pcolumn: ["ARG", "MEX", "Atletico"] }],
+    [{ order: "29", result: "Liverpool 4-3 Borussia", year: "2015–16", category: "Champions", prow: ["Played WC 2016", "DF", "ChampionsWin"], pcolumn: ["Liverpool", "Borussia", "CRO"] }],
+    [{ order: "30", result: "Villarreal 1-1 Manchester United", year: "2020–21", category: "Europa League", prow: ["PO", "EuropaWin", "Played WC 2022"], pcolumn: ["Villarreal", "Man Utd", "ESP"] }],
+    [{ order: "31", result: "Liverpool 3–3*[h] Milan", year: "2004–05", category: "Champions", prow: ["ChampionsWin", "Premier", "PO"], pcolumn: ["Liverpool", "Milan", "Galatasaray"] }],
+    [{ order: "32", result: "Italy 0-0 South Korea", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ITA", "KOR", "WC01"] }],
+    [{ order: "33", result: "Barcelona 2–1 Arsenal", year: "2005–06", category: "Champions", prow: ["Arsenal", "CMR", "Chelsea"], pcolumn: ["Barcelona", "ChampionsWin", "Premier"] }],
+    [{ order: "34", result: "Brazil  1-2  Germany", year: "1998", category: "World Cup", prow: ["Played WC 2002", "ChampionsWin", "LaLigaWin"], pcolumn: ["BRA", "ENG", "Barcelona"] }],
+    [{ order: "35", result: "", year: "2018–19", category: "Champions", prow: ["ChampionsWin", "Premier", "NED"], pcolumn: ["Liverpool", "Tottenham", "Atletico"] }],
+    [{ order: "36", result: "England 2-2 Greece", year: "2011", category: "Other", prow: ["CC", "DL", "DF"], pcolumn: ["ENG", "GRE", "Played WC 2002"] }],
+    [{ order: "37", result: "Monaco 3-1 Real Madrid", year: "2004", category: "Champions", prow: ["ChampionsWin", "POR", "DL"], pcolumn: ["Porto", "Monaco", "Played Euro 2004"] }],
+    [{ order: "38", result: "Sevilla 1-1 Roma", year: "2022–23", category: "Europa League", prow: ["Played WC 2022", "PO", "ARG"], pcolumn: ["Sevilla", "Roma", "EuropaWin"] }],
+    [{ order: "39", result: "Atlético Madrid 3–0 Athletic Bilbao", year: "2011–12", category: "Europa League", prow: ["Atletico", "DL", "CC"], pcolumn: ["Athletic", "COL", "EuropaWin"] }],
+    [{ order: "40", result: "Real Madrid 0-3 Barcelona", year: "2005-2006", category: "LaLiga", prow: ["Played WC 2006", "Milan", "WC01"], pcolumn: ["Real Madrid", "Barcelona", "BRA"] }],
+    [{ order: "41", result: "Real Madrid 3–0 Valencia", year: "1999–2000", category: "Champions", prow: ["ChampionsWin", "Played Euro 2000", "Liverpool"], pcolumn: ["Real Madrid", "Valencia", "LaLigaWin"] }],
 
 
   ];
@@ -11911,6 +11916,10 @@ function createDisclaimer() {
     modal.style.left = '60%';
     modal.style.overflow = 'auto'; // Add scroll bar when content overflow
     modal3dates.innerHTML = '';
+    modal3dates.style.listStyleType = 'none'; // Remove bullet points
+    modal3dates.style.marginRight = '5px';
+
+
 
     // Array of month names for better readability
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -11927,22 +11936,22 @@ function createDisclaimer() {
     for (let date = endDate; date >= startDate; date.setDate(date.getDate() - 1)) {
       // Create a new list item
       const listItem = document.createElement('li');
-      const checkdate = date.getDate()
+
       // Format the date as "1/March/2024" without the dot at the beginning
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       limit2 = getTheDate(dateStringToDate(dateString));
-      const dateString2 = `(${limit2}) ${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
+      console.log(limit2)
+      console.log(getItemByOrder(limit2.toString()))
+      const dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")";
       // Set the text content of the list item to the formatted date
       listItem.textContent = dateString2
       // Add class for styling
       listItem.classList.add('dateItem');
 
-      // Add an event listener to the list item
+
       listItem.addEventListener('click', function () {
-        // Handle click event here (e.g., navigate to a specific date)
         modal.style.display = 'none';
 
-        // Assuming getTheDate() returns a date, not clear from the provided code
         limit = getTheDate(dateStringToDate(dateString));
 
         for (var i = 0; i < puzzleselection.length; i++) {
@@ -11952,12 +11961,14 @@ function createDisclaimer() {
           }
         }
 
-    currentPuzzle = puzzle1[0].order;
-    window.localStorage.setItem('currentPuzzle', currentPuzzle)
-        window.location.href = window.location.href;
+        currentPuzzle = puzzle1[0].order;
+        window.localStorage.setItem('currentPuzzle', currentPuzzle);
 
+        // Adding a delay of 1 second (1000 milliseconds) before refreshing the page
+        setTimeout(function () {
+          window.location.href = window.location.href;
+        }, 500); // Change delay time as needed
       });
-
       // Append the list item to modal3dates
       modal3dates.appendChild(listItem);
     }
