@@ -11930,7 +11930,7 @@ function createDisclaimer() {
     modal.style.transition = 'opacity 0.65s';
     modal.style.opacity = '1';
     modal.style.width = '80%'; // Adjusted width for better visibility
-    modal.style.maxWidth = '600px'; // Added maximum width to prevent it from getting too wide
+    modal.style.maxWidth = '275px'; // Added maximum width to prevent it from getting too wide
     modal.style.height = '100%'; // Adjusted height to auto
     modal.style.top = '50%';
     modal.style.left = '60%';
