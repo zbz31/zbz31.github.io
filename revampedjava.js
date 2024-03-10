@@ -11937,7 +11937,7 @@ function createDisclaimer() {
     modal.style.transform = 'translate(-50%, -50%)'; // Center the modal horizontally and vertically
     modal.style.background = '#ffffff'; // Set background color to white
     modal.style.borderRadius = '8px'; // Added border radius for a softer appearance
-    modal.style.padding = '20px'; // Added padding for better spacing
+    modal.style.padding = '10px'; // Added padding for better spacing
     modal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)'; // Added subtle shadow for depth
     modal.style.overflow = 'auto'; // Add scroll bar when content overflows
 
