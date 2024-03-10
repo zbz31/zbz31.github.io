@@ -2,9 +2,9 @@
 .headline {
     background-color: #333; /* Dark background color for the headline bar */
     color: #fff; /* White text color for better contrast */
-    padding: 8px; /* 15 pixels padding on the top and bottom*/
+    padding: 10px 20px; /* Padding for better spacing */
     font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
-    font-weight: 700; /* Make the text bold */
+    font-weight: 600; /* Medium font weight for a professional look */
     position: fixed; /* Keep the header fixed at the top of the page */
     top: 0; /* Positioned at the very top of the page */
     left: 0; /* Aligned to the left side of the page */
@@ -12,21 +12,37 @@
     box-sizing: border-box; /* Include padding and border in the total width and height */
     z-index: 1000; /* Ensure the header stays on top of other elements */
     display: flex; /* Use a flexible layout to arrange elements */
-    justify-content: center; /* Center the text horizontally within the header */
+    justify-content: space-between; /* Space evenly between elements */
     align-items: center; /* Center the text vertically within the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
-
 
 /* Style for the text within the headline */
 .headline-text {
     flex-grow: 1; /* Allow the text to expand and fill the remaining space */
     text-align: center; /* Center the text horizontally within the header */
-    font-size: 14px; /* Adjust the font size to your preference */
+    font-size: 14px; /* Adjusted font size */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 0.5px; /* Adjusted letter spacing */
+}
+
+/* Style for a decorative line underneath the headline */
+.headline-line {
+    width: 100%; /* Ensure the line spans the entire width of the header */
+    height: 1px; /* Set the height of the line */
+    background-color: #fff; /* White color for the line */
 }
 
 
-
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  position: relative;
+  background-color: #f5f5f5;
+}
 
 
 
@@ -167,18 +183,25 @@
 }
 
 .grid-playercell {
-  border: 0.05px solid black;
-  width: 90px;
-  height: 90px;
+  border: 1px solid #ccc; /* Softened border */
+  border-radius: 10px; /* Increased border radius for a smoother look */
+  width: 90px; /* Slightly increased width for better spacing */
+  height: 90px; /* Slightly increased height for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px; /* Adjust the value as needed */
-  background-color: #ffffff; /* Added semicolon */
-  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 12px;
-} /* Added closing curly brace */
+  background-color: #f8f8f8; /* Light background color */
+  font-family: 'Arial', sans-serif; /* Arial font for a clean and widely supported typeface */
+  font-size: 14px; /* Increased font size for better readability */
+  color: #333; /* Darkened text color for better contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
 
+.grid-playercell:hover {
+  transform: translateY(-2px); /* Lift up slightly on hover for interactive feedback */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover for depth */
+}
 
 .grid-cellunsolved {
   width: 85px;
@@ -200,7 +223,7 @@
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
   text-decoration: line-through;
   border: 2px solid #990000; /* Darker and less fluorescent red color */
-  box-shadow: 0 0 10px #990000; /* Darker and less fluorescent red shadow */
+  box-shadow: 0 2px 4px #990000; /* Darker and less fluorescent red shadow */
   margin-left: 3px; /* Adjust the margin as needed */
 }
 
@@ -225,7 +248,7 @@
     overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
  border: 2px solid #006600; /* Darker and less intense fluorescent green color */
-  box-shadow: 0 0 10px #006600; /* Darker and less intense fluorescent green shadow */
+  box-shadow: 0 2px 4px #006600; /* Darker and less intense fluorescent green shadow */
 margin-left: 3px; /* Adjust the margin as needed */
 }
 
@@ -289,10 +312,13 @@ margin-left: 3px; /* Adjust the margin as needed */
   align-items: center;
   text-align: center; /* Added to center the text horizontally */
   border-radius: 5px; /* Adjust the value as needed */
-  background-color: #ffffff; /* Added semicolon */
+
   font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
   font-weight : 700;
   font-size : 0.8em;
+
+
+
 }
 
 
@@ -446,7 +472,7 @@ margin-left: 3px; /* Adjust the margin as needed */
   left: 50%;
   transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
   background-color: #f9f9f9;
-  padding: 10px 10px; 
+  padding: 10px ; 
   border: 1px solid #ccc;
   border-radius: 5px;
   z-index: 9999;
@@ -470,17 +496,19 @@ margin-left: 3px; /* Adjust the margin as needed */
 
 
 
-
-.grid-cellnumber{
-  border: 1px solid black;
-  width: 50px;
-  height: 50px;
+.grid-cellnumber {
+  border: 2px solid #aaa; /* Lighter border color for a subtle look */
+  width: 50px; /* Increased width for better readability */
+  height: 50px; /* Increased height for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 12px; /* Increased font size for better visibility */
-  text-align: center; /* Center-align text */
-  border-radius: 5px; /* Rounded corners */
-background-color: rgb(209, 234, 224)
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px; /* Increased font size for better legibility */
+  font-weight: 500; /* Added font weight for a more professional look */
+  text-align: center;
+  border-radius: 1px; /* Increased border radius for smoother edges */
+  background-color: #dbd5d6; /* Slightly lighter background color for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
