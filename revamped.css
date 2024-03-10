@@ -497,18 +497,17 @@ margin-left: 3px; /* Adjust the margin as needed */
 
 
 .grid-cellnumber {
-  border: 2px solid #aaa; /* Lighter border color for a subtle look */
   width: 50px; /* Increased width for better readability */
   height: 50px; /* Increased height for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 12px; /* Increased font size for better legibility */
-  font-weight: 500; /* Added font weight for a more professional look */
+  font-size: 15px; /* Increased font size for better legibility */
+  font-weight: 700; /* Added font weight for a more professional look */
   text-align: center;
-  border-radius: 1px; /* Increased border radius for smoother edges */
-  background-color: #dbd5d6; /* Slightly lighter background color for contrast */
+  border-radius: 4px; /* Increased border radius for smoother edges */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect for depth */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #d9efd2; /* Slightly lighter background color for contrast */
 }
