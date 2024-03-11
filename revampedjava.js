@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
-   //window.localStorage.removeItem('current3Grid');
+ // window.localStorage.removeItem('current3Grid');
   let answers=[]
 
   const puzzleselection = [
@@ -61,7 +61,7 @@
 
   ];
   const names = [
-{name:"William Saliba", Country:"FRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:68, goals:5, assists:2},{ club:"fr Marseille", matches:52, goals:0, assists:0},], Titles:"2022WC02", WC:"2022", Euro:""},
+   {name:"William Saliba", Country:"FRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:68, goals:5, assists:2},{ club:"fr Marseille", matches:52, goals:0, assists:0},], Titles:"2022WC02", WC:"2022", Euro:""},
 {name:"Gabriel Dos Santos", Country:"BRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:153, goals:15, assists:1},], Titles:"", WC:"", Euro:""},
 {name:"Declan Rice", Country:"ENG", Position:"CC",Teams: [{ club:"en Arsenal", matches:36, goals:4, assists:6},], Titles:"2021EuroFinal", WC:"2022", Euro:"2021Euro"},
 {name:"Ben White", Country:"ENG", Position:"DF",Teams: [{ club:"en Arsenal", matches:119, goals:3, assists:7},], Titles:"", WC:"", Euro:""},
@@ -9812,7 +9812,7 @@
 {name:"Osman Üstünel", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:2, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mutlu Topçu", Country:"TUR", Position:"DF,CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mustafa Öztürk", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
-  
+
   ];
   const countries = [{
       cname: "ALB",
@@ -11138,6 +11138,7 @@
     row3col3: ""
   };
    if (currentGrid.find(item => item.order === currentPuzzle) !== undefined) {
+     console.log("YEYE")
      puzzleGrid = currentGrid.find(item => item.order === currentPuzzle);
    }
    console.log(puzzleGrid)
@@ -11172,9 +11173,12 @@
     const storedcurrentGrid = window.localStorage.getItem('current3Grid');
  
     if (!storedcurrentGrid) {
+      console.log("NOYE")
       window.localStorage.setItem('current3Grid', currentGrid);
     } else {
+      console.log("YAESTA")
       currentGrid = JSON.parse(storedcurrentGrid);
+      console.log(currentGrid)
     }
   }
 
@@ -11694,13 +11698,20 @@ function initHelpModal() {
     button.style.marginLeft = '2px'; // Add some space before the edge
     button.classList.add('coolButton'); // Add a class for styling
     document.getElementById('gridContainer').appendChild(button);
-
+    console.log(currentPuzzle)
+    console.log(currentGrid)
     button.addEventListener('click', function () {
 
+      console.log(currentPuzzle)
+      currentGrid = currentGrid.filter(item => item.order !== currentPuzzle);
 
-      removeItemByOrder(currentGrid, currentPuzzle);
-      window.localStorage.setItem('current3Grid', currentGrid);
-      window.location.href = window.location.href;
+      console.log(currentGrid)
+      window.localStorage.setItem('current3Grid', JSON.stringify(currentGrid));
+
+
+      setTimeout(function () {
+        window.location.href = window.location.href;
+      }, 2000); // 2000 milliseconds = 2 seconds
     });
 }
 
