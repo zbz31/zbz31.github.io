@@ -11698,8 +11698,7 @@ function initHelpModal() {
     button.style.marginLeft = '2px'; // Add some space before the edge
     button.classList.add('coolButton'); // Add a class for styling
     document.getElementById('gridContainer').appendChild(button);
-    console.log(currentPuzzle)
-    console.log(currentGrid)
+
     button.addEventListener('click', function () {
 
       console.log(currentPuzzle)
@@ -11710,6 +11709,7 @@ function initHelpModal() {
 
 
       setTimeout(function () {
+        window.localStorage.setItem('currentPuzzle', currentPuzzle);
         window.location.href = window.location.href;
       }, 300); // 2000 milliseconds = 2 seconds
     });
