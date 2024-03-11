@@ -61,7 +61,7 @@
 
   ];
   const names = [
-   {name:"William Saliba", Country:"FRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:68, goals:5, assists:2},{ club:"fr Marseille", matches:52, goals:0, assists:0},], Titles:"2022WC02", WC:"2022", Euro:""},
+  {name:"William Saliba", Country:"FRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:68, goals:5, assists:2},{ club:"fr Marseille", matches:52, goals:0, assists:0},], Titles:"2022WC02", WC:"2022", Euro:""},
 {name:"Gabriel Dos Santos", Country:"BRA", Position:"DF",Teams: [{ club:"en Arsenal", matches:153, goals:15, assists:1},], Titles:"", WC:"", Euro:""},
 {name:"Declan Rice", Country:"ENG", Position:"CC",Teams: [{ club:"en Arsenal", matches:36, goals:4, assists:6},], Titles:"2021EuroFinal", WC:"2022", Euro:"2021Euro"},
 {name:"Ben White", Country:"ENG", Position:"DF",Teams: [{ club:"en Arsenal", matches:119, goals:3, assists:7},], Titles:"", WC:"", Euro:""},
@@ -11711,7 +11711,7 @@ function initHelpModal() {
 
       setTimeout(function () {
         window.location.href = window.location.href;
-      }, 10); // 2000 milliseconds = 2 seconds
+      }, 300); // 2000 milliseconds = 2 seconds
     });
 }
 
@@ -12086,7 +12086,7 @@ function createDisclaimer() {
     modal.style.transition = 'opacity 0.65s';
     modal.style.opacity = '1';
     modal.style.width = '80%'; // Adjusted width for better visibility
-    modal.style.maxWidth = '275px'; // Added maximum width to prevent it from getting too wide
+    modal.style.maxWidth = '290px'; // Added maximum width to prevent it from getting too wide
     modal.style.height = '100%'; // Adjusted height to auto
     modal.style.top = '50%';
     modal.style.left = '60%';
@@ -12099,10 +12099,10 @@ function createDisclaimer() {
 
 
 
-
+    modal3dates.style.top = '40px'; // Adjust the top position as needed
     modal3dates.innerHTML = '';
     modal3dates.style.listStyleType = 'none'; // Remove bullet points
-    modal3dates.style.marginRight = '5px';
+    modal3dates.style.marginRight = '1px';
     modal3dates.style.padding = '0'; // Remove any default padding
     modal3dates.style.margin = '15'; // Remove any default margin
     modal3dates.style.position = 'absolute'; // Position it absolutely
@@ -12118,7 +12118,7 @@ function createDisclaimer() {
     // Set the end date to March 7, 2024
     const today = new Date();
     const endDate = new Date(today);
-    endDate.setDate(today.getDate() - 1);
+    endDate.setDate(today.getDate() );
 
     // Loop through each day from end date to start date in reverse order
     for (let date = endDate; date >= startDate; date.setDate(date.getDate() - 1)) {
