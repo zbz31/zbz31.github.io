@@ -11711,7 +11711,7 @@ function initHelpModal() {
 
       setTimeout(function () {
         window.location.href = window.location.href;
-      }, 2000); // 2000 milliseconds = 2 seconds
+      }, 10); // 2000 milliseconds = 2 seconds
     });
 }
 
