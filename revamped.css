@@ -253,6 +253,34 @@ margin-left: 3px; /* Adjust the margin as needed */
 }
 
 
+
+.grid-cellalreadyused {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+   font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d1c36a; /* Text color */
+  border-radius: 5px; /* Adjust the value as needed */
+  background-color: rgb(220, 246, 218);
+  text-align: center; /* Justify text horizontally */
+  /*animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
+  animation: starAnimation 1s forwards;
+    overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+ border: 2px solid #006600; /* Darker and less intense fluorescent green color */
+  box-shadow: 0 2px 4px #006600; /* Darker and less intense fluorescent green shadow */
+margin-left: 3px; /* Adjust the margin as needed */
+}
+
+
+
+
 @keyframes cellFill {
   0% {
     transform: scale(0.75); /* Start with smaller size */
