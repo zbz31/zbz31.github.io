@@ -265,7 +265,7 @@ body {
   letter-spacing: 1px;
   color: #424242; /* Dark grey text color */
   border-radius: 5px; /* Adjust the value as needed */
-  background: linear-gradient(45deg, #bfbfbf, #e0e0e0); /* Gradient background with cooler grey colors */
+  background: linear-gradient(45deg, #d4f2ce, #e5f9e4); /* Gradient background with very light green colors */
   text-align: center; /* Justify text horizontally */
   animation: starAnimation 1s forwards;
   overflow: hidden; /* Hide overflow text */
