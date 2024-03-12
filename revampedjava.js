@@ -11821,7 +11821,7 @@ function createDisclaimer() {
      return false;
    }
 
-   function countWStatsForOrder(data, order, clet) {
+   function countWStatsForOrder(data, order) {
      // Iterate over the array
 
      for (let i = 0; i < data.length; i++) {
@@ -11831,39 +11831,39 @@ function createDisclaimer() {
          // Initialize count
          let wCount = 0;
          // Check stat attribute of row1col1 if it exists and is an object
-         if (data[i].row1col1 && typeof data[i].row1col1 === 'object' && data[i].row1col1.status === clet) {
+         if (data[i].row1col1 && typeof data[i].row1col1 === 'object' && data[i].row1col1.status === "w") {
            wCount++;
          }
          // Check stat attribute of row1col2 if it exists and is an object
-         if (data[i].row2col1 && typeof data[i].row2col1 === 'object' && data[i].row2col1.status === clet) {
+         if (data[i].row2col1 && typeof data[i].row2col1 === 'object' && data[i].row2col1.status === "w") {
            wCount++;
          }
 
-         if (data[i].row3col1 && typeof data[i].row3col1 === 'object' && data[i].row3col1.status === clet) {
+         if (data[i].row3col1 && typeof data[i].row3col1 === 'object' && data[i].row3col1.status === "w") {
            wCount++;
          }
 
-         if (data[i].row1col2 && typeof data[i].row1col2 === 'object' && data[i].row1col2.status === clet) {
+         if (data[i].row1col2 && typeof data[i].row1col2 === 'object' && data[i].row1col2.status === "w") {
            wCount++;
          }
 
-         if (data[i].row2col2 && typeof data[i].row2col2 === 'object' && data[i].row2col2.status === clet) {
+         if (data[i].row2col2 && typeof data[i].row2col2 === 'object' && data[i].row2col2.status === "w") {
            wCount++;
          }
 
-         if (data[i].row3col2 && typeof data[i].row3col2 === 'object' && data[i].row3col2.status === clet) {
+         if (data[i].row3col2 && typeof data[i].row3col2 === 'object' && data[i].row3col2.status === "w") {
            wCount++;
          }
 
-         if (data[i].row1col3 && typeof data[i].row1col3 === 'object' && data[i].row1col3.status === clet) {
+         if (data[i].row1col3 && typeof data[i].row1col3 === 'object' && data[i].row1col3.status === "w") {
            wCount++;
          }
 
-         if (data[i].row2col3 && typeof data[i].row2col3 === 'object' && data[i].row2col3.status === clet) {
+         if (data[i].row2col3 && typeof data[i].row2col3 === 'object' && data[i].row2col3.status === "w") {
            wCount++;
          }
 
-         if (data[i].row3col3 && typeof data[i].row3col3 === 'object' && data[i].row3col3.status === clet) {
+         if (data[i].row3col3 && typeof data[i].row3col3 === 'object' && data[i].row3col3.status === "w") {
            wCount++;
          }
 
@@ -11913,10 +11913,20 @@ function createDisclaimer() {
     })
       .forEach(item => {
         if (count < 10) { 
-          const li = document.createElement("li");
+          var li = document.createElement("li");
           const flagImg = `<img src="${countries.find(country => country.cname === item.Country).Flag}" alt="Flag of Germany" style="width: 20px; height: auto; margin-right: 5px;">`;
 
-          li.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
+      
+
+          const isString = findItemByOrderAndName(currentPuzzle, currentGrid, item.name);
+
+
+          if (isString){
+            li.innerHTML = `${flagImg}  ${item.name} [${item.Position}] 🔎 `;
+          }
+          else{
+            li.innerHTML = `${flagImg} ${item.name} [${item.Position}]`;
+          }
 
           li.addEventListener('click', () => {
             // When a suggestion is clicked, populate the input field with the clicked name
@@ -11930,18 +11940,16 @@ function createDisclaimer() {
               (item.Teams.some(team => team.club.includes(puzzle1.pcolumn[col - 1])) || item.Position.includes(puzzle1.pcolumn[col - 1]) || item.Country.includes(puzzle1.pcolumn[col - 1]) || item.Titles.includes(puzzle1.pcolumn[col - 1]) || item.WC.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)) || item.Euro.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)))) {
               cell.classList.remove("grid-playercell");
    
-              const isString = findItemByOrderAndName(currentPuzzle, currentGrid, item.name);
 
-              console.log(item.name, currentPuzzle)
               if (isString && cell.textContent == "") {
-                console.log("HEY")
+
                                 puzzleGrid["row" + row + "col" + col] = {
                   name: item.name,
                   status: "r"
                 };
                 cell.classList.add("grid-cellalreadyused");
               } else if (cell.textContent == ""){
-                console.log(currentGrid)
+
                                 puzzleGrid["row" + row + "col" + col] = {
                   name: item.name,
                   status: "w"
@@ -12082,11 +12090,10 @@ function createDisclaimer() {
   }
 
   function solved() {
-    const gridCellssolved = document.querySelectorAll('.grid-cellsolved, .grid-cellalreadyused');
+    const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
     const gridCellsunsolved = document.querySelectorAll('.grid-cellunsolved');
-    const delay = 1000; 
-    if (countWStatsForOrder(currentGrid, currentPuzzle, "w") + countWStatsForOrder(currentGrid, currentPuzzle, "r") === 9) {
-      console.log("YYYY")
+
+    if (answers.length === 9 && !answers.includes("ERROR")) {
       const addFluorescentBorder = (cells, delay) => {
         setTimeout(() => {
           cells.forEach(cell => {
@@ -12094,7 +12101,7 @@ function createDisclaimer() {
           });
         }, delay);
       };
-    
+
       if (gridCellssolved.length === 9) {
         addFluorescentBorder(gridCellssolved, 600);
       } else {
@@ -12276,7 +12283,7 @@ function createDisclaimer() {
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       limit2 = getTheDate(dateStringToDate(dateString));
 
-      const scores = countWStatsForOrder(currentGrid, limit2.toString(), "w") + countWStatsForOrder(currentGrid, limit2.toString(), "r")  
+      const scores = countWStatsForOrder(currentGrid, limit2.toString()) 
 
  
 
@@ -12297,9 +12304,7 @@ function createDisclaimer() {
 
         listItem.style.backgroundColor = 'rgba(144, 238, 144, 0.5)'; // Lighter green background
         listItem.style.fontWeight = 'bold'; // Bold font weight
-        if (countWStatsForOrder(currentGrid, limit2.toString(), "w")===9){
         dateString2 = dateString2 + " ⭐" 
-        }
       }
       listItem.textContent = dateString2
 
