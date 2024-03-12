@@ -11821,7 +11821,7 @@ function createDisclaimer() {
      return false;
    }
 
-   function countWStatsForOrder(data, order) {
+   function countWStatsForOrder(data, order, clet) {
      // Iterate over the array
 
      for (let i = 0; i < data.length; i++) {
@@ -11831,39 +11831,39 @@ function createDisclaimer() {
          // Initialize count
          let wCount = 0;
          // Check stat attribute of row1col1 if it exists and is an object
-         if (data[i].row1col1 && typeof data[i].row1col1 === 'object' && data[i].row1col1.status === "w") {
+         if (data[i].row1col1 && typeof data[i].row1col1 === 'object' && data[i].row1col1.status === clet) {
            wCount++;
          }
          // Check stat attribute of row1col2 if it exists and is an object
-         if (data[i].row2col1 && typeof data[i].row2col1 === 'object' && data[i].row2col1.status === "w") {
+         if (data[i].row2col1 && typeof data[i].row2col1 === 'object' && data[i].row2col1.status === clet) {
            wCount++;
          }
 
-         if (data[i].row3col1 && typeof data[i].row3col1 === 'object' && data[i].row3col1.status === "w") {
+         if (data[i].row3col1 && typeof data[i].row3col1 === 'object' && data[i].row3col1.status === clet) {
            wCount++;
          }
 
-         if (data[i].row1col2 && typeof data[i].row1col2 === 'object' && data[i].row1col2.status === "w") {
+         if (data[i].row1col2 && typeof data[i].row1col2 === 'object' && data[i].row1col2.status === clet) {
            wCount++;
          }
 
-         if (data[i].row2col2 && typeof data[i].row2col2 === 'object' && data[i].row2col2.status === "w") {
+         if (data[i].row2col2 && typeof data[i].row2col2 === 'object' && data[i].row2col2.status === clet) {
            wCount++;
          }
 
-         if (data[i].row3col2 && typeof data[i].row3col2 === 'object' && data[i].row3col2.status === "w") {
+         if (data[i].row3col2 && typeof data[i].row3col2 === 'object' && data[i].row3col2.status === clet) {
            wCount++;
          }
 
-         if (data[i].row1col3 && typeof data[i].row1col3 === 'object' && data[i].row1col3.status === "w") {
+         if (data[i].row1col3 && typeof data[i].row1col3 === 'object' && data[i].row1col3.status === clet) {
            wCount++;
          }
 
-         if (data[i].row2col3 && typeof data[i].row2col3 === 'object' && data[i].row2col3.status === "w") {
+         if (data[i].row2col3 && typeof data[i].row2col3 === 'object' && data[i].row2col3.status === clet) {
            wCount++;
          }
 
-         if (data[i].row3col3 && typeof data[i].row3col3 === 'object' && data[i].row3col3.status === "w") {
+         if (data[i].row3col3 && typeof data[i].row3col3 === 'object' && data[i].row3col3.status === clet) {
            wCount++;
          }
 
@@ -12082,10 +12082,11 @@ function createDisclaimer() {
   }
 
   function solved() {
-    const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
+    const gridCellssolved = document.querySelectorAll('.grid-cellsolved, .grid-cellalreadyused');
     const gridCellsunsolved = document.querySelectorAll('.grid-cellunsolved');
-
-    if (answers.length === 9 && !answers.includes("ERROR")) {
+    const delay = 1000; 
+    if (countWStatsForOrder(currentGrid, currentPuzzle, "w") + countWStatsForOrder(currentGrid, currentPuzzle, "r") === 9) {
+      console.log("YYYY")
       const addFluorescentBorder = (cells, delay) => {
         setTimeout(() => {
           cells.forEach(cell => {
@@ -12093,7 +12094,7 @@ function createDisclaimer() {
           });
         }, delay);
       };
-
+    
       if (gridCellssolved.length === 9) {
         addFluorescentBorder(gridCellssolved, 600);
       } else {
@@ -12275,7 +12276,7 @@ function createDisclaimer() {
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       limit2 = getTheDate(dateStringToDate(dateString));
 
-      const scores = countWStatsForOrder(currentGrid, limit2.toString()) 
+      const scores = countWStatsForOrder(currentGrid, limit2.toString(), "w") + countWStatsForOrder(currentGrid, limit2.toString(), "r")  
 
  
 
