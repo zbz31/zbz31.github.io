@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
- // window.localStorage.removeItem('current3Grid');
+ window.localStorage.removeItem('current3Grid');
   let answers=[]
 
   const puzzleselection = [
