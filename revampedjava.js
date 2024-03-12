@@ -11124,6 +11124,7 @@
   let guessedWordCount = 0;
   let currentPuzzle = todayPuzzle()[0].order;
   let currentGrid=[]
+  let currentPlayers=[];
   initLocalStorage();
   let puzzleGrid = {
     order: currentPuzzle,
@@ -11180,7 +11181,25 @@
       currentGrid = JSON.parse(storedcurrentGrid);
 
     }
+
+    const storedPlayers = window.localStorage.getItem('currentPlayers');
+
+    if (!storedPlayers) {
+
+      window.localStorage.setItem('currentPlayers', currentPlayers);
+    } else {
+
+      currentPlayers = JSON.parse(storedPlayers);
+
+    }
+
+
+
+
   }
+
+
+
 
    function removeItemByOrder(arr, order) {
      for (var i = 0; i < arr.length; i++) {
@@ -11524,6 +11543,21 @@ function initHelpModal() {
       }
 
 
+      if (puzzleGrid["row" + row + "col" + col].status === "r") {
+
+        cell.textContent = puzzleGrid["row" + row + "col" + col].name;
+        cell.classList.remove("grid-playercell");
+        cell.classList.add("grid-cellalreadyused");
+        cell.addEventListener('click', () => {
+          if (cell.textContent.trim() !== '') {
+            showModal2(puzzle1, row, col, cell);
+          }
+        }); // Added a closing parenthesis here
+      }
+
+
+
+
 
       cell.addEventListener('click', () => {
         if (cell.textContent === '') {
@@ -11842,6 +11876,32 @@ function createDisclaimer() {
    }
 
 
+   function findItemByOrderAndName(orderToFind, array, name) {
+     let foundItem = null;
+
+     // Iterate over each sub-array or directly over the object
+     for (let i = 0; i < array.length; i++) {
+       const subArray = array[i];
+       if (Array.isArray(subArray)) {
+         for (let j = 0; j < subArray.length; j++) {
+           const item = subArray[j];
+           if (item.order !== orderToFind && (item.row1col1?.name === name || item.row1col2?.name === name)) {
+             foundItem = item;
+             break;
+           }
+         }
+       } else if (subArray.order !== orderToFind && (subArray.row1col1?.name === name || subArray.row1col2?.name === name)) {
+         foundItem = subArray;
+         break;
+       }
+     }
+
+     return foundItem;
+   }
+
+
+
+
   function populateNameList(puzzle1, filter, row, col, cell) {
     const nameList = document.getElementById("nameList");
     nameList.innerHTML = "";
@@ -11870,23 +11930,30 @@ function createDisclaimer() {
               (item.Teams.some(team => team.club.includes(puzzle1.pcolumn[col - 1])) || item.Position.includes(puzzle1.pcolumn[col - 1]) || item.Country.includes(puzzle1.pcolumn[col - 1]) || item.Titles.includes(puzzle1.pcolumn[col - 1]) || item.WC.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)) || item.Euro.includes(puzzle1.pcolumn[col - 1].substring(puzzle1.pcolumn[col - 1].length - 4)))) {
               cell.classList.remove("grid-playercell");
    
-              console.log(answers)
-              const isString = isStringPresentWithDifferentOrderAndStat(item.name, currentGrid, currentPuzzle, "w");
+              const isString = findItemByOrderAndName(currentPuzzle, currentGrid, item.name);
 
-  
-              if (isString) {
+              console.log(item.name, currentPuzzle)
+              if (isString && cell.textContent == "") {
+                console.log("HEY")
+                                puzzleGrid["row" + row + "col" + col] = {
+                  name: item.name,
+                  status: "r"
+                };
                 cell.classList.add("grid-cellalreadyused");
-              } else {
+              } else if (cell.textContent == ""){
+                console.log(currentGrid)
+                                puzzleGrid["row" + row + "col" + col] = {
+                  name: item.name,
+                  status: "w"
+                };
                 cell.classList.add("grid-cellsolved");
               }
+
 
               if (cell.textContent == "") {
 
                 cell.textContent = `${item.name} `; // Set the text content of the cell directly
-                puzzleGrid["row" + row + "col" + col] = {
-                  name: item.name,
-                  status: "w"
-                };
+
                 let found = false;
                 for (let i = 0; i < currentGrid.length; i++) {
                   if (currentGrid[i].order === currentPuzzle) {
