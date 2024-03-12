@@ -12212,23 +12212,26 @@ function createDisclaimer() {
 
  
 
-      const dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")" + " [" + scores + "/9]";
+      var dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")" + " [" + scores + "/9]";
       // Set the text content of the list item to the formatted date
-      listItem.textContent = dateString2
+
       // Add class for styling
       listItem.classList.add('dateItem');
 
       if (scores > 0 && scores < 9){
 
         listItem.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Light orange background
+        listItem.style.fontWeight = 'bold'; // Bold font weight  
+     
       }
 
       if (scores === 9) {
 
         listItem.style.backgroundColor = 'rgba(144, 238, 144, 0.5)'; // Lighter green background
-
+        listItem.style.fontWeight = 'bold'; // Bold font weight
+        dateString2 = dateString2 + " ⭐" 
       }
-
+      listItem.textContent = dateString2
 
       listItem.addEventListener('click', function () {
         modal.style.display = 'none';
