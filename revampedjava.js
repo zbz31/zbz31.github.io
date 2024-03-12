@@ -12297,7 +12297,9 @@ function createDisclaimer() {
 
         listItem.style.backgroundColor = 'rgba(144, 238, 144, 0.5)'; // Lighter green background
         listItem.style.fontWeight = 'bold'; // Bold font weight
+        if (countWStatsForOrder(currentGrid, limit2.toString(), "w")===9){
         dateString2 = dateString2 + " ⭐" 
+        }
       }
       listItem.textContent = dateString2
 
