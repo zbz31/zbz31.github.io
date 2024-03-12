@@ -209,24 +209,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 12px;
-  font-weight: bold; /* Make the text bolder */
+  font-family: 'Strait', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #990000;; /* Text color */
-  border-radius: 5px; /* Adjust the value as needed */
-  background-color: rgb(248, 204, 204);
-  text-align: center; /* Justify text horizontally */
+  color: #990000;
+  border-radius: 5px;
+  background: linear-gradient(45deg, rgb(248, 204, 204), #ffcccc, #ffb8b8, #ffa5a5, #ff9292);
+  text-align: center;
   animation: starAnimation 1s forwards;
-  overflow: hidden; /* Hide overflow text */
-  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: line-through;
-  border: 2px solid #990000; /* Darker and less fluorescent red color */
-  box-shadow: 0 2px 4px #990000; /* Darker and less fluorescent red shadow */
-  margin-left: 3px; /* Adjust the margin as needed */
+  border: 2px solid #990000;
+  box-shadow: 0 2px 4px #990000;
+  margin-left: 3px;
 }
-
 
 .grid-cellsolved {
   width: 85px;
@@ -236,22 +235,21 @@ body {
   align-items: center;
   font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
   font-size: 14px;
-   font-weight: bold; /* Make the text bolder */
+  font-weight: bold; /* Make the text bolder */
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #006600; /* Text color */
   border-radius: 5px; /* Adjust the value as needed */
-  background-color: rgb(220, 246, 218);
+  background: linear-gradient(45deg, rgb(220, 246, 218), #a1db9c); /* Gradient background transitioning from current color to a lighter shade */
   text-align: center; /* Justify text horizontally */
-  /*animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
+  /* animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
   animation: starAnimation 1s forwards;
-    overflow: hidden; /* Hide overflow text */
+  overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
- border: 2px solid #006600; /* Darker and less intense fluorescent green color */
+  border: 2px solid #006600; /* Darker and less intense fluorescent green color */
   box-shadow: 0 2px 4px #006600; /* Darker and less intense fluorescent green shadow */
-margin-left: 3px; /* Adjust the margin as needed */
+  margin-left: 3px; /* Adjust the margin as needed */
 }
-
 
 
 .grid-cellalreadyused {
@@ -260,25 +258,22 @@ margin-left: 3px; /* Adjust the margin as needed */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 12px;
-   font-weight: bold; /* Make the text bolder */
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 14px;
+  font-weight: bold; /* Make the text bolder */
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #d1c36a; /* Text color */
+  color: #424242; /* Dark grey text color */
   border-radius: 5px; /* Adjust the value as needed */
-  background-color: rgb(220, 246, 218);
+  background: linear-gradient(45deg, #bfbfbf, #e0e0e0); /* Gradient background with cooler grey colors */
   text-align: center; /* Justify text horizontally */
-  /*animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
   animation: starAnimation 1s forwards;
-    overflow: hidden; /* Hide overflow text */
+  overflow: hidden; /* Hide overflow text */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
- border: 2px solid #006600; /* Darker and less intense fluorescent green color */
-  box-shadow: 0 2px 4px #006600; /* Darker and less intense fluorescent green shadow */
-margin-left: 3px; /* Adjust the margin as needed */
+  border: 2px solid #757575; /* Darker grey border */
+  box-shadow: 0 2px 4px #616161; /* Darker grey shadow */
+  margin-left: 3px; /* Adjust the margin as needed */
 }
-
-
 
 
 @keyframes cellFill {
