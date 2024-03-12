@@ -3,7 +3,7 @@
   let answers=[]
 
   const puzzleselection = [
-
+ 
     [{ order: "1", result: "France 2-1 Portugal", year: "2000", category: "EURO", prow: ["Played Euro 2000", "Real Madrid", "Barcelona"], pcolumn: ["FRA", "POR", "Juventus"] }],
     [{ order: "2", result: "Man Utd 0-0 Arsenal", year: "2001", category: "Premier League", prow: ["NED", "FRA", "Played Euro 2000"], pcolumn: ["Man Utd", "Arsenal", "Premier"] }],
     [{ order: "3", result: "Francia 4-4 Argentina", year: "2022", category: "World Cup", prow: ["Played WC 2022", "WC01", "Barcelona"], pcolumn: ["ARG", "FRA", "ParisSG"] }],
