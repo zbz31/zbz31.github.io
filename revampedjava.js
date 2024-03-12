@@ -1,7 +1,7 @@
  document.addEventListener("DOMContentLoaded", () => {
  // window.localStorage.removeItem('current3Grid');
   let answers=[]
-
+ 
   const puzzleselection = [
  
     [{ order: "1", result: "France 2-1 Portugal", year: "2000", category: "EURO", prow: ["Played Euro 2000", "Real Madrid", "Barcelona"], pcolumn: ["FRA", "POR", "Juventus"] }],
