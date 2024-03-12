@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
- //window.localStorage.removeItem('current3Grid');
+ // window.localStorage.removeItem('current3Grid');
   let answers=[]
 
   const puzzleselection = [
@@ -11787,6 +11787,60 @@ function createDisclaimer() {
      return false;
    }
 
+   function countWStatsForOrder(data, order) {
+     // Iterate over the array
+
+     for (let i = 0; i < data.length; i++) {
+       // Check if the current item is defined and has an order property
+       if (data[i] && data[i].order === order) {
+     
+         // Initialize count
+         let wCount = 0;
+         // Check stat attribute of row1col1 if it exists and is an object
+         if (data[i].row1col1 && typeof data[i].row1col1 === 'object' && data[i].row1col1.status === "w") {
+           wCount++;
+         }
+         // Check stat attribute of row1col2 if it exists and is an object
+         if (data[i].row2col1 && typeof data[i].row2col1 === 'object' && data[i].row2col1.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row3col1 && typeof data[i].row3col1 === 'object' && data[i].row3col1.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row1col2 && typeof data[i].row1col2 === 'object' && data[i].row1col2.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row2col2 && typeof data[i].row2col2 === 'object' && data[i].row2col2.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row3col2 && typeof data[i].row3col2 === 'object' && data[i].row3col2.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row1col3 && typeof data[i].row1col3 === 'object' && data[i].row1col3.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row2col3 && typeof data[i].row2col3 === 'object' && data[i].row2col3.status === "w") {
+           wCount++;
+         }
+
+         if (data[i].row3col3 && typeof data[i].row3col3 === 'object' && data[i].row3col3.status === "w") {
+           wCount++;
+         }
+
+         // Return the count
+         return wCount;
+       }
+     }
+     // Return 0 if the item with the given order is not found
+     return 0;
+   }
+
 
   function populateNameList(puzzle1, filter, row, col, cell) {
     const nameList = document.getElementById("nameList");
@@ -11819,7 +11873,8 @@ function createDisclaimer() {
               console.log(answers)
               const isString = isStringPresentWithDifferentOrderAndStat(item.name, currentGrid, currentPuzzle, "w");
 
-        if (isString) {
+  
+              if (isString) {
                 cell.classList.add("grid-cellalreadyused");
               } else {
                 cell.classList.add("grid-cellsolved");
@@ -12137,7 +12192,7 @@ function createDisclaimer() {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 
-    const startDate = new Date('2024-01-22');
+    const startDate = new Date('2024-01-23');
 
     // Set the end date to March 7, 2024
     const today = new Date();
@@ -12153,11 +12208,26 @@ function createDisclaimer() {
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       limit2 = getTheDate(dateStringToDate(dateString));
 
-      const dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")";
+      const scores = countWStatsForOrder(currentGrid, limit2.toString()) 
+
+ 
+
+      const dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")" + " [" + scores + "/9]";
       // Set the text content of the list item to the formatted date
       listItem.textContent = dateString2
       // Add class for styling
       listItem.classList.add('dateItem');
+
+      if (scores > 0 && scores < 9){
+
+        listItem.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Light orange background
+      }
+
+      if (scores === 9) {
+
+        listItem.style.backgroundColor = 'rgba(144, 238, 144, 0.5)'; // Lighter green background
+
+      }
 
 
       listItem.addEventListener('click', function () {
