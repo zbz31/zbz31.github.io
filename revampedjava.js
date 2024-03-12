@@ -1,5 +1,5 @@
  document.addEventListener("DOMContentLoaded", () => {
- window.localStorage.removeItem('current3Grid');
+ //window.localStorage.removeItem('current3Grid');
   let answers=[]
 
   const puzzleselection = [
@@ -11819,11 +11819,10 @@ function createDisclaimer() {
               console.log(answers)
               const isString = isStringPresentWithDifferentOrderAndStat(item.name, currentGrid, currentPuzzle, "w");
 
-  
-              if (isString) {
-                cell.classList.add("grid-cellsolved");
-              } else {
+        if (isString) {
                 cell.classList.add("grid-cellalreadyused");
+              } else {
+                cell.classList.add("grid-cellsolved");
               }
 
               if (cell.textContent == "") {
