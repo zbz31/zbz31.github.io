@@ -69,7 +69,7 @@
 [{order:"63",result:"Arsenal 2-1 Tottenham",year:"2021", category:"Premier League",prow:["Tottenham","Roma","DL"], pcolumn: ["Arsenal","ARG","Sevilla"],ylink:"https://www.youtube.com/watch?v=UJhvsaRnSdI"}],
 [{order:"64",result:"Argentina 2-1 Mexico",year:"2006", category:"World Cup",prow:["Played WC 2006","CC","DF"], pcolumn: ["ARG","MEX","Atletico"],ylink:"https://www.youtube.com/watch?v=xh-yANwjcR0"}],
 [{order:"65",result:"Borussia 3-2 Malaga",year:"2013", category:"Champions",prow:["DF","CC","ChampionsWin"], pcolumn: ["Malaga","Borussia","Porto"],ylink:"https://www.youtube.com/watch?v=rz50dgak8P8"}],
-[{order:"66",result:"Spain 0-1 Switzerland",year:"2010", category:"World Cup",prow:["Played WC 2010","PO","Man City"], pcolumn: ["SPA","SUI","WC01"],ylink:"https://www.youtube.com/watch?v=RxiBdX5F2I8"}],
+[{order:"66",result:"Spain 0-1 Switzerland",year:"2010", category:"World Cup",prow:["Played WC 2010","PO","Man City"], pcolumn: ["ESP","SUI","WC01"],ylink:"https://www.youtube.com/watch?v=RxiBdX5F2I8"}],
 [{order:"67",result:"R. Madrid 1-0 Atlético",year:"2015", category:"Champions",prow:["DL","ChampionsWin","Played WC 2014"], pcolumn: ["Real Madrid","Atletico","MEX"],ylink:"https://www.youtube.com/watch?v=bmbf1LG9UD8"}],
 [{order:"68",result:"Italy 1-0 Australia",year:"2006", category:"World Cup",prow:["Played WC 2006","DL","CC"], pcolumn: ["Roma","Inter","AUS"],ylink:"https://www.youtube.com/watch?v=tkOuuIpfXNs"}],
 [{order:"69",result:"R. Madrid 4-1 Juventus",year:"2017", category:"Champions",prow:["Juventus","ChampionsWin","LaLigaWin"], pcolumn: ["Real Madrid","CRO","POR"],ylink:"https://www.youtube.com/watch?v=XrKBZS-IWoQ"}],
