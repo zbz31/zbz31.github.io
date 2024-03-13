@@ -49,6 +49,38 @@ body {
 
 
 
+.modal-solved {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 140%;
+  overflow: auto;
+  color: #333; /* Change the font color */
+  transition: opacity 0.6s ease; /* Smooth transition for opacity */
+}
+
+
+.format1 {
+    font-weight: bold;
+         font-family: 'Arial', sans-serif; /* Use Roboto font for the text */
+    font-size: 14px;
+}
+
+.format2 {
+    color: blue;
+     font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
+    
+    font-size: 14px;
+}
+
+.format3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
 /*This corresponds to the HELP Modal */
 
 .modalhelp {
@@ -265,7 +297,7 @@ body {
   letter-spacing: 1px;
   color: #424242; /* Dark grey text color */
   border-radius: 5px; /* Adjust the value as needed */
-  background: linear-gradient(45deg, #c1d4c4, #ceddc5); /* Greyish-green gradient background */
+  background: linear-gradient(45deg, #d4f2ce, #e5f9e4); /* Gradient background with very light green colors */
   text-align: center; /* Justify text horizontally */
   animation: starAnimation 1s forwards;
   overflow: hidden; /* Hide overflow text */
@@ -532,16 +564,4 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect for depth */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
   
-}
-
-
-.fluorescent-border {
-border: 2px solid #00ff00; /* Fluorescent green color */
-box-shadow: 0 0 10px #00ff00; /* Fluorescent green shadow */
-   transition: border-color 1.3s, box-shadow 1.3s;
-}
-
-.fluorescent-border2 {
- border: 2px solid #990000; /* Darker and less fluorescent red color */
-  box-shadow: 0 0 10px #990000; /* Darker and less fluorescent red shadow */
 }
