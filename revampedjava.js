@@ -72,7 +72,7 @@
     [{ order: "66", result: "Spain 0-1 Switzerland", year: "2010", category: "World Cup", prow: ["Played WC 2010", "PO", "Man City"], pcolumn: ["ESP", "SUI", "WC01"] }],
     [{ order: "67", result: "R. Madrid 1-0 Atlético", year: "2015", category: "Champions", prow: ["DL", "ChampionsWin", "Played WC 2014"], pcolumn: ["Real Madrid", "Atletico", "MEX"] }],
     [{ order: "68", result: "Italy 1-0 Australia", year: "2006", category: "World Cup", prow: ["Played WC 2006", "DL", "CC"], pcolumn: ["Roma", "Inter", "AUS"] }],
-    [{ order: "69", result: "Arsenal 6-0 Ludogorets", year: "2016", category: "Europa League", prow: ["CC", "DL", "LaLigaWin"], pcolumn: ["Arsenal", "BUL", "EuropaWin"] }],
+    [{ order: "69", result: "Arsenal 6-0 Ludogorets", year: "2016", category: "Europa League", prow: ["CC", "DL", "Played WC 1998"], pcolumn: ["Arsenal", "BUL", "EuropaWin"] }],
     [{ order: "70", result: "Liverpool 5-2 Roma", year: "2018", category: "Champions", prow: ["Liverpool", "Premier", "Played WC 2018"], pcolumn: ["Roma", "ChampionsWin", "BRA"] }],
 
 
