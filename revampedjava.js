@@ -11179,6 +11179,12 @@
   puzzle1=getItemByOrder(currentPuzzle);
   
   createGrid(puzzle1);
+     const scorestotal = countWStatsForOrder(currentGrid, currentPuzzle, "w") + countWStatsForOrder(currentGrid, currentPuzzle, "r") + countWStatsForOrder(currentGrid, currentPuzzle, "e")
+
+   if (scorestotal === 9) {
+     solved()
+   }
+
   window.localStorage.setItem('currentPuzzle', todayPuzzle()[0].order)
   
 
