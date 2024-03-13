@@ -69,16 +69,16 @@
     [{ order: "63", result: "Arsenal 2-1 Tottenham", year: "2021", category: "Premier League", prow: ["Arsenal", "ARG", "Sevilla"], pcolumn: ["Tottenham", "Roma", "DL"] }],
     [{ order: "64", result: "Argentina 2-1 Mexico", year: "2006", category: "World Cup", prow: ["Played WC 2006", "CC", "DF"], pcolumn: ["ARG", "MEX", "Atletico"] }],
     [{ order: "65", result: "Borussia 3-2 Malaga", year: "2013", category: "Champions", prow: ["DF", "CC", "ChampionsWin"], pcolumn: ["Malaga", "Borussia", "Porto"] }],
-    [{ order: "66", result: "Spain 0-1 Switzerland", year: "2010", category: "World Cup", prow: ["Played WC 2010", "PO", "Man City"], pcolumn: ["ESP", "SUI", "WC01"] }],
+    [{ order: "66", result: "Spain 0-1 Switzerland", year: "2010", category: "World Cup", prow: ["Played WC 2010", "PO", "Man City"], pcolumn: ["ESP", "SUI", "WC01"],  }],
     [{ order: "67", result: "R. Madrid 1-0 Atlético", year: "2015", category: "Champions", prow: ["DL", "ChampionsWin", "Played WC 2014"], pcolumn: ["Real Madrid", "Atletico", "MEX"] }],
     [{ order: "68", result: "Italy 1-0 Australia", year: "2006", category: "World Cup", prow: ["Played WC 2006", "DL", "CC"], pcolumn: ["Roma", "Inter", "AUS"] }],
-    [{ order: "69", result: "Arsenal 6-0 Ludogorets", year: "2016", category: "Europa League", prow: ["CC", "DL", "Played WC 1998"], pcolumn: ["Arsenal", "BUL", "EuropaWin"] }],
+    [{ order: "69", result: "Arsenal 6-0 Ludogorets", year: "2016", category: "Europa League", prow: ["CC", "DL", "Played WC 1998"], pcolumn: ["Arsenal", "BUL", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=pCLVHZ4rIIU"}],
     [{ order: "70", result: "Liverpool 5-2 Roma", year: "2018", category: "Champions", prow: ["Liverpool", "Premier", "Played WC 2018"], pcolumn: ["Roma", "ChampionsWin", "BRA"] }],
 
 
   ];
   const names = [
-{name:"Thierry Henry", Country:"FRA", Position:"DL",Teams: [{ club:"en Arsenal", matches:339, goals:217, assists:88},{ club:"it Juventus", matches:16, goals:3, assists:2},{ club:"es Barcelona", matches:106, goals:43, assists:21},{ club:"fr Monaco", matches:57, goals:12, assists:0},], Titles:"2006WC02, 1998WC01,2000EuroWin,2009ChampionsWin, 2006ChampionsFinal,2000EuropaFinal,2004Premier, 2002Premier,2010LaLigaWin, 2009LaLigaWin", WC:"2010, 2006, 2002, 1998", Euro:"2008Euro, 2004Euro, 2000Euro"},
+ {name:"Thierry Henry", Country:"FRA", Position:"DL",Teams: [{ club:"en Arsenal", matches:339, goals:217, assists:88},{ club:"it Juventus", matches:16, goals:3, assists:2},{ club:"es Barcelona", matches:106, goals:43, assists:21},{ club:"fr Monaco", matches:57, goals:12, assists:0},], Titles:"2006WC02, 1998WC01,2000EuroWin,2009ChampionsWin, 2006ChampionsFinal,2000EuropaFinal,2004Premier, 2002Premier,2010LaLigaWin, 2009LaLigaWin", WC:"2010, 2006, 2002, 1998", Euro:"2008Euro, 2004Euro, 2000Euro"},
 {name:"Cesc Fàbregas", Country:"ESP", Position:"CC",Teams: [{ club:"en Arsenal", matches:267, goals:48, assists:83},{ club:"en Chelsea", matches:198, goals:22, assists:56},{ club:"es Barcelona", matches:122, goals:31, assists:38},{ club:"fr Monaco", matches:66, goals:4, assists:9},], Titles:"2010WC01,2012EuroFinal, 2008EuroWin,2006ChampionsFinal,2019EuropaWin,2017Premier, 2015Premier,2013LaLigaWin", WC:"2014, 2010, 2006", Euro:"2016Euro, 2012Euro, 2008Euro"},
 {name:"Patrick Vieira", Country:"FRA", Position:"CC",Teams: [{ club:"en Arsenal", matches:315, goals:28, assists:33},{ club:"en Man City", matches:35, goals:3, assists:3},{ club:"it Inter", matches:79, goals:7, assists:7},{ club:"it Juventus", matches:38, goals:5, assists:7},], Titles:"2006WC02, 1998WC01,2000EuroWin,2010ChampionsWin,2000EuropaFinal,2010SerieAWin, 2009SerieAWin, 2008SerieAWin, 2007SerieAWin,2004Premier, 2002Premier, 1998Premier", WC:"2006, 2002, 1998", Euro:"2004Euro, 2000Euro"},
 {name:"Pedro Rodríguez", Country:"ESP", Position:"DL",Teams: [{ club:"en Chelsea", matches:206, goals:43, assists:27},{ club:"it Roma", matches:40, goals:6, assists:5},{ club:"es Barcelona", matches:273, goals:79, assists:40},], Titles:"2010WC01,2012EuroFinal,2015ChampionsWin, 2011ChampionsWin, 2009ChampionsWin,2019EuropaWin,2017Premier,2015LaLigaWin, 2013LaLigaWin, 2011LaLigaWin, 2010LaLigaWin, 2009LaLigaWin", WC:"2014, 2010", Euro:"2016Euro, 2012Euro"},
@@ -12037,7 +12037,13 @@ function createDisclaimer() {
 
             }
             modal.style.display = 'none';
-            solved()
+            const scorestotal = countWStatsForOrder(currentGrid, currentPuzzle, "w") + countWStatsForOrder(currentGrid, currentPuzzle, "r") + countWStatsForOrder(currentGrid, currentPuzzle, "e")
+
+            if (scorestotal === 9){
+              solved()
+            }
+
+       
           });
           nameList.appendChild(li);
           cell.addEventListener('click', () => {
@@ -12428,14 +12434,14 @@ function createDisclaimer() {
        start = "⭐"
      } 
 
-
+    console.log(currentPuzzle)
      // Create an array of objects containing text and corresponding CSS classes
      var itemsToAdd = [
        { text: "SCORE: " + (scores+scoresrep) +"/" + 9 + "  " + start, className: "format1" },
        { text: "", className: "" },
        { text: "Match on Youtube", className: "format2" },
        { text: "", className: "" },
-       { text: "▶️", className: "format3", href: "https://www.youtube.com/watch?v=pCLVHZ4rIIU"}
+       { text: "▶️", className: "format3", href: (puzzleselection.flat().find(item => item.order === currentPuzzle).ylink)}
      ];
 
      function renderItems() {
