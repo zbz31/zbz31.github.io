@@ -9862,7 +9862,7 @@
 {name:"Osman Üstünel", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:2, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mutlu Topçu", Country:"TUR", Position:"DF,CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
 {name:"Mustafa Öztürk", Country:"TUR", Position:"CC",Teams: [{ club:"tr Besiktas", matches:1, goals:0, assists:0},], Titles:"", WC:"", Euro:""},
-
+  
   ];
   const countries = [{
       cname: "ALB",
@@ -11947,12 +11947,12 @@ function createDisclaimer() {
        if (Array.isArray(subArray)) {
          for (let j = 0; j < subArray.length; j++) {
            const item = subArray[j];
-           if (item.order !== orderToFind && (item.row1col1?.name === name || item.row1col2?.name === name)) {
+           if (item.order !== orderToFind && (item.row1col1?.name === name || item.row1col2?.name === name || item.row1col3?.name === name || item.row2col1?.name === name || item.row2col2?.name === name || item.row2col3?.name === name || item.row3col1?.name === name || item.row3col2?.name === name || item.row3col3?.name === name)) {
              foundItem = item;
              break;
            }
          }
-       } else if (subArray.order !== orderToFind && (subArray.row1col1?.name === name || subArray.row1col2?.name === name)) {
+       } else if (subArray.order !== orderToFind && (subArray.row1col1?.name === name || subArray.row1col2?.name === name || subArray.row1col3?.name === name || subArray.row2col1?.name === name || subArray.row2col2?.name === name || subArray.row2col3?.name === name || subArray.row3col1?.name === name || subArray.row3col2?.name === name || subArray.row3col3?.name === name)) {
          foundItem = subArray;
          break;
        }
@@ -12344,13 +12344,13 @@ function resetBt(){
 
  
 
-      var dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")" + " [" + scores + "/9]";
+      var dateString2 = `[${limit2}] - ` + getItemByOrder(limit2.toString()).result + " (" + getItemByOrder(limit2.toString()).year + ")" + " [" + (scores+scoresrep) + "/9]";
       // Set the text content of the list item to the formatted date
 
       // Add class for styling
       listItem.classList.add('dateItem');
 
-      if (scores > 0 && scores < 9){
+      if ((scores+scoresrep) > 0 && scores < 9){
 
         listItem.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Light orange background
         listItem.style.fontWeight = 'bold'; // Bold font weight  
