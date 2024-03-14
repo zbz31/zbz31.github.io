@@ -197,6 +197,24 @@ body {
 }
 
 
+#reset-button {
+
+
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+     font-size: 12px; /* Change the font size */
+     font-weight: normal; /* Change the font weight */
+    padding: 5px 8px;
+    background-color: rgb(188, 186, 192); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #f8f8f8; /* Light gray on hover */
+}
 
 
 
@@ -208,8 +226,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(4, 105px);
-  grid-template-rows: repeat(4, 105px);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
   justify-content: center;
   align-content: center;
 }
@@ -217,8 +235,8 @@ body {
 .grid-playercell {
   border: 1px solid #ccc; /* Softened border */
   border-radius: 10px; /* Increased border radius for a smoother look */
-  width: 90px; /* Slightly increased width for better spacing */
-  height: 90px; /* Slightly increased height for better spacing */
+  width: 80px; /* Slightly increased width for better spacing */
+  height: 80px; /* Slightly increased height for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,8 +254,8 @@ body {
 }
 
 .grid-cellunsolved {
-  width: 85px;
-  height: 85px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,8 +278,8 @@ body {
 }
 
 .grid-cellsolved {
-  width: 85px;
-  height: 85px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,8 +377,8 @@ body {
 
 .grid-puzzlecell {
   border: 0.05px solid black;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
