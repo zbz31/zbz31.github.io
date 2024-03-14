@@ -235,8 +235,8 @@ body {
 .grid-playercell {
   border: 1px solid #ccc; /* Softened border */
   border-radius: 10px; /* Increased border radius for a smoother look */
-  width: 80px; /* Slightly increased width for better spacing */
-  height: 80px; /* Slightly increased height for better spacing */
+  width: 75px; /* Slightly increased width for better spacing */
+  height: 75px; /* Slightly increased height for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,23 +435,23 @@ body {
 
 
 
-
-
 .modal {
   display: none;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
+  left: 40%;
+  transform: translate(-70%, -50%);
   background-color: #f9f9f9;
-  padding: 30px;
+  padding: 20px 50px 50px; /* Adjusted padding to make it taller and wider to the left and enlarge by the bottom */
   border: 1px solid #ccc;
   border-radius: 5px;
   z-index: 9999;
 }
+
 .modal-content {
   width: 100%;
-  padding: 60px;
+  height: 100%;
+  padding: 1px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -459,22 +459,20 @@ body {
 }
 
 .modal input[type="text"] {
-  width: 75%;
+  width: 85%;
   padding: 8px;
   margin-bottom: 10px;
   border: 5px solid #ccc;
   border-radius: 3px;
-
   font-family: "Inter", sans-serif;
 }
-
 /* Style for the suggestion list */
 #nameList,
 #nameElement {
   list-style-type: none;
   padding: 0;
   margin: 0; /* Add this line to remove default margin */
-  max-height: 120px; /* Adjust the maximum height as needed */
+  max-height: 160px; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Add vertical scroll when content overflows */
 }
 
@@ -482,13 +480,13 @@ body {
 #nameList li,
 #nameElement li {
   
-  padding: 8px;
+  padding: 7px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
   font-size: 9.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: #333; /* Text color */
   border-bottom: 1px solid #ccc; /* Add a fine line below each item */
 }
@@ -513,7 +511,7 @@ body {
 /* Style for each suggestion item */
 #nameElement li {
   list-style-type: none; /* Remove default bullet points */
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
