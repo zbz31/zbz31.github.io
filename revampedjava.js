@@ -12339,7 +12339,7 @@ function resetBt(){
       const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
       limit2 = getTheDate(dateStringToDate(dateString));
 
-      const scores = countWStatsForOrder(currkentGrid, limit2.toString(), "w") 
+      const scores = countWStatsForOrder(currentGrid, limit2.toString(), "w") 
       const scoresrep = countWStatsForOrder(currentGrid, limit2.toString(), "r") 
 
  
