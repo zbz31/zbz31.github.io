@@ -444,14 +444,14 @@ body {
   left: 50%;
   transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
   z-index: 9999;
 }
 .modal-content {
   width: 100%;
-  padding: 80px;
+  padding: 60px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -464,7 +464,7 @@ body {
   margin-bottom: 10px;
   border: 5px solid #ccc;
   border-radius: 3px;
-  transition: $opacity-transition;
+
   font-family: "Inter", sans-serif;
 }
 
@@ -474,7 +474,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0; /* Add this line to remove default margin */
-  max-height: 200px; /* Adjust the maximum height as needed */
+  max-height: 120px; /* Adjust the maximum height as needed */
   overflow-y: auto; /* Add vertical scroll when content overflows */
 }
 
@@ -482,11 +482,11 @@ body {
 #nameList li,
 #nameElement li {
   
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
-  font-size: 10px;
+  font-size: 9.5px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #333; /* Text color */
@@ -513,7 +513,7 @@ body {
 /* Style for each suggestion item */
 #nameElement li {
   list-style-type: none; /* Remove default bullet points */
-  padding: 12px;
+  padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
