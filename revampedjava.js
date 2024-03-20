@@ -12728,7 +12728,7 @@ function resetBt(){
      } 
 
 
-     currentGrid.find(item => item.order === currentPuzzle).rarity = ((scores + scoresrep / 2)  / 9)
+     currentGrid.find(item => item.order === currentPuzzle).rarity = ((scores + scoresrep / 2) *100 / 9)
 
      window.localStorage.setItem('current3Grid', JSON.stringify(currentGrid));
     console.log(currentPuzzle)
@@ -12824,7 +12824,6 @@ function resetBt(){
 }
  }
 );
-
 
 
 
