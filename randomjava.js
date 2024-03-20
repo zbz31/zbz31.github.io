@@ -11714,7 +11714,7 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       }
 
-    } while (Math.min(...totality) < 1);
+    } while (Math.min(...totality) < 4);
     puzzle0[0].order = "##"
     return puzzle0
   }
