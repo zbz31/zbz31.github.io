@@ -1,0 +1,584 @@
+/* Style for the headline bar */
+.headline {
+    background-color: #333; /* Dark background color for the headline bar */
+    color: #fff; /* White text color for better contrast */
+    padding: 10px 20px; /* Padding for better spacing */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
+    font-weight: 600; /* Medium font weight for a professional look */
+    position: fixed; /* Keep the header fixed at the top of the page */
+    top: 0; /* Positioned at the very top of the page */
+    left: 0; /* Aligned to the left side of the page */
+    width: 100%; /* The header spans the entire width of the page */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+    display: flex; /* Use a flexible layout to arrange elements */
+    justify-content: space-between; /* Space evenly between elements */
+    align-items: center; /* Center the text vertically within the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Style for the text within the headline */
+.headline-text {
+    flex-grow: 1; /* Allow the text to expand and fill the remaining space */
+    text-align: center; /* Center the text horizontally within the header */
+    font-size: 14px; /* Adjusted font size */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 0.5px; /* Adjusted letter spacing */
+}
+
+/* Style for a decorative line underneath the headline */
+.headline-line {
+    width: 100%; /* Ensure the line spans the entire width of the header */
+    height: 1px; /* Set the height of the line */
+    background-color: #fff; /* White color for the line */
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+
+
+
+
+
+.modal-solved {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  color: #333; /* Change the font color */
+  transition: opacity 0.6s ease; /* Smooth transition for opacity */
+}
+
+
+.format1 {
+    font-weight: bold;
+         font-family: 'Arial', sans-serif; /* Use Roboto font for the text */
+    font-size: 14px;
+}
+
+.format2 {
+    color: blue;
+     font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
+    
+    font-size: 14px;
+}
+
+.format3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/*This corresponds to the HELP Modal */
+
+.modalhelp {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 140%;
+  overflow: auto;
+  color: #333; /* Change the font color */
+  transition: opacity 0.6s ease; /* Smooth transition for opacity */
+}
+
+.modalhelp-content {
+  background-color: rgb(55, 55, 56); /* Background color of the textbox */
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  font-family: 'Roboto', sans-serif; /* Change the font family */
+  font-size: 14px; /* Change the font size */
+  font-weight: normal; /* Change the font weight */
+  color: rgb(206, 203, 203); /* Text color of the textbox */
+  max-width: 500px;
+  opacity: 0; /* Initially hide the modal content */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.modalhelp-content.show {
+  opacity: 1; /* Show modal content with smooth transition */
+}
+.modalhelp-content hr {
+  border: 1px solid rgb(58, 58, 60);
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* here ends the help modal */
+
+#random-button {
+
+
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+     font-size: 12px; /* Change the font size */
+     font-weight: normal; /* Change the font weight */
+    padding: 5px 8px;
+    background-color: rgb(188, 186, 192); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#random-button:hover {
+    background-color: #f8f8f8; /* Light gray on hover */
+}
+
+
+#archive-button {
+
+
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+     font-size: 12px; /* Change the font size */
+     font-weight: normal; /* Change the font weight */
+    padding: 5px 8px;
+    background-color: rgb(188, 186, 192); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#archive-button:hover {
+    background-color: #f8f8f8; /* Light gray on hover */
+}
+
+
+#help-button {
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+    font-size: 12px; /* Change the font size */
+    font-weight: normal; /* Change the font weight */
+
+    margin-left: 10px;
+    padding: 5px 8px;
+    background-color: rgb(188, 186, 192); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#help-button:hover {
+    background-color: #f8f8f8; /* Light gray on hover */
+}
+
+
+#reset-button {
+
+
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif; /* Change the font family */
+     font-size: 12px; /* Change the font size */
+     font-weight: normal; /* Change the font weight */
+    padding: 5px 8px;
+    background-color: rgb(188, 186, 192); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background-color: #f8f8f8; /* Light gray on hover */
+}
+
+
+
+
+
+.grid-container {
+  position: absolute;
+  top: calc(15%); /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  justify-content: center;
+  align-content: center;
+}
+
+.grid-playercell {
+  border: 1px solid #ccc; /* Softened border */
+  border-radius: 10px; /* Increased border radius for a smoother look */
+  width: 75px; /* Slightly increased width for better spacing */
+  height: 75px; /* Slightly increased height for better spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8; /* Light background color */
+  font-family: 'Arial', sans-serif; /* Arial font for a clean and widely supported typeface */
+  font-size: 14px; /* Increased font size for better readability */
+  color: #333; /* Darkened text color for better contrast */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grid-playercell:hover {
+  transform: translateY(-2px); /* Lift up slightly on hover for interactive feedback */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover for depth */
+}
+
+.grid-cellunsolved {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Strait', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #990000;
+  border-radius: 5px;
+  background: linear-gradient(45deg, rgb(248, 204, 204), #ffcccc, #ffb8b8, #ffa5a5, #ff9292);
+  text-align: center;
+  animation: starAnimation 1s forwards;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: line-through;
+  border: 2px solid #990000;
+  box-shadow: 0 2px 4px #990000;
+  margin-left: 3px;
+}
+
+.grid-cellsolved {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+  font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #006600; /* Text color */
+  border-radius: 5px; /* Adjust the value as needed */
+  background: linear-gradient(45deg, rgb(220, 246, 218), #a1db9c); /* Gradient background transitioning from current color to a lighter shade */
+  text-align: center; /* Justify text horizontally */
+  /* animation: cellFill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Apply animation */
+  animation: starAnimation 1s forwards;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  border: 2px solid #006600; /* Darker and less intense fluorescent green color */
+  box-shadow: 0 2px 4px #006600; /* Darker and less intense fluorescent green shadow */
+  margin-left: 3px; /* Adjust the margin as needed */
+}
+
+
+.grid-cellalreadyused {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 12px;
+  font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #424242; /* Dark grey text color */
+  border-radius: 5px; /* Adjust the value as needed */
+  background: linear-gradient(45deg, #ececec, #f7f7f7); /* Gradient background with greyish colors */
+  text-align: center; /* Justify text horizontally */
+  animation: starAnimation 1s forwards;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  border: 2px solid #a5a5a5; /* Light grey border */
+  box-shadow: 0 2px 4px #b0b0b0; /* Light grey shadow */
+  margin-left: 3px; /* Adjust the margin as needed */
+}
+
+@keyframes cellFill {
+  0% {
+    transform: scale(0.75); /* Start with smaller size */
+    opacity: 0; /* Initially hide the text */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly increase size */
+    opacity: 1; /* Show the text */
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+@keyframes cellVibrate {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(2px, -2px), scale(0.85);
+  }
+}
+
+@keyframes starAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.92);
+  }
+}
+
+
+
+
+.grid-puzzlecell {
+  border: 0.05px solid black;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Added to center the text horizontally */
+  border-radius: 5px; /* Adjust the value as needed */
+
+  font-family: 'Strait', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-weight : 700;
+  font-size : 0.8em;
+
+
+
+}
+
+
+
+.grid-puzzlecell img {
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  filter: contrast(100%) brightness(90%) blur(0);
+  
+}
+
+
+
+
+
+
+.coolButton {
+    background-color: rgb(111, 83, 238); /* Green background */
+    border: none; /* Remove borders */
+    font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+
+    color: white; /* White text */
+    padding: 10px 14px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as a block element */
+    font-size: 12px; /* Font size */
+    margin: 4px 2px; /* Margin */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 8px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition duration */
+}
+
+.coolButton:hover {
+    background-color: #0d0345; /* Darker green on hover */
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-70%, -50%);
+  background-color: #f9f9f9;
+  padding: 5px 20px 40px; /* Adjusted padding to make it taller and wider to the left and enlarge by the bottom */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px 50px; /* Adjusted padding to make it taller and wider to the left and enlarge by the bottom */
+
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+
+.modal input[type="text"] {
+  width: 85%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 5px solid #ccc;
+  border-radius: 3px;
+  font-family: "Inter", sans-serif;
+}
+/* Style for the suggestion list */
+#nameList,
+#nameElement {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Add this line to remove default margin */
+  max-height: 160px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add vertical scroll when content overflows */
+}
+
+/* Style for each suggestion item */
+#nameList li,
+#nameElement li {
+  
+  padding: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333; /* Text color */
+  border-bottom: 1px solid #ccc; /* Add a fine line below each item */
+}
+
+#nameList li:last-child,
+#nameElement li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+#nameList li:hover,
+#nameElement li:hover {
+  background-color: #f0f0f0; /* Background color change on hover */
+}
+
+#nameElement {
+  list-style-type: none;
+  padding: 0;
+  max-height: 150px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add vertical scroll when content overflows */
+}
+
+/* Style for each suggestion item */
+#nameElement li {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* You can replace 'Roboto' with your preferred font */
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333; /* Text color */
+  border-bottom: 1px solid #ccc; /* Add a fine line below each item */
+}
+#nameList li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+
+
+
+
+
+
+
+
+
+
+.modalarchive  {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%); /* Adjust the first value (-60%) to move it more to the left */
+  background-color: #f9f9f9;
+  padding: 10px ; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.modalarchive li {
+    list-style-type: none; /* Remove default bullet points */
+}
+.dateItem  {
+    cursor: pointer;
+    padding: 10px 16px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Arial', sans-serif; /* Use a cool font */
+    font-size: 12px; /* Adjust font size */
+
+}
+
+.dateItem:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+
+.grid-cellnumber {
+  width: 50px; /* Increased width for better readability */
+  height: 50px; /* Increased height for better spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px; /* Increased font size for better legibility */
+  font-weight: 700; /* Added font weight for a more professional look */
+  text-align: center;
+  border-radius: 4px; /* Increased border radius for smoother edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  
+}
