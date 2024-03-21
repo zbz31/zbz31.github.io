@@ -524,7 +524,18 @@ const flags = [
 
     if ((row === 0 && col === 1) || (row === 0 && col === 2) || (row === 0 && col === 3)) {
       cell.classList.add("grid-puzzlecell");
+
+      if (puzzle1.pcolumn[col - 1].includes("rgn_")) {
+        // Slice the string from index 3 and assign it to cell.textContent
+        cell.innerHTML = "Region:" + "<br>" + puzzle1.pcolumn[col - 1].slice(4);
+      }
+      else if (puzzle1.pcolumn[col - 1].includes("cl_")) {
+        // Slice the string from index 3 and assign it to cell.textContent
+        cell.innerHTML = "Contains:" + "<br>" + puzzle1.pcolumn[col - 1].slice(3);
+      }
+      else{
       cell.textContent = puzzle1.pcolumn[col - 1];
+      }
       cell.style.border = 'none';
     }
 
@@ -533,7 +544,22 @@ const flags = [
 
     if ((row === 1 && col === 0) || (row === 2 && col === 0) || (row === 3 && col === 0)) {
       cell.classList.add("grid-puzzlecell");
-      cell.textContent = puzzle1.prow[row - 1];
+      if ((row === 1 && col === 0) || (row === 2 && col === 0) || (row === 3 && col === 0)) {
+        cell.classList.add("grid-puzzlecell");
+        if (puzzle1.prow[row - 1].includes("rgn_")) {
+          // Slice the string from index 3 and assign it to cell.textContent
+          cell.innerHTML = "Region:" + "<br>" + puzzle1.prow[row - 1].slice(4);
+        }
+        else if (puzzle1.prow[row - 1].includes("cl_")) {
+          // Slice the string from index 3 and assign it to cell.textContent
+          cell.innerHTML = "Contains:" + "<br>" + puzzle1.prow[row - 1].slice(3);
+        }
+        else {
+          cell.textContent = puzzle1.prow[row - 1];
+        }
+        cell.style.border = 'none';
+      }
+
 
       cell.style.border = 'none';
     }
