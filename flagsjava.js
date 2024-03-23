@@ -640,11 +640,9 @@ const flags = [
       currentGrid = currentGrid.filter(item => item.order !== currentPuzzle);
 
 
-      window.localStorage.setItem('current3Grid', JSON.stringify(currentGrid));
-
 
       setTimeout(function () {
-        window.localStorage.setItem('currentPuzzle', currentPuzzle);
+
         window.location.href = window.location.href;
       }, 300); // 2000 milliseconds = 2 seconds
     });
@@ -1192,7 +1190,7 @@ const flags = [
         }
 
         currentPuzzle = puzzle1[0].order;
-        window.localStorage.setItem('currentPuzzle', currentPuzzle);
+
 
         // Adding a delay of 1 second (1000 milliseconds) before refreshing the page
         setTimeout(function () {
