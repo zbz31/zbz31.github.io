@@ -3,146 +3,128 @@
   let answers=[]
 
   const puzzleselection = [
-  [{order:"1",result:"France 2-1 Portugal",year:"2000", category:"EURO",prow:["Played Euro 2000","Real Madrid","Barcelona"], pcolumn: ["FRA","POR","Juventus"],ylink:"https://www.youtube.com/watch?v=BeHaPM91ZF4"}],
-[{order:"2",result:"R. Madrid 3-1 Man City",year:"2022", category:"Champions",prow:["Real Madrid","Premier","Played WC 2022"], pcolumn: ["Man City","BRA","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=8MC1kRv2WCc"}],
-[{order:"3",result:"Francia 3-3 Argentina",year:"2022", category:"World Cup",prow:["Played WC 2022","WC01","Barcelona"], pcolumn: ["ARG","FRA","ParisSG"],ylink:"https://youtu.be/zhEWqfP6V_w"}],
-[{order:"4",result:"Liverpool 3-3 Milan",year:"2005", category:"Champions",prow:["ChampionsWin","DL","PO"], pcolumn: ["Liverpool","Milan","Premier"],ylink:"https://www.youtube.com/watch?v=3ojXHf293M8"}],
-[{order:"5",result:"Man Utd 2-1 Bayern",year:"1999", category:"Champions",prow:["ChampionsWin","Premier","DL"], pcolumn: ["Man Utd","Bayern","NOR"],ylink:"https://www.youtube.com/watch?v=kiEq_TLXiCg"}],
-[{order:"6",result:"Netherlands 0-1 Spain",year:"2010", category:"World Cup",prow:["Played WC 2010","CC","Barcelona"], pcolumn: ["NED","ESP","WC01"],ylink:"https://www.youtube.com/watch?v=aKSHgMqCwbQ"}],
-[{order:"7",result:"Germany 1-0 Argentina",year:"2014", category:"World Cup",prow:["Played WC 2014","WC01","CC"], pcolumn: ["Borussia","ARG","GER"],ylink:"https://www.youtube.com/watch?v=ffAYByv2pLc"}],
-[{order:"8",result:"Liverpool 4-0 R. Madrid",year:"2009", category:"Champions",prow:["Real Madrid","ESP","Played Euro 2008"], pcolumn: ["Liverpool","ChampionsWin","Premier"],ylink:"https://www.youtube.com/watch?v=1eN_ehTBPb4"}],
-[{order:"9",result:"France 4-2 Croatia",year:"2018", category:"World Cup",prow:["Played WC 2018","Atletico","Tottenham"], pcolumn: ["FRA","CRO","WC01"],ylink:"https://www.youtube.com/watch?v=GrsEAvRerTg"}],
-[{order:"10",result:"Chelsea 1-0 Man City",year:"2021", category:"Champions",prow:["Chelsea","Man City","DL"], pcolumn: ["ChampionsWin","GER","FRA"],ylink:"https://www.youtube.com/watch?v=GX0H_EzxXvM"}],
-[{order:"11",result:"Bayern 2-1 Borussia",year:"2013", category:"Champions",prow:["Bayern","DL","CC"], pcolumn: ["Borussia","NED","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=wA4ChhQ38GQ"}],
-[{order:"12",result:"Brazil 2-0 Germany",year:"2002", category:"World Cup",prow:["Played WC 2002","WC01","SerieAWin"], pcolumn: ["BRA","GER","Real Madrid"],ylink:"https://www.youtube.com/watch?v=O8dUhMGtUtw"}],
-[{order:"13",result:"R. Madrid 4-1 Atlético",year:"2014", category:"Champions",prow:["ChampionsWin","DF","Sevilla"], pcolumn: ["Real Madrid","Atletico","Played WC 2014"],ylink:"https://www.youtube.com/watch?v=Ji021RYgGXQ"}],
-[{order:"14",result:"Milan 0-0 Juventus",year:"2003", category:"Champions",prow:["ChampionsWin","PO","DF"], pcolumn: ["Milan","Juventus","ITA"],ylink:"https://www.youtube.com/watch?v=fGT5raSCUSQ"}],
-[{order:"15",result:"Argentina 0-3 Croatia",year:"2018", category:"World Cup",prow:["LaLigaWin","ChampionsWin","CC"], pcolumn: ["CRO","ARG","Played WC 2018"],ylink:"https://www.youtube.com/watch?v=hcM5n71XmBo"}],
-[{order:"16",result:"Juventus 1-3 Barcelona",year:"2015", category:"Champions",prow:["CRO","URU","BRA"], pcolumn: ["Barcelona","Juventus","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=1mVu7AzvCDo"}],
-[{order:"17",result:"R. Madrid 1-0 Liverpool",year:"2022", category:"Champions",prow:["PO","BRA","Played WC 2022"], pcolumn: ["Real Madrid","Liverpool","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=g306fSvzDig"}],
-[{order:"18",result:"Sweden 4-2 England",year:"2011", category:"Other",prow:["Man Utd","DL","Played Euro 2012"], pcolumn: ["SWE","ENG","Ajax"],ylink:"https://www.youtube.com/watch?v=RDsxKXa0PbA"}],
-[{order:"19",result:"Spain 1-1 Ireland",year:"2002", category:"World Cup",prow:["Played WC 2002","DL","CC"], pcolumn: ["ESP","IRL","Valencia"],ylink:"https://www.youtube.com/watch?v=st8f8W70BO0"}],
-[{order:"20",result:"Milan 2-1 Liverpool",year:"2007", category:"Champions",prow:["ChampionsWin","DL","NED"], pcolumn: ["Milan","Liverpool","SerieAWin"],ylink:"https://www.youtube.com/watch?v=HB3JnHb_IG4"}],
-[{order:"21",result:"England 2-2 Greece",year:"2001", category:"Other",prow:["CC","DL","DF"], pcolumn: ["ENG","GRE","Played WC 2002"],ylink:"https://www.youtube.com/watch?v=t0GESlaVNdE"}],
-[{order:"22",result:"Porto 3-2 Celtic",year:"2003", category:"Europa League",prow:["DL","CC","DF"], pcolumn: ["Celtic","Porto","EuropaWin"],ylink:"https://www.youtube.com/watch?v=mvPNakjRQyw"}],
-[{order:"23",result:"Chile 0-0 Argentina",year:"2011", category:"Other",prow:["DL","Barcelona","Inter"], pcolumn: ["CHI","ARG","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=ATXMJOEt6zc"}],
-[{order:"24",result:"R. Madrid 1-0 Juventus",year:"1998", category:"Champions",prow:["Played WC 1998","ChampionsWin","Valencia"], pcolumn: ["Real Madrid","Juventus","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=P-0mRkA7FHE"}],
-[{order:"25",result:"R. Madrid 2-1 Leverkusen",year:"2002", category:"Champions",prow:["Real Madrid","CC","Played WC 2002"], pcolumn: ["Leverkusen","ChampionsWin","FRA"],ylink:"https://www.youtube.com/watch?v=ca-O58vdPTQ"}],
-[{order:"26",result:"Italy 0-1 Uruguay",year:"2014", category:"World Cup",prow:["Played WC 2014","DF","Atletico"], pcolumn: ["URU","ITA","Juventus"],ylink:"https://www.youtube.com/watch?v=TWpFi-GKSyQ"}],
-[{order:"27",result:"Porto 3-0 Monaco",year:"2004", category:"Champions",prow:["ChampionsWin","POR","DL"], pcolumn: ["Porto","Monaco","Played Euro 2004"],ylink:"https://www.youtube.com/watch?v=ms4XLL58UUs"}],
-[{order:"28",result:"Barcelona 2-8 Bayern",year:"2020", category:"Champions",prow:["Barcelona","ChampionsWin","BRA"], pcolumn: ["Bayern","Espanyol","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=nMt56fQKLIQ"}],
-[{order:"29",result:"Liverpool 4-3 Borussia",year:"2016", category:"Champions",prow:["Played Euro 2016","DF","ChampionsWin"], pcolumn: ["Liverpool","Borussia","PremierWin"],ylink:"https://www.youtube.com/watch?v=bXnpbaKWHXc"}],
-[{order:"30",result:"Villarreal 1-1 Man Utd",year:"2021", category:"Europa League",prow:["PO","EuropaWin","Played WC 2022"], pcolumn: ["Villarreal","Man Utd","ESP"],ylink:"https://www.youtube.com/watch?v=X_NSB3CnHoo"}],
-[{order:"31",result:"Brazil 0-3 France",year:"1998", category:"World Cup",prow:["Played WC 1998","DL","CC"], pcolumn: ["BRA","FRA","WC01"],ylink:"https://www.youtube.com/watch?v=tmjFa9LB7Pg"}],
-[{order:"32",result:"Italy 0-0 South Korea",year:"2002", category:"World Cup",prow:["Played WC 2002","DL","CC"], pcolumn: ["ITA","KOR","ESP"],ylink:"https://www.youtube.com/watch?v=VxHFxUjqZSo"}],
-[{order:"33",result:"Barcelona 2-1 Arsenal",year:"2006", category:"Champions",prow:["Arsenal","Chelsea","Played WC 2006"], pcolumn: ["Barcelona","ChampionsWin","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=VsdMmDwCY10"}],
-[{order:"34",result:"England 1-2 Brazil",year:"1998", category:"World Cup",prow:["Played WC 2002","ChampionsWin","LaLigaWin"], pcolumn: ["ENG","BRA","Barcelona"],ylink:"https://www.youtube.com/watch?v=4JcwixRnFhs"}],
-[{order:"35",result:"Liverpool 2-0 Tottenham",year:"2019", category:"Champions",prow:["ChampionsWin","Premier","BEL"], pcolumn: ["Liverpool","Tottenham","Atletico"],ylink:"https://www.youtube.com/watch?v=8gh3F-pEXK0"}],
-[{order:"36",result:"R. Madrid 3-1 Liverpool",year:"2018", category:"Champions",prow:["DL","FRA","PO"], pcolumn: ["Real Madrid","Liverpool","Tottenham"],ylink:"https://www.youtube.com/watch?v=rtFGpfrdlMI"}],
-[{order:"37",result:"Monaco 3-1 R. Madrid",year:"2004", category:"Champions",prow:["Real Madrid","DL","ChampionsWin"], pcolumn: ["Monaco","LaLigaWin","Played Euro 2004"],ylink:"https://www.youtube.com/watch?v=w6lXZWSyp84"}],
-[{order:"38",result:"Sevilla 1-1 Roma",year:"2023", category:"Europa League",prow:["Played WC 2022","PO","ARG"], pcolumn: ["Sevilla","Roma","EuropaWin"],ylink:"https://www.youtube.com/watch?v=Knwgwhr-0gA"}],
-[{order:"39",result:"Atlético 3-0 Athletic",year:"2012", category:"Europa League",prow:["Atletico","DL","CC"], pcolumn: ["Athletic","COL","EuropaWin"],ylink:"https://www.youtube.com/watch?v=KHVdoHhhan8"}],
-[{order:"40",result:"R. Madrid 0-3 Barcelona",year:"2006", category:"LaLiga",prow:["Played WC 2006","CC","WC01"], pcolumn: ["Real Madrid","Barcelona","BRA"],ylink:"https://www.youtube.com/watch?v=XBPhFGpNFyA"}],
-[{order:"41",result:"R. Madrid 3-0 Valencia",year:"2000", category:"Champions",prow:["ChampionsWin","Played Euro 2000","Liverpool"], pcolumn: ["Real Madrid","Valencia","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=NheGyuANjiI"}],
-[{order:"42",result:"Chelsea 4-1 Arsenal",year:"2019", category:"Europa League",prow:["EuropaWin","Premier","CC"], pcolumn: ["Chelsea","Arsenal","BEL"],ylink:"https://www.youtube.com/watch?v=FR_cF8MELvw"}],
-[{order:"43",result:"Italy 1-1 France",year:"2006", category:"World Cup",prow:["Played WC 2006","Inter","Juventus"], pcolumn: ["ITA","FRA","WC01"],ylink:"https://www.youtube.com/watch?v=Nlsm0RlC8zI"}],
-[{order:"44",result:"Mexico 0-0 Brazil",year:"2014", category:"World Cup",prow:["Played WC 2014","WC01","CC"], pcolumn: ["Borussia","ARG","GER"],ylink:"https://www.youtube.com/watch?v=JGCI5BT7X9k"}],
-[{order:"45",result:"Bayern 1-1 Villarreal",year:"2022", category:"Champions",prow:["DL","CC","Played WC 2022"], pcolumn: ["Bayern","Villarreal","ESP"],ylink:"https://www.youtube.com/watch?v=KxjSd3pj3k4"}],
-[{order:"46",result:"Inter 2-5 Schalke",year:"2011", category:"Champions",prow:["CC","DL","Real Madrid"], pcolumn: ["Inter","Schalke","SRB"],ylink:"https://www.youtube.com/watch?v=Ajn5lzhZk6k"}],
-[{order:"47",result:"Netherlands 2-1 Argentina",year:"1998", category:"World Cup",prow:["Played WC 1998","Premier","Inter"], pcolumn: ["NED","ARG","Arsenal"],ylink:"https://www.youtube.com/watch?v=DemI2OO7FsU"}],
-[{order:"48",result:"Belgium 3-2 Japan",year:"2018", category:"World Cup",prow:["Played WC 2018","CC","DL"], pcolumn: ["BEL","JPN","Tottenham"],ylink:"https://youtu.be/fJeJuc27ggE"}],
-[{order:"49",result:"Barcelona 3-2 Valencia",year:"2001", category:"LaLiga",prow:["BRA","Played WC 2002","WC01"], pcolumn: ["Barcelona","Valencia","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=7lxf5lVlIos"}],
-[{order:"50",result:"Inter 2-0 Bayern",year:"2010", category:"Champions",prow:["ChampionsWin","SerieAWin","Played WC 2010"], pcolumn: ["Inter","Bayern","ARG"],ylink:"https://www.youtube.com/watch?v=1ahQNqglBJI"}],
-[{order:"51",result:"Juventus 2-3 Man Utd",year:"1999", category:"Champions",prow:["Man Utd","CC","Premier"], pcolumn: ["Juventus","IRL","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=oiv-X3Dd_uo"}],
-[{order:"52",result:"Valencia 2-0 Marseille",year:"2004", category:"Europa League",prow:["LaLigaWin","PO","CC"], pcolumn: ["Valencia","Marseille","EuropaWin"],ylink:"https://www.youtube.com/watch?v=L3AlpxC-Qdk"}],
-[{order:"53",result:"Italy 1-1 England",year:"2021", category:"EURO",prow:["Played Euro 2021","Chelsea","PO"], pcolumn: ["ITA","ENG","Arsenal"],ylink:"https://www.youtube.com/watch?v=QwvV06FvXbg"}],
-[{order:"54",result:"Everton 0-3 Man Utd",year:"2023", category:"Premier League",prow:["Man Utd","DL","DF"], pcolumn: ["Everton","ARG","Porto"],ylink:"https://www.youtube.com/watch?v=qgmhQZzoy1s"}],
-[{order:"55",result:"R. Madrid 2-1 Vasco",year:"1998", category:"Other",prow:["ChampionsWin","Played WC 1998","LaLigaWin"], pcolumn: ["Real Madrid","BRA","ESP"],ylink:"https://www.youtube.com/watch?v=A5YfmMxVDmg"}],
-[{order:"56",result:"Milan 3-0 Man Utd",year:"2007", category:"Champions",prow:["BRA","ChampionsWin","Real Madrid"], pcolumn: ["Milan","Man Utd","SerieAWin"],ylink:"https://www.youtube.com/watch?v=13damNjxiPI"}],
-[{order:"57",result:"Portugal 3-3 Spain",year:"2018", category:"World Cup",prow:["Sporting","DL","PO"], pcolumn: ["POR","ESP","Played WC 2018"],ylink:"https://www.youtube.com/watch?v=4rp2aLQl7vg"}],
-[{order:"58",result:"Spain 0-0 Italy",year:"2008", category:"EURO",prow:["Played Euro 2008","PO","Premier"], pcolumn: ["ESP","ITA","WC01"],ylink:"https://www.youtube.com/watch?v=U1cPCcj4FBs"}],
-[{order:"59",result:"Anderlecht 1-3 Milan",year:"2012", category:"Champions",prow:["DF","Roma","PO"], pcolumn: ["BEL","Milan","FRA"],ylink:"https://www.youtube.com/watch?v=aLFNsTt-FLo"}],
-[{order:"60",result:"Man City 3-2 QPR",year:"2013", category:"Premier League",prow:["ARG","Atletico","Inter"], pcolumn: ["Man City","Man Utd","Premier"],ylink:"https://www.youtube.com/watch?v=QdZfs3aj3uk"}],
-[{order:"61",result:"Ajax 2-3 Tottenham",year:"2019", category:"Champions",prow:["ChampionsWin","DL","ParisSG"], pcolumn: ["Ajax","Tottenham","BRA"],ylink:"https://www.youtube.com/watch?v=uGuQiSSBPkg"}],
-[{order:"62",result:"Colombia 2-0 Uruguay",year:"2014", category:"World Cup",prow:["Played WC 2014","DL","CC"], pcolumn: ["COL","URU","Porto"],ylink:"https://www.youtube.com/watch?v=mV7HZSq0gXE"}],
-[{order:"63",result:"Arsenal 2-1 Tottenham",year:"2021", category:"Premier League",prow:["Roma","CC","DL"], pcolumn: ["Arsenal","Tottenham","ARG"],ylink:"https://www.youtube.com/watch?v=UJhvsaRnSdI"}],
-[{order:"64",result:"Argentina 2-1 Mexico",year:"2006", category:"World Cup",prow:["Played WC 2006","CC","DF"], pcolumn: ["ARG","MEX","Atletico"],ylink:"https://www.youtube.com/watch?v=xh-yANwjcR0"}],
-[{order:"65",result:"Borussia 3-2 Malaga",year:"2013", category:"Champions",prow:["DF","CC","ChampionsWin"], pcolumn: ["Malaga","Borussia","Porto"],ylink:"https://www.youtube.com/watch?v=rz50dgak8P8"}],
-[{order:"66",result:"Spain 0-1 Switzerland",year:"2010", category:"World Cup",prow:["Played WC 2010","PO","CC"], pcolumn: ["ESP","SUI","Premier"],ylink:"https://www.youtube.com/watch?v=RxiBdX5F2I8"}],
-[{order:"67",result:"R. Madrid 1-0 Atlético",year:"2015", category:"Champions",prow:["DL","Sevilla","Played WC 2014"], pcolumn: ["Real Madrid","Atletico","MEX"],ylink:"https://www.youtube.com/watch?v=bmbf1LG9UD8"}],
-[{order:"68",result:"Uruguay 1-1 Ghana",year:"2010", category:"World Cup",prow:["Played WC 2010","DL","CC"], pcolumn: ["URU","GHA","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=tDpx9GGH79I"}],
-[{order:"69",result:"R. Madrid 4-1 Juventus",year:"2017", category:"Champions",prow:["DL","ChampionsWin","LaLigaWin"], pcolumn: ["Real Madrid","Juventus","POR"],ylink:"https://www.youtube.com/watch?v=XrKBZS-IWoQ"}],
-[{order:"70",result:"Atletico 1-1 Barcelona",year:"2014", category:"LaLiga",prow:["Barcelona","URU","LaLigaWin"], pcolumn: ["Atletico","Inter","Played WC 2014"],ylink:"https://www.youtube.com/watch?v=UtYW5Da3_1o"}],
-[{order:"71",result:"Arsenal 6-0 Ludogorets",year:"2016", category:"Europa League",prow:["CC","DL","Played WC 1998"], pcolumn: ["Arsenal","BUL","EuropaWin"],ylink:"https://www.youtube.com/watch?v=pCLVHZ4rIIU"}],
-[{order:"72",result:"Roma 3-0 Barcelona",year:"2018", category:"Champions",prow:["DF","CC","DL"], pcolumn: ["Roma","Barcelona","GRE"],ylink:"https://www.youtube.com/watch?v=nZyQBKf4LbU"}],
-[{order:"73",result:"Brazil 3-2 Denmark",year:"1998", category:"World Cup",prow:["Played WC 1998","CC","Barcelona"], pcolumn: ["BRA","DEN","Olympiakos"],ylink:"https://www.youtube.com/watch?v=4JcwixRnFhs"}],
-[{order:"74",result:"Man City 1-0 Leicester",year:"2019", category:"Premier League",prow:["DF","Premier","PO"], pcolumn: ["Man City","Leicester","BEL"],ylink:"https://www.youtube.com/watch?v=SJlXFmLRdGI"}],
-[{order:"75",result:"Bayern 2-2 Leverkusen",year:"2023", category:"Other",prow:["Bayern","ESP","DL"], pcolumn: ["Leverkusen","ENG","Tottenham"],ylink:"https://www.youtube.com/watch?v=vAvv8BUCqG4"}],
-[{order:"76",result:"Portugal 1-0 Netherlands",year:"2006", category:"World Cup",prow:["Played WC 2006","Real Madrid","Barcelona"], pcolumn: ["POR","NED","Premier"],ylink:"https://www.youtube.com/watch?v=cFDoPRSnefE"}],
-[{order:"77",result:"Juventus 3-0 Atlético",year:"2019", category:"Champions",prow:["POR","ChampionsWin","Man Utd"], pcolumn: ["Juventus","Atletico","Sporting"],ylink:"https://www.youtube.com/watch?v=cLfSpFg6Pxg"}],
-[{order:"78",result:"R. Madrid 1-1 Lyon",year:"2010", category:"Champions",prow:["DL","CC","Played WC 2010"], pcolumn: ["Real Madrid","Lyon","ARG"],ylink:"https://www.youtube.com/watch?v=XW2gWizQli8"}],
-[{order:"79",result:"Ajax 0-1 Juventus",year:"2004", category:"Champions",prow:["CC","DL","Played Euro 2004"], pcolumn: ["Ajax","Juventus","CZE"],ylink:"https://www.youtube.com/watch?v=8O6GHrPvumQ"}],
-[{order:"80",result:"Germany 1-0 USA",year:"2002", category:"World Cup",prow:["PO","Played WC 2002","CC"], pcolumn: ["GER","USA","Bayern"],ylink:"https://www.youtube.com/watch?v=ctBKzj6HUSk"}],
-[{order:"81",result:"Brazil 2-0 Serbia",year:"2022", category:"World Cup",prow:["DL","Played WC 2022","DF"], pcolumn: ["BRA","SRB","Tottenham"],ylink:"https://www.youtube.com/watch?v=kL0IkvLrQLM"}],
-[{order:"82",result:"Barcelona 6-1 PSG",year:"2017", category:"Champions",prow:["ParisSG","DF","ChampionsWin"], pcolumn: ["Barcelona","ESP","BRA"],ylink:"https://www.youtube.com/watch?v=h4m68r8kWAc"}],
-[{order:"83",result:"Galatasaray 3-2 Monaco",year:"2000", category:"Champions",prow:["DL","CC","Played Euro 2000"], pcolumn: ["Galatasaray","Monaco","ROU"],ylink:"https://www.youtube.com/watch?v=lRrd5xFYEXk"}],
-[{order:"84",result:"Bayern 1-1 Valencia",year:"2001", category:"Champions",prow:["PO","DF","LaLigaWin"], pcolumn: ["Bayern","Valencia","GER"],ylink:"https://www.youtube.com/watch?v=imGy71tsgtQ"}],
-[{order:"85",result:"Barcelona 4-0 Villarreal",year:"2006", category:"LaLiga",prow:["Played WC 2006","LaLigaWin","BRA"], pcolumn: ["Barcelona","Villarreal","Milan"],ylink:"https://www.youtube.com/watch?v=DH_gBJT9bAg"}],
-[{order:"86",result:"Sweden 1-1 Italy",year:"2004", category:"EURO",prow:["Played Euro 2004","DL","CC"], pcolumn: ["SWE","Roma","SerieAWin"],ylink:"https://www.youtube.com/watch?v=kwdGw2Zu_jo"}],
-[{order:"87",result:"Chelsea 1-1 Bayern",year:"2012", category:"Champions",prow:["Chelsea","DL","Premier"], pcolumn: ["Bayern","CIV","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=lBP7QQYN1IU"}],
-[{order:"88",result:"England 1-1 USA",year:"2010", category:"World Cup",prow:["Played WC 2010","PO","CC"], pcolumn: ["USA","ENG","Liverpool"],ylink:"https://www.youtube.com/watch?v=8ahf8b7ex8U"}],
-[{order:"89",result:"Bayern 1-0 PSG",year:"2020", category:"Champions",prow:["Bayern","ChampionsWin","CC"], pcolumn: ["ParisSG","FRA","Juventus"],ylink:"https://www.youtube.com/watch?v=DdoaGdGAkPw"}],
-[{order:"90",result:"Liverpool 5-4 Alavés",year:"2001", category:"Europa League",prow:["DF","CC","ESP"], pcolumn: ["Liverpool","Alaves","EuropaWin"],ylink:"https://www.youtube.com/watch?v=uNqFuw6YQZQ"}],
-[{order:"91",result:"Inter 4-3 Tottenham",year:"2010", category:"Champions",prow:["DF","CC","Real Madrid"], pcolumn: ["Inter","Tottenham","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=dI2GwCf2ABk"}],
-[{order:"92",result:"Deportivo 4-0 Milan",year:"2004", category:"Champions",prow:["CC","DL","Played Euro 2004"], pcolumn: ["Deportivo","Milan","ESP"],ylink:"https://www.youtube.com/watch?v=nLxavokhgtI"}],
-[{order:"93",result:"Galatasaray 0-0 Arsenal",year:"2000", category:"Other",prow:["PO","CC","DL"], pcolumn: ["Galatasaray","Arsenal","Played Euro 2000"],ylink:"https://www.youtube.com/watch?v=S75hTDHl7nc"}],
-[{order:"94",result:"Germany 0-1 Spain",year:"2008", category:"EURO",prow:["Played Euro 2008","DL","DF"], pcolumn: ["GER","SPA","Atletico"],ylink:"https://www.youtube.com/watch?v=qRLbzpy1y8Y"}],
-[{order:"95",result:"Greece 1-0 Portugal",year:"2004", category:"EURO",prow:["DF","CC","DL"], pcolumn: ["GRE","POR","Played Euro 2004"],ylink:"https://www.youtube.com/watch?v=OG5u1uurPik"}],
-[{order:"96",result:"Athletic 1-0 Barcelona",year:"2019", category:"LaLiga",prow:["DL","CC","PO"], pcolumn: ["Athletic","Barcelona","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=OeKYxa-9LiM"}],
-[{order:"97",result:"Bayern 0-4 R. Madrid",year:"2014", category:"Champions",prow:["ChampionsWin","DF","WC01"], pcolumn: ["Real Madrid","Bayern","Played WC 2014"],ylink:"https://www.youtube.com/watch?v=Pmhx0Uxv8R0"}],
-[{order:"98",result:"Chelsea 1-1 Barcelona",year:"2009", category:"Champions",prow:["CC","ChampionsWin","WC01"], pcolumn: ["Chelsea","Barcelona","ESP"],ylink:"https://www.youtube.com/watch?v=zWBKP-DZNEc"}],
-[{order:"99",result:"Man Utd 4-3 R. Madrid",year:"2003", category:"Champions",prow:["DL","BRA","LaLigaWin"], pcolumn: ["Man Utd","Real Madrid","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=KoPIUSG-vcg"}],
-[{order:"100",result:"Netherlands 5-1 Spain",year:"2014", category:"World Cup",prow:["Played WC 2014","Premier","Man Utd"], pcolumn: ["NED","ESP","Arsenal"],ylink:"https://www.youtube.com/watch?v=DeKSmd-hjwo"}],
-[{order:"101",result:"Man City 1-0 Inter",year:"2023", category:"Champions",prow:["ChampionsWin","Played WC 2022","CC"], pcolumn: ["Man City","Inter","ESP"],ylink:"https://www.youtube.com/watch?v=AXEG_lagq9E"}],
-[{order:"102",result:"England 1-2 Iceland",year:"2016", category:"EURO",prow:["Played Euro 2016","DL","CC"], pcolumn: ["ENG","ISL","Premier"],ylink:"https://www.youtube.com/watch?v=PVq0MrmezpI"}],
-[{order:"103",result:"R. Madrid 3-1 Napoli",year:"2017", category:"Champions",prow:["DL","CC","ITA"], pcolumn: ["Real Madrid","Napoli","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=GVW1uYXkMOE"}],
-[{order:"104",result:"Villarreal 0-0 Arsenal",year:"2006", category:"Champions",prow:["PO","CC","Barcelona"], pcolumn: ["Villarreal","Arsenal","ARG"],ylink:"https://www.youtube.com/watch?v=42TuTfcxVJg"}],
-[{order:"105",result:"Japan 2-1 Spain",year:"2022", category:"World Cup",prow:["Played WC 2022","DL","CC"], pcolumn: ["JPN","ESP","GER"],ylink:"https://www.youtube.com/watch?v=91eoGiLSCgY"}],
-[{order:"106",result:"Porto 1-1 Man Utd",year:"2004", category:"Champions",prow:["CC","DL","Played Euro 2004"], pcolumn: ["Man Utd","Porto","POR"],ylink:"https://www.youtube.com/watch?v=wO6WsbkFu5k"}],
-[{order:"107",result:"Arsenal 7-0 Everton",year:"2005", category:"Premier League",prow:["PO","DF","CC"], pcolumn: ["Arsenal","Everton","Premier"],ylink:"https://www.youtube.com/watch?v=Hz2YwNq33_8"}],
-[{order:"108",result:"Barcelona 7-1 Leverkusen",year:"2012", category:"Champions",prow:["DL","CC","LaLigaWin"], pcolumn: ["Barcelona","Leverkusen","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=YAy0tg558wE"}],
-[{order:"109",result:"Celtic 4-3 Juventus",year:"2002", category:"Champions",prow:["CC","DL","Played WC 2002"], pcolumn: ["Celtic","Juventus","ENG"],ylink:"https://www.youtube.com/watch?v=I9KwePPBsvY"}],
-[{order:"110",result:"Inter 1-5 Arsenal",year:"2003", category:"Champions",prow:["FRA","DL","ChampionsWin"], pcolumn: ["Inter","Arsenal","Premier"],ylink:"https://www.youtube.com/watch?v=czFBu4n06kQ"}],
-[{order:"111",result:"Napoli 5-1 Juventus",year:"2022", category:"LaLiga",prow:["SerieAWin","DL","Played WC 2022"], pcolumn: ["Napoli","Juventus","Milan"],ylink:"https://www.youtube.com/watch?v=C4htjVFlsYs"}],
-[{order:"112",result:"Spain 0-0 Portugal",year:"2012", category:"EURO",prow:["Played Euro 2012","PO","CC"], pcolumn: ["ESP","POR","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=IgwsdBR_N1w"}],
-[{order:"113",result:"Athletic 0-1 R. Sociedad",year:"2021", category:"LaLiga",prow:["Real Sociedad","DF","DL"], pcolumn: ["Athletic","ESP","Played Euro 2021"],ylink:"https://www.youtube.com/watch?v=FPAHnfFxS5Y"}],
-[{order:"114",result:"Benfica 1-2 Chelsea",year:"2013", category:"Europa League",prow:["DF","CC","Premier"], pcolumn: ["Benfica","Chelsea","SRB"],ylink:"https://www.youtube.com/watch?v=D4-kCnF7gSU"}],
-[{order:"115",result:"Argentina 2-2 England",year:"1998", category:"World Cup",prow:["Played WC 1998","CC","DL"], pcolumn: ["ARG","ENG","Premier"],ylink:"https://www.youtube.com/watch?v=kJge6YhLKsM"}],
-[{order:"116",result:"Bayern 2-1 R. Madrid",year:"2000", category:"Champions",prow:["FRA","Premier","Played Euro 2000"], pcolumn: ["Bayern","Real Madrid","ChampionsWin"],ylink:"https://www.youtube.com/watch?v=3tGISSPC6HM"}],
-[{order:"117",result:"Atletico 2-1 Inter",year:"2024", category:"Champions",prow:["NED","FRA","PO"], pcolumn: ["Atletico","Inter","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=_V92UGhMZAs"}],
-[{order:"118",result:"Barcelona 2-4 Girona",year:"2023", category:"LaLiga",prow:["DL","DF","CC"], pcolumn: ["Barcelona","Girona","ESP"],ylink:"https://www.youtube.com/watch?v=XFvVgpeqi5M"}],
-[{order:"119",result:"Liverpool 4-3 RB Salzburg",year:"2019", category:"Champions",prow:["DL","CC","DF"], pcolumn: ["AUT","Liverpool","SEN"],ylink:"https://www.youtube.com/watch?v=Y26HYaY3qls"}],
-[{order:"120",result:"Man Utd 4-3 Liverpool",year:"2024", category:"Premier League",prow:["DL","CC","AfricaCupWin"], pcolumn: ["Man Utd","Liverpool","CIV"],ylink:"https://www.youtube.com/watch?v=wao8uhVnOGc"}],
-[{order:"121",result:"Spain 2-3 Nigeria",year:"1998", category:"World Cup",prow:["Played WC 1998","DL","CC"], pcolumn: ["ESP","NGA","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=DPcEHOjjXQg"}],
-[{order:"122",result:"Getafe 3-3 Bayern",year:"2008", category:"Europa League",prow:["DF","CC","PO"], pcolumn: ["Getafe","Bayern","ESP"],ylink:"https://www.youtube.com/watch?v=LWFxDntTqj8"}],
-[{order:"123",result:"Borussia 4-1 R. Madrid",year:"2013", category:"Champions",prow:["DL","CC","DF"], pcolumn: ["Borussia","Real Madrid","POL"],ylink:"https://www.youtube.com/watch?v=DkL-kz2MG4c"}],
-[{order:"124",result:"Arsenal 2-3 Tottenham",year:"2010", category:"Premier League",prow:["CC","DF","Played WC 2010"], pcolumn: ["Arsenal","Tottenham","NED"],ylink:"https://www.youtube.com/watch?v=dIZz_A3sZ7E"}],
-[{order:"125",result:"Inter 3-0 Lazio",year:"1998", category:"Europa League",prow:["ITA","BRA","Played WC 1998"], pcolumn: ["Inter","Lazio","EuropaWin"],ylink:"https://www.youtube.com/watch?v=zjng85HEnmY"}],
-[{order:"126",result:"Chelsea 1-4 Atletico",year:"2012", category:"Other",prow:["PO","CC","DL"], pcolumn: ["Chelsea","DL","EuropaWin"],ylink:"https://www.youtube.com/watch?v=QGpBXCjrJ_s"}],
-[{order:"127",result:"Liverpool 4-0 Barcelona",year:"2019", category:"Champions",prow:["DF","Premier","ChampionsWin"], pcolumn: ["Liverpool","Barcelona","ENG"],ylink:"https://www.youtube.com/watch?v=buoMlAshKXQ"}],
-[{order:"128",result:"France 0-1 Senegal",year:"2002", category:"World Cup",prow:["DL","CC","DF"], pcolumn: ["FRA","SEN","Played WC 2002"],ylink:"https://www.youtube.com/watch?v=NZ7Cdw-zO0M"}],
-[{order:"129",result:"R. Madrid 1-1 Malaga",year:"2012", category:"LaLiga",prow:["ESP","CC","Villarreal"], pcolumn: ["Real Madrid","Malaga","LaLigaWin"],ylink:"https://youtube.com/watch?v=chUsBRLD_Mc"}],
-[{order:"130",result:"River 3-1 Boca",year:"2018", category:"Other",prow:["DF","CC","DL"], pcolumn: ["ARG","ARG","ARG"],ylink:"https://www.youtube.com/watch?v=PM8SFdMVA-s"}],
-[{order:"131",result:"PSG 5-0 Steaua",year:"1997", category:"Champions",prow:["DF","DL","CC"], pcolumn: ["ParisSG","Romania","Played WC 1998"],ylink:"https://www.youtube.com/watch?v=puI4pxaiEeg"}],
-[{order:"132",result:"Chelsea 4-1 Napoli",year:"2012", category:"Champions",prow:["CC","Premier","DF"], pcolumn: ["Chelsea","Napoli","SRB"],ylink:"https://www.youtube.com/watch?v=mrE4b-NyAZE"}],
-[{order:"133",result:"Santos 0-4 Barcelona",year:"2011", category:"Other",prow:["ChampionsWin","LaLigaWin","CC"], pcolumn: ["BRA","Barcelona","ESP"],ylink:"https://www.youtube.com/watch?v=egoMJ5OLeNg"}],
-[{order:"134",result:"R. Madrid 0-1 Betis",year:"2017", category:"LaLiga",prow:["DL","CC","DF"], pcolumn: ["Real Madrid","Betis","LaLigaWin"],ylink:"https://www.youtube.com/watch?v=XWPt6rCBCSU"}],
-[{order:"135",result:"Italy 1-0 Australia",year:"2006", category:"World Cup",prow:["Played WC 2006","DL","CC"], pcolumn: ["Roma","Inter","AUS"],ylink:"https://www.youtube.com/watch?v=tkOuuIpfXNs"}],
-[{order:"136",result:"Corinthians 2-1 Chelsea",year:"1998", category:"Other",prow:["DL","CC","DF"], pcolumn: ["BRA","Chelsea","PER"],ylink:"https://www.youtube.com/watch?v=9zVAJt5zfl0"}],
-[{order:"137",result:"Turkey 3-2 Czech Rep",year:"2008", category:"EURO",prow:["Played Euro 2008","CC","DL"], pcolumn: ["TUR","CZE","CRO"],ylink:"https://www.youtube.com/watch?v=tWgb3XYYIPQ"}],
-[{order:"138",result:"Villarreal 2-1 Las Palmas",year:"2016", category:"LaLiga",prow:["DL","CC","DF"], pcolumn: ["Villarreal","Las Palmas","GHA"],ylink:"https://www.youtube.com/watch?v=ssoxmXoBll8"}],
-[{order:"139",result:"Portugal 2-0 Wales",year:"2016", category:"EURO",prow:["Played Euro 2016","CC","DL"], pcolumn: ["Sporting","POR","WAL"],ylink:"https://www.youtube.com/watch?v=eRwNXMDGz88"}],
-[{order:"140",result:"PSG 2-1 Marseille",year:"2018", category:"Other",prow:["FRA","DL","CC"], pcolumn: ["ParisSG","Marseille","Played WC 2006"],ylink:"https://www.youtube.com/watch?v=IwKrvICBb7I"}],
+    [{ order: "1", result: "France 2-1 Portugal", year: "2000", category: "EURO", prow: ["Played Euro 2000", "Real Madrid", "Barcelona"], pcolumn: ["FRA", "POR", "Juventus"], ylink: "https://www.youtube.com/watch?v=BeHaPM91ZF4" }],
+    [{ order: "2", result: "Man Utd 0-0 Arsenal", year: "2003", category: "Premier League", prow: ["NED", "FRA", "Played Euro 2000"], pcolumn: ["Man Utd", "Arsenal", "Premier"], ylink: "https://www.youtube.com/watch?v=_ek9oXTXpog" }],
+    [{ order: "3", result: "Francia 3-3 Argentina", year: "2022", category: "World Cup", prow: ["Played WC 2022", "WC01", "Barcelona"], pcolumn: ["ARG", "FRA", "ParisSG"], ylink: "https://youtu.be/zhEWqfP6V_w" }],
+    [{ order: "4", result: "Brazil 0-3 France", year: "1998", category: "World Cup", prow: ["Played WC 1998", "DL", "CC"], pcolumn: ["BRA", "FRA", "WC01"], ylink: "https://www.youtube.com/watch?v=tmjFa9LB7Pg" }],
+    [{ order: "5", result: "Man Utd 2-1 Bayern", year: "1999", category: "Champions", prow: ["ChampionsWin", "Premier", "DL"], pcolumn: ["Man Utd", "Bayern", "NOR"], ylink: "https://www.youtube.com/watch?v=kiEq_TLXiCg" }],
+    [{ order: "6", result: "Netherlands 5-1 Spain", year: "2014", category: "World Cup", prow: ["Played WC 2014", "Premier", "Man Utd"], pcolumn: ["NED", "ESP", "Arsenal"], ylink: "https://www.youtube.com/watch?v=DeKSmd-hjwo" }],
+    [{ order: "7", result: "Bayern 1-1 Villarreal", year: "2022", category: "Champions", prow: ["DL", "CC", "Played WC 2022"], pcolumn: ["Bayern", "Villarreal", "ESP"], ylink: "https://www.youtube.com/watch?v=KxjSd3pj3k4" }],
+    [{ order: "8", result: "Liverpool 4-0 R. Madrid", year: "2009", category: "Champions", prow: ["Real Madrid", "ESP", "Played Euro 2008"], pcolumn: ["Liverpool", "ChampionsWin", "Premier"], ylink: "https://www.youtube.com/watch?v=1eN_ehTBPb4" }],
+    [{ order: "9", result: "France 4-2 Croatia", year: "2018", category: "World Cup", prow: ["Played WC 2018", "Atletico", "Tottenham"], pcolumn: ["FRA", "CRO", "WC01"], ylink: "https://www.youtube.com/watch?v=GrsEAvRerTg" }],
+    [{ order: "10", result: "Chelsea 1-0 Man City", year: "2021", category: "Champions", prow: ["Chelsea", "Man City", "DL"], pcolumn: ["ChampionsWin", "GER", "FRA"], ylink: "https://www.youtube.com/watch?v=GX0H_EzxXvM" }],
+    [{ order: "11", result: "Bayern 2-1 Borussia", year: "2013", category: "Champions", prow: ["Bayern", "DL", "CC"], pcolumn: ["Borussia", "NED", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=wA4ChhQ38GQ" }],
+    [{ order: "12", result: "Brazil 2-0 Germany", year: "2002", category: "World Cup", prow: ["Played WC 2002", "WC01", "SerieAWin"], pcolumn: ["BRA", "GER", "Real Madrid"], ylink: "https://www.youtube.com/watch?v=O8dUhMGtUtw" }],
+    [{ order: "13", result: "R. Madrid 4-1 Atlético", year: "2014", category: "Champions", prow: ["ChampionsWin", "DF", "Sevilla"], pcolumn: ["Real Madrid", "Atletico", "Played WC 2014"], ylink: "https://www.youtube.com/watch?v=Ji021RYgGXQ" }],
+    [{ order: "14", result: "R. Madrid 1-0 Juventus", year: "1998", category: "Champions", prow: ["Played WC 1998", "ChampionsWin", "Valencia"], pcolumn: ["Real Madrid", "Juventus", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=P-0mRkA7FHE" }],
+    [{ order: "15", result: "Argentina 0-3 Croatia", year: "2018", category: "World Cup", prow: ["LaLigaWin", "ChampionsWin", "CC"], pcolumn: ["CRO", "ARG", "Played WC 2018"], ylink: "https://www.youtube.com/watch?v=hcM5n71XmBo" }],
+    [{ order: "16", result: "Juventus 1-3 Barcelona", year: "2015", category: "Champions", prow: ["CRO", "URU", "BRA"], pcolumn: ["Barcelona", "Juventus", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=1mVu7AzvCDo" }],
+    [{ order: "17", result: "R. Madrid 1-0 Liverpool", year: "2022", category: "Champions", prow: ["PO", "BRA", "Played WC 2022"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=g306fSvzDig" }],
+    [{ order: "18", result: "Sweden 4-2 England", year: "2011", category: "Other", prow: ["Man Utd", "DL", "Played Euro 2012"], pcolumn: ["SWE", "ENG", "Ajax"], ylink: "https://www.youtube.com/watch?v=RDsxKXa0PbA" }],
+    [{ order: "19", result: "Spain 1-1 Ireland", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ESP", "IRL", "Valencia"], ylink: "https://www.youtube.com/watch?v=st8f8W70BO0" }],
+    [{ order: "20", result: "Milan 2-1 Liverpool", year: "2007", category: "Champions", prow: ["ChampionsWin", "DL", "NED"], pcolumn: ["Milan", "Liverpool", "SerieAWin"], ylink: "https://www.youtube.com/watch?v=HB3JnHb_IG4" }],
+    [{ order: "21", result: "R. Madrid 3-1 Liverpool", year: "2018", category: "Champions", prow: ["DL", "FRA", "PO"], pcolumn: ["Real Madrid", "Liverpool", "Tottenham"], ylink: "https://www.youtube.com/watch?v=rtFGpfrdlMI" }],
+    [{ order: "22", result: "Porto 3-2 Celtic", year: "2003", category: "Europa League", prow: ["DL", "CC", "DF"], pcolumn: ["Celtic", "Porto", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=mvPNakjRQyw" }],
+    [{ order: "23", result: "Chile 0-0 Argentina", year: "2011", category: "Other", prow: ["DL", "Barcelona", "Inter"], pcolumn: ["CHI", "ARG", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=ATXMJOEt6zc" }],
+    [{ order: "24", result: "Milan 0-0 Juventus", year: "2003", category: "Champions", prow: ["ChampionsWin", "PO", "DF"], pcolumn: ["Milan", "Juventus", "ITA"], ylink: "https://www.youtube.com/watch?v=fGT5raSCUSQ" }],
+    [{ order: "25", result: "R. Madrid 2-1 Leverkusen", year: "2002", category: "Champions", prow: ["Real Madrid", "CC", "Played WC 2002"], pcolumn: ["Leverkusen", "ChampionsWin", "FRA"], ylink: "https://www.youtube.com/watch?v=ca-O58vdPTQ" }],
+    [{ order: "26", result: "Italy 0-1 Uruguay", year: "2014", category: "World Cup", prow: ["Played WC 2014", "DF", "Atletico"], pcolumn: ["URU", "ITA", "Juventus"], ylink: "https://www.youtube.com/watch?v=TWpFi-GKSyQ" }],
+    [{ order: "27", result: "Porto 3-0 Monaco", year: "2004", category: "Champions", prow: ["ChampionsWin", "POR", "DL"], pcolumn: ["Porto", "Monaco", "Played Euro 2004"], ylink: "https://www.youtube.com/watch?v=ms4XLL58UUs" }],
+    [{ order: "28", result: "Barcelona 2-8 Bayern", year: "2020", category: "Champions", prow: ["Barcelona", "ChampionsWin", "BRA"], pcolumn: ["Bayern", "Espanyol", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=nMt56fQKLIQ" }],
+    [{ order: "29", result: "Liverpool 4-3 Borussia", year: "2016", category: "Champions", prow: ["Played Euro 2016", "DF", "ChampionsWin"], pcolumn: ["Liverpool", "Borussia", "PremierWin"], ylink: "https://www.youtube.com/watch?v=bXnpbaKWHXc" }],
+    [{ order: "30", result: "Villarreal 1-1 Man Utd", year: "2021", category: "Europa League", prow: ["PO", "EuropaWin", "Played WC 2022"], pcolumn: ["Villarreal", "Man Utd", "ESP"], ylink: "https://www.youtube.com/watch?v=X_NSB3CnHoo" }],
+    [{ order: "31", result: "Liverpool 3-3 Milan", year: "2005", category: "Champions", prow: ["ChampionsWin", "DL", "PO"], pcolumn: ["Liverpool", "Milan", "Premier"], ylink: "https://www.youtube.com/watch?v=3ojXHf293M8" }],
+    [{ order: "32", result: "Italy 0-0 South Korea", year: "2002", category: "World Cup", prow: ["Played WC 2002", "DL", "CC"], pcolumn: ["ITA", "KOR", "ESP"], ylink: "https://www.youtube.com/watch?v=VxHFxUjqZSo" }],
+    [{ order: "33", result: "Barcelona 2-1 Arsenal", year: "2006", category: "Champions", prow: ["Arsenal", "Chelsea", "Played WC 2006"], pcolumn: ["Barcelona", "ChampionsWin", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=VsdMmDwCY10" }],
+    [{ order: "34", result: "England 1-2 Brazil", year: "1998", category: "World Cup", prow: ["Played WC 2002", "ChampionsWin", "LaLigaWin"], pcolumn: ["ENG", "BRA", "Barcelona"], ylink: "https://www.youtube.com/watch?v=4JcwixRnFhs" }],
+    [{ order: "35", result: "Liverpool 2-0 Tottenham", year: "2019", category: "Champions", prow: ["ChampionsWin", "Premier", "BEL"], pcolumn: ["Liverpool", "Tottenham", "Atletico"], ylink: "https://www.youtube.com/watch?v=8gh3F-pEXK0" }],
+    [{ order: "36", result: "England 2-2 Greece", year: "2001", category: "Other", prow: ["CC", "DL", "DF"], pcolumn: ["ENG", "GRE", "Played WC 2002"], ylink: "https://www.youtube.com/watch?v=t0GESlaVNdE" }],
+    [{ order: "37", result: "Monaco 3-1 R. Madrid", year: "2004", category: "Champions", prow: ["Real Madrid", "DL", "ChampionsWin"], pcolumn: ["Monaco", "LaLigaWin", "Played Euro 2004"], ylink: "https://www.youtube.com/watch?v=w6lXZWSyp84" }],
+    [{ order: "38", result: "Sevilla 1-1 Roma", year: "2023", category: "Europa League", prow: ["Played WC 2022", "PO", "ARG"], pcolumn: ["Sevilla", "Roma", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=Knwgwhr-0gA" }],
+    [{ order: "39", result: "Atlético 3-0 Athletic", year: "2012", category: "Europa League", prow: ["Atletico", "DL", "CC"], pcolumn: ["Athletic", "COL", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=KHVdoHhhan8" }],
+    [{ order: "40", result: "R. Madrid 0-3 Barcelona", year: "2006", category: "LaLiga", prow: ["Played WC 2006", "CC", "WC01"], pcolumn: ["Real Madrid", "Barcelona", "BRA"], ylink: "https://www.youtube.com/watch?v=XBPhFGpNFyA" }],
+    [{ order: "41", result: "R. Madrid 3-0 Valencia", year: "2000", category: "Champions", prow: ["ChampionsWin", "Played Euro 2000", "Liverpool"], pcolumn: ["Real Madrid", "Valencia", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=NheGyuANjiI" }],
+    [{ order: "42", result: "Chelsea 4-1 Arsenal", year: "2019", category: "Europa League", prow: ["EuropaWin", "Premier", "CC"], pcolumn: ["Chelsea", "Arsenal", "BEL"], ylink: "https://www.youtube.com/watch?v=FR_cF8MELvw" }],
+    [{ order: "43", result: "Italy 1-1 France", year: "2006", category: "World Cup", prow: ["Played WC 2006", "Inter", "Juventus"], pcolumn: ["ITA", "FRA", "WC01"], ylink: "https://www.youtube.com/watch?v=Nlsm0RlC8zI" }],
+    [{ order: "44", result: "R. Madrid 3-1 Man City", year: "2022", category: "Champions", prow: ["Real Madrid", "Premier", "Played WC 2022"], pcolumn: ["Man City", "BRA", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=8MC1kRv2WCc" }],
+    [{ order: "45", result: "Germany 1-0 Argentina", year: "2014", category: "World Cup", prow: ["Played WC 2014", "WC01", "CC"], pcolumn: ["Borussia", "ARG", "GER"], ylink: "https://www.youtube.com/watch?v=ffAYByv2pLc" }],
+    [{ order: "46", result: "Inter 2-5 Schalke", year: "2011", category: "Champions", prow: ["CC", "DL", "Real Madrid"], pcolumn: ["Inter", "Schalke", "SRB"], ylink: "https://www.youtube.com/watch?v=Ajn5lzhZk6k" }],
+    [{ order: "47", result: "Netherlands 2-1 Argentina", year: "1998", category: "World Cup", prow: ["Played WC 1998", "Premier", "Inter"], pcolumn: ["NED", "ARG", "Arsenal"], ylink: "https://www.youtube.com/watch?v=DemI2OO7FsU" }],
+    [{ order: "48", result: "Belgium 3-2 Japan", year: "2018", category: "World Cup", prow: ["Played WC 2018", "CC", "DL"], pcolumn: ["BEL", "JPN", "Tottenham"], ylink: "https://youtu.be/fJeJuc27ggE" }],
+    [{ order: "49", result: "Barcelona 3-2 Valencia", year: "2001", category: "LaLiga", prow: ["BRA", "Played WC 2002", "WC01"], pcolumn: ["Barcelona", "Valencia", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=7lxf5lVlIos" }],
+    [{ order: "50", result: "Inter 2-0 Bayern", year: "2010", category: "Champions", prow: ["ChampionsWin", "SerieAWin", "Played WC 2010"], pcolumn: ["Inter", "Bayern", "ARG"], ylink: "https://www.youtube.com/watch?v=1ahQNqglBJI" }],
+    [{ order: "51", result: "Juventus 2-3 Man Utd", year: "1999", category: "Champions", prow: ["Man Utd", "CC", "Premier"], pcolumn: ["Juventus", "IRL", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=oiv-X3Dd_uo" }],
+    [{ order: "52", result: "Valencia 2-0 Marseille", year: "2004", category: "Europa League", prow: ["LaLigaWin", "PO", "CC"], pcolumn: ["Valencia", "Marseille", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=L3AlpxC-Qdk" }],
+    [{ order: "53", result: "Italy 1-1 England", year: "2021", category: "EURO", prow: ["Played Euro 2021", "Chelsea", "PO"], pcolumn: ["ITA", "ENG", "Arsenal"], ylink: "https://www.youtube.com/watch?v=QwvV06FvXbg" }],
+    [{ order: "54", result: "Everton 0-3 Man Utd", year: "2023", category: "Premier League", prow: ["Man Utd", "DL", "DF"], pcolumn: ["Everton", "ARG", "Porto"], ylink: "https://www.youtube.com/watch?v=qgmhQZzoy1s" }],
+    [{ order: "55", result: "Portugal 2-0 Wales", year: "2016", category: "EURO", prow: ["Played Euro 2016", "CC", "DL"], pcolumn: ["Sporting", "POR", "WAL"], ylink: "https://www.youtube.com/watch?v=eRwNXMDGz88" }],
+    [{ order: "56", result: "R. Madrid 0-1 Betis", year: "2017", category: "LaLiga", prow: ["DL", "CC", "DF"], pcolumn: ["Real Madrid", "Betis", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=XWPt6rCBCSU" }],
+    [{ order: "57", result: "Portugal 3-3 Spain", year: "2018", category: "World Cup", prow: ["Sporting", "DL", "PO"], pcolumn: ["POR", "ESP", "Played WC 2018"], ylink: "https://www.youtube.com/watch?v=4rp2aLQl7vg" }],
+    [{ order: "58", result: "Spain 0-0 Italy", year: "2008", category: "EURO", prow: ["Played Euro 2008", "PO", "Premier"], pcolumn: ["ESP", "ITA", "WC01"], ylink: "https://www.youtube.com/watch?v=U1cPCcj4FBs" }],
+    [{ order: "59", result: "Anderlecht 1-3 Milan", year: "2012", category: "Champions", prow: ["DF", "Roma", "PO"], pcolumn: ["BEL", "Milan", "FRA"], ylink: "https://www.youtube.com/watch?v=aLFNsTt-FLo" }],
+    [{ order: "60", result: "Man City 3-2 QPR", year: "2013", category: "Premier League", prow: ["ARG", "Atletico", "Inter"], pcolumn: ["Man City", "Man Utd", "Premier"], ylink: "https://www.youtube.com/watch?v=QdZfs3aj3uk" }],
+    [{ order: "61", result: "Ajax 2-3 Tottenham", year: "2019", category: "Champions", prow: ["ChampionsWin", "DL", "ParisSG"], pcolumn: ["Ajax", "Tottenham", "BRA"], ylink: "https://www.youtube.com/watch?v=uGuQiSSBPkg" }],
+    [{ order: "62", result: "Colombia 2-0 Uruguay", year: "2014", category: "World Cup", prow: ["Played WC 2014", "DL", "CC"], pcolumn: ["COL", "URU", "Porto"], ylink: "https://www.youtube.com/watch?v=mV7HZSq0gXE" }],
+    [{ order: "63", result: "Arsenal 2-1 Tottenham", year: "2021", category: "Premier League", prow: ["Roma", "CC", "DL"], pcolumn: ["Arsenal", "Tottenham", "ARG"], ylink: "https://www.youtube.com/watch?v=UJhvsaRnSdI" }],
+    [{ order: "64", result: "Argentina 2-1 Mexico", year: "2006", category: "World Cup", prow: ["Played WC 2006", "CC", "DF"], pcolumn: ["ARG", "MEX", "Atletico"], ylink: "https://www.youtube.com/watch?v=xh-yANwjcR0" }],
+    [{ order: "65", result: "Borussia 3-2 Malaga", year: "2013", category: "Champions", prow: ["DF", "CC", "ChampionsWin"], pcolumn: ["Malaga", "Borussia", "Porto"], ylink: "https://www.youtube.com/watch?v=rz50dgak8P8" }],
+    [{ order: "66", result: "Spain 0-1 Switzerland", year: "2010", category: "World Cup", prow: ["Played WC 2010", "PO", "CC"], pcolumn: ["ESP", "SUI", "Premier"], ylink: "https://www.youtube.com/watch?v=RxiBdX5F2I8" }],
+    [{ order: "67", result: "R. Madrid 1-0 Atlético", year: "2015", category: "Champions", prow: ["DL", "Sevilla", "Played WC 2014"], pcolumn: ["Real Madrid", "Atletico", "MEX"], ylink: "https://www.youtube.com/watch?v=bmbf1LG9UD8" }],
+    [{ order: "68", result: "Italy 1-0 Australia", year: "2006", category: "World Cup", prow: ["Played WC 2006", "DL", "CC"], pcolumn: ["Roma", "Inter", "AUS"], ylink: "https://www.youtube.com/watch?v=tkOuuIpfXNs" }],
+    [{ order: "69", result: "R. Madrid 4-1 Juventus", year: "2017", category: "Champions", prow: ["DL", "ChampionsWin", "LaLigaWin"], pcolumn: ["Real Madrid", "Juventus", "POR"], ylink: "https://www.youtube.com/watch?v=XrKBZS-IWoQ" }],
+    [{ order: "70", result: "Atletico 1-1 Barcelona", year: "2014", category: "LaLiga", prow: ["Barcelona", "URU", "LaLigaWin"], pcolumn: ["Atletico", "Inter", "Played WC 2014"], ylink: "https://www.youtube.com/watch?v=UtYW5Da3_1o" }],
+    [{ order: "71", result: "Arsenal 6-0 Ludogorets", year: "2016", category: "Europa League", prow: ["CC", "DL", "Played WC 1998"], pcolumn: ["Arsenal", "BUL", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=pCLVHZ4rIIU" }],
+    [{ order: "72", result: "Roma 3-0 Barcelona", year: "2018", category: "Champions", prow: ["DF", "CC", "DL"], pcolumn: ["Roma", "Barcelona", "GRE"], ylink: "https://www.youtube.com/watch?v=nZyQBKf4LbU" }],
+    [{ order: "73", result: "Brazil 3-2 Denmark", year: "1998", category: "World Cup", prow: ["Played WC 1998", "CC", "Barcelona"], pcolumn: ["BRA", "DEN", "Olympiakos"], ylink: "https://www.youtube.com/watch?v=4JcwixRnFhs" }],
+    [{ order: "74", result: "Man City 1-0 Leicester", year: "2019", category: "Premier League", prow: ["DF", "Premier", "PO"], pcolumn: ["Man City", "Leicester", "BEL"], ylink: "https://www.youtube.com/watch?v=SJlXFmLRdGI" }],
+    [{ order: "75", result: "Bayern 2-2 Leverkusen", year: "2023", category: "Other", prow: ["Bayern", "ESP", "DL"], pcolumn: ["Leverkusen", "ENG", "Tottenham"], ylink: "https://www.youtube.com/watch?v=vAvv8BUCqG4" }],
+    [{ order: "76", result: "Portugal 1-0 Netherlands", year: "2006", category: "World Cup", prow: ["Played WC 2006", "Real Madrid", "Barcelona"], pcolumn: ["POR", "NED", "Premier"], ylink: "https://www.youtube.com/watch?v=cFDoPRSnefE" }],
+    [{ order: "77", result: "Juventus 3-0 Atlético", year: "2019", category: "Champions", prow: ["POR", "ChampionsWin", "Man Utd"], pcolumn: ["Juventus", "Atletico", "Sporting"], ylink: "https://www.youtube.com/watch?v=cLfSpFg6Pxg" }],
+    [{ order: "78", result: "Uruguay 1-1 Ghana", year: "2010", category: "World Cup", prow: ["Played WC 2010", "DL", "CC"], pcolumn: ["URU", "GHA", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=tDpx9GGH79I" }],
+    [{ order: "79", result: "Ajax 0-1 Juventus", year: "2004", category: "Champions", prow: ["CC", "DL", "Played Euro 2004"], pcolumn: ["Ajax", "Juventus", "CZE"], ylink: "https://www.youtube.com/watch?v=8O6GHrPvumQ" }],
+    [{ order: "80", result: "Milan 3-0 Man Utd", year: "2007", category: "Champions", prow: ["BRA", "ChampionsWin", "Real Madrid"], pcolumn: ["Milan", "Man Utd", "SerieAWin"], ylink: "https://www.youtube.com/watch?v=13damNjxiPI" }],
+    [{ order: "81", result: "Brazil 2-0 Serbia", year: "2022", category: "World Cup", prow: ["DL", "Played WC 2022", "DF"], pcolumn: ["BRA", "SRB", "Tottenham"], ylink: "https://www.youtube.com/watch?v=kL0IkvLrQLM" }],
+    [{ order: "82", result: "Barcelona 6-1 PSG", year: "2017", category: "Champions", prow: ["ParisSG", "DF", "ChampionsWin"], pcolumn: ["Barcelona", "ESP", "BRA"], ylink: "https://www.youtube.com/watch?v=h4m68r8kWAc" }],
+    [{ order: "83", result: "Galatasaray 3-2 Monaco", year: "2000", category: "Champions", prow: ["DL", "CC", "Played Euro 2000"], pcolumn: ["Galatasaray", "Monaco", "ROU"], ylink: "https://www.youtube.com/watch?v=lRrd5xFYEXk" }],
+    [{ order: "84", result: "Bayern 1-1 Valencia", year: "2001", category: "Champions", prow: ["PO", "DF", "LaLigaWin"], pcolumn: ["Bayern", "Valencia", "GER"], ylink: "https://www.youtube.com/watch?v=imGy71tsgtQ" }],
+    [{ order: "85", result: "Barcelona 4-0 Villarreal", year: "2006", category: "LaLiga", prow: ["Played WC 2006", "LaLigaWin", "BRA"], pcolumn: ["Barcelona", "Villarreal", "Milan"], ylink: "https://www.youtube.com/watch?v=DH_gBJT9bAg" }],
+    [{ order: "86", result: "Sweden 1-1 Italy", year: "2004", category: "EURO", prow: ["Played Euro 2004", "DL", "CC"], pcolumn: ["SWE", "Roma", "SerieAWin"], ylink: "https://www.youtube.com/watch?v=kwdGw2Zu_jo" }],
+    [{ order: "87", result: "Chelsea 1-1 Bayern", year: "2012", category: "Champions", prow: ["Chelsea", "DL", "Premier"], pcolumn: ["Bayern", "CIV", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=lBP7QQYN1IU" }],
+    [{ order: "88", result: "England 1-1 USA", year: "2010", category: "World Cup", prow: ["Played WC 2010", "PO", "CC"], pcolumn: ["USA", "ENG", "Liverpool"], ylink: "https://www.youtube.com/watch?v=8ahf8b7ex8U" }],
+    [{ order: "89", result: "Bayern 1-0 PSG", year: "2020", category: "Champions", prow: ["Bayern", "ChampionsWin", "CC"], pcolumn: ["ParisSG", "FRA", "Juventus"], ylink: "https://www.youtube.com/watch?v=DdoaGdGAkPw" }],
+    [{ order: "90", result: "Liverpool 5-4 Alavés", year: "2001", category: "Europa League", prow: ["DF", "CC", "ESP"], pcolumn: ["Liverpool", "Alaves", "EuropaWin"], ylink: "https://www.youtube.com/watch?v=uNqFuw6YQZQ" }],
+    [{ order: "91", result: "Inter 4-3 Tottenham", year: "2010", category: "Champions", prow: ["DF", "CC", "Real Madrid"], pcolumn: ["Inter", "Tottenham", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=dI2GwCf2ABk" }],
+    [{ order: "92", result: "Deportivo 4-0 Milan", year: "2004", category: "Champions", prow: ["CC", "DL", "Played Euro 2004"], pcolumn: ["Deportivo", "Milan", "ESP"], ylink: "https://www.youtube.com/watch?v=nLxavokhgtI" }],
+    [{ order: "93", result: "Galatasaray 0-0 Arsenal", year: "2000", category: "Other", prow: ["PO", "CC", "DL"], pcolumn: ["Galatasaray", "Arsenal", "Played Euro 2000"], ylink: "https://www.youtube.com/watch?v=S75hTDHl7nc" }],
+    [{ order: "94", result: "Germany 0-1 Spain", year: "2008", category: "EURO", prow: ["Played Euro 2008", "DL", "DF"], pcolumn: ["GER", "SPA", "Atletico"], ylink: "https://www.youtube.com/watch?v=qRLbzpy1y8Y" }],
+    [{ order: "95", result: "Greece 1-0 Portugal", year: "2004", category: "EURO", prow: ["DF", "CC", "DL"], pcolumn: ["GRE", "POR", "Played Euro 2004"], ylink: "https://www.youtube.com/watch?v=OG5u1uurPik" }],
+    [{ order: "96", result: "Athletic 1-0 Barcelona", year: "2019", category: "LaLiga", prow: ["DL", "CC", "PO"], pcolumn: ["Athletic", "Barcelona", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=OeKYxa-9LiM" }],
+    [{ order: "97", result: "Bayern 0-4 R. Madrid", year: "2014", category: "Champions", prow: ["ChampionsWin", "DF", "WC01"], pcolumn: ["Real Madrid", "Bayern", "Played WC 2014"], ylink: "https://www.youtube.com/watch?v=Pmhx0Uxv8R0" }],
+    [{ order: "98", result: "Chelsea 1-1 Barcelona", year: "2009", category: "Champions", prow: ["CC", "ChampionsWin", "WC01"], pcolumn: ["Chelsea", "Barcelona", "ESP"], ylink: "https://www.youtube.com/watch?v=zWBKP-DZNEc" }],
+    [{ order: "99", result: "Man Utd 4-3 R. Madrid", year: "2003", category: "Champions", prow: ["DL", "BRA", "LaLigaWin"], pcolumn: ["Man Utd", "Real Madrid", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=KoPIUSG-vcg" }],
+    [{ order: "100", result: "Netherlands 0-1 Spain", year: "2010", category: "World Cup", prow: ["Played WC 2010", "CC", "Barcelona"], pcolumn: ["NED", "ESP", "WC01"], ylink: "https://www.youtube.com/watch?v=aKSHgMqCwbQ" }],
+    [{ order: "101", result: "Man City 1-0 Inter", year: "2023", category: "Champions", prow: ["ChampionsWin", "Played WC 2022", "CC"], pcolumn: ["Man City", "Inter", "ESP"], ylink: "https://www.youtube.com/watch?v=AXEG_lagq9E" }],
+    [{ order: "102", result: "England 1-2 Iceland", year: "2016", category: "EURO", prow: ["Played Euro 2016", "DL", "CC"], pcolumn: ["ENG", "ISL", "Premier"], ylink: "https://www.youtube.com/watch?v=PVq0MrmezpI" }],
+    [{ order: "103", result: "R. Madrid 3-1 Napoli", year: "2017", category: "Champions", prow: ["DL", "CC", "ITA"], pcolumn: ["Real Madrid", "Napoli", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=GVW1uYXkMOE" }],
+    [{ order: "104", result: "Villarreal 0-0 Arsenal", year: "2006", category: "Champions", prow: ["PO", "CC", "Barcelona"], pcolumn: ["Villarreal", "Arsenal", "ARG"], ylink: "https://www.youtube.com/watch?v=42TuTfcxVJg" }],
+    [{ order: "105", result: "Japan 2-1 Spain", year: "2022", category: "World Cup", prow: ["Played WC 2022", "DL", "CC"], pcolumn: ["JPN", "ESP", "GER"], ylink: "https://www.youtube.com/watch?v=91eoGiLSCgY" }],
+    [{ order: "106", result: "Porto 1-1 Man Utd", year: "2004", category: "Champions", prow: ["CC", "DL", "Played Euro 2004"], pcolumn: ["Man Utd", "Porto", "POR"], ylink: "https://www.youtube.com/watch?v=wO6WsbkFu5k" }],
+    [{ order: "107", result: "Arsenal 7-0 Everton", year: "2005", category: "Premier League", prow: ["PO", "DF", "CC"], pcolumn: ["Arsenal", "Everton", "Premier"], ylink: "https://www.youtube.com/watch?v=Hz2YwNq33_8" }],
+    [{ order: "108", result: "Barcelona 7-1 Leverkusen", year: "2012", category: "Champions", prow: ["DL", "CC", "LaLigaWin"], pcolumn: ["Barcelona", "Leverkusen", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=YAy0tg558wE" }],
+    [{ order: "109", result: "Celtic 4-3 Juventus", year: "2002", category: "Champions", prow: ["CC", "DL", "Played WC 2002"], pcolumn: ["Celtic", "Juventus", "ENG"], ylink: "https://www.youtube.com/watch?v=I9KwePPBsvY" }],
+    [{ order: "110", result: "Inter 1-5 Arsenal", year: "2003", category: "Champions", prow: ["FRA", "DL", "ChampionsWin"], pcolumn: ["Inter", "Arsenal", "Premier"], ylink: "https://www.youtube.com/watch?v=czFBu4n06kQ" }],
+    [{ order: "111", result: "Napoli 5-1 Juventus", year: "2022", category: "LaLiga", prow: ["SerieAWin", "DL", "Played WC 2022"], pcolumn: ["Napoli", "Juventus", "Milan"], ylink: "https://www.youtube.com/watch?v=C4htjVFlsYs" }],
+    [{ order: "112", result: "Spain 0-0 Portugal", year: "2012", category: "EURO", prow: ["Played Euro 2012", "PO", "CC"], pcolumn: ["ESP", "POR", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=IgwsdBR_N1w" }],
+    [{ order: "113", result: "Athletic 0-1 R. Sociedad", year: "2021", category: "LaLiga", prow: ["Real Sociedad", "DF", "DL"], pcolumn: ["Athletic", "ESP", "Played Euro 2021"], ylink: "https://www.youtube.com/watch?v=FPAHnfFxS5Y" }],
+    [{ order: "114", result: "Benfica 1-2 Chelsea", year: "2013", category: "Europa League", prow: ["DF", "CC", "Premier"], pcolumn: ["Benfica", "Chelsea", "SRB"], ylink: "https://www.youtube.com/watch?v=D4-kCnF7gSU" }],
+    [{ order: "115", result: "Argentina 2-2 England", year: "1998", category: "World Cup", prow: ["Played WC 1998", "CC", "DL"], pcolumn: ["ARG", "ENG", "Premier"], ylink: "https://www.youtube.com/watch?v=kJge6YhLKsM" }],
+    [{ order: "116", result: "Bayern 2-1 R. Madrid", year: "2000", category: "Champions", prow: ["FRA", "Premier", "Played Euro 2000"], pcolumn: ["Bayern", "Real Madrid", "ChampionsWin"], ylink: "https://www.youtube.com/watch?v=3tGISSPC6HM" }],
+    [{ order: "117", result: "Atletico 2-1 Inter", year: "2024", category: "Champions", prow: ["NED", "FRA", "PO"], pcolumn: ["Atletico", "Inter", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=_V92UGhMZAs" }],
+    [{ order: "118", result: "Barcelona 2-4 Girona", year: "2023", category: "LaLiga", prow: ["DL", "DF", "CC"], pcolumn: ["Barcelona", "Girona", "ESP"], ylink: "https://www.youtube.com/watch?v=XFvVgpeqi5M" }],
+    [{ order: "119", result: "Liverpool 4-3 RB Salzburg", year: "2019", category: "Champions", prow: ["DL", "CC", "DF"], pcolumn: ["AUT", "Liverpool", "SEN"], ylink: "https://www.youtube.com/watch?v=Y26HYaY3qls" }],
+    [{ order: "120", result: "Man Utd 4-3 Liverpool", year: "2024", category: "Premier League", prow: ["DL", "CC", "AfricaCupWin"], pcolumn: ["Man Utd", "Liverpool", "CIV"], ylink: "https://www.youtube.com/watch?v=wao8uhVnOGc" }],
+    [{ order: "121", result: "Spain 2-3 Nigeria", year: "1998", category: "World Cup", prow: ["Played WC 1998", "DL", "CC"], pcolumn: ["ESP", "NGA", "LaLigaWin"], ylink: "https://www.youtube.com/watch?v=DPcEHOjjXQg" }],
+    [{ order: "122", result: "Getafe 3-3 Bayern", year: "2008", category: "Europa League", prow: ["DF", "CC", "PO"], pcolumn: ["Getafe", "Bayern", "ESP"], ylink: "https://www.youtube.com/watch?v=LWFxDntTqj8" }],
 
   ];
   const names = [
@@ -10102,7 +10084,7 @@
     { name: "Enrico Annoni", Country: "ITA", Position: "DF", Teams: [{ club: "sc Celtic", matches: 2, goals: 0, assists: 0 },], Titles: "", WC: "", Euro: "" },
     { name: "Stewart Kerr", Country: "SCO", Position: "PO", Teams: [{ club: "sc Celtic", matches: 1, goals: 0, assists: 0 },], Titles: "", WC: "", Euro: "" },
     { name: "Gordon Marshall", Country: "SCO", Position: "PO", Teams: [{ club: "sc Celtic", matches: 1, goals: 0, assists: 0 },], Titles: "", WC: "", Euro: "" },
-
+   
   ];
   const countries = [{
       cname: "ALB",
@@ -11174,196 +11156,196 @@
   ];
   const teamslog = [{
       tname: "Real Madrid",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/240px-Real_Madrid_CF.svg.png"
+      Logo: "https://i.ibb.co/NTS6Q5w/Real-Madrid-Logo.png"
     },
     {
       tname: "Athletic",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_Bilbao_logo.svg/170px-Club_Athletic_Bilbao_logo.svg.png"
+      Logo: "https://i.ibb.co/1bGs5jf/Athletic-Logo.png"
     },
     {
       tname: "Mallorca",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Rcd_mallorca.svg/155px-Rcd_mallorca.svg.png"
+      Logo: "https://i.ibb.co/h8D0ccv/Mallorca-Logo.png"
     },
     {
       tname: "Alaves",
-      Logo: "https://upload.wikimedia.org/wikipedia/an/thumb/2/2e/Deportivo_Alaves_logo.svg/200px-Deportivo_Alaves_logo.svg.png?20180119120309"
+      Logo: "https://i.ibb.co/Wz521dz/Alaves-Logo.png"
     },
     {
       tname: "Villarreal",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Villarreal_CF_logo-en.svg/255px-Villarreal_CF_logo-en.svg.png"
+      Logo: "https://i.ibb.co/xCyZF7f/Villarreal-Logo.png"
     },
     {
       tname: "Malaga",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/M%C3%A1laga_CF.svg/150px-M%C3%A1laga_CF.svg.png"
+      Logo: "https://i.ibb.co/X3Zp2bV/Malaga-Logo.png"
     },
     {
       tname: "Sevilla",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/233px-Sevilla_FC_logo.svg.png"
+      Logo: "https://i.ibb.co/c1j1JT2/Sevilla-Logo.png"
     },
     {
       tname: "Barcelona",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/300px-FC_Barcelona_%28crest%29.svg.png"
+      Logo: "https://i.ibb.co/1ZC2Fvv/Barcelona-Logo.png"
     },
     {
       tname: "Betis",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/220px-Real_betis_logo.svg.png"
+      Logo: "https://i.ibb.co/fkKZrp0/Betis-Logo.png"
     },
     {
       tname: "Getafe",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Getafe_logo.svg/270px-Getafe_logo.svg.png"
+      Logo: "https://i.ibb.co/4VpDSdB/Getafe-Logo.png"
     },
     {
       tname: "Deportivo",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/RC_Deportivo_La_Coru%C3%B1a_logo.svg/255px-RC_Deportivo_La_Coru%C3%B1a_logo.svg.png"
+      Logo: "https://i.ibb.co/R715tvN/Deportivo-Logo.png"
     },
     {
       tname: "Celta",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/RC_Celta_de_Vigo_logo.svg/195px-RC_Celta_de_Vigo_logo.svg.png"
+      Logo: "https://i.ibb.co/8dPKQyY/Celta-Logo.png"
     },
     {
       tname: "Valencia",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Valenciacf.svg/263px-Valenciacf.svg.png"
+      Logo: "https://i.ibb.co/sVKGJkr/Valencia-Logo.png"
     },
     {
       tname: "Espanyol",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Rcd_espanyol_logo.svg/150px-Rcd_espanyol_logo.svg.png"
+      Logo: "https://i.ibb.co/DD0PcZt/Espanyol-Logo.png"
     },
     {
       tname: "Atletico",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/234px-Atletico_Madrid_2017_logo.svg.png"
+      Logo: "https://i.ibb.co/VHD5DzW/Atletico-Logo.png"
     },
     {
       tname: "Inter",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Inter_Old_Logo_%282007-2014%29.svg/394px-Inter_Old_Logo_%282007-2014%29.svg.png"
+      Logo: "https://i.ibb.co/cXMbZrR/Inter-Logo.png"
     },
     {
       tname: "Milan",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/153px-Logo_of_AC_Milan.svg.png"
+      Logo: "https://i.ibb.co/jR4NYNH/Milan-logo.png"
     },
     {
       tname: "Roma",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/240px-AS_Roma_logo_%282017%29.svg.png"
+      Logo: "https://i.ibb.co/1MpBGV0/Roma-Logo.png"
     },
     {
       tname: "Juventus",
-      Logo: "https://upload.wikimedia.org/wikipedia/it/thumb/5/50/Logo_FC_Juventus_2004-2017.svg/800px-Logo_FC_Juventus_2004-2017.svg.png"
+      Logo: "https://i.ibb.co/qBGThmZ/Juventus-Logo.png"
     },
     {
       tname: "Napoli",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SSC_Napoli_%28Gradient%29.svg/240px-SSC_Napoli_%28Gradient%29.svg.png"
+      Logo: "https://i.ibb.co/HhwBgCc/Napoli-Logo.png"
     },
     {
       tname: "ParisSG",
-      Logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/8/86/Paris_Saint-Germain_Logo.svg/600px-Paris_Saint-Germain_Logo.svg.png?20231024114603"
+      Logo: "https://i.ibb.co/TkP43qV/Paris-SG-Logo.png"
     },
     {
       tname: "Lyon",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/165px-Olympique_Lyonnais_logo.svg.png"
+      Logo: "https://i.ibb.co/WkLKLcn/Lyon-Logo.png"
     },
     {
       tname: "Monaco",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/125px-LogoASMonacoFC2021.svg.png"
+      Logo: "https://i.ibb.co/1dZQPHt/Monaco-Logo.png"
     },
     {
       tname: "Marseille",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Olympique_Marseille_logo.svg/180px-Olympique_Marseille_logo.svg.png"
+      Logo: "https://i.ibb.co/xJz22VV/Marseille-Logo.png"
     },
     {
       tname: "Sporting",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Sporting_Clube_de_Portugal_%28Logo%29.svg/160px-Sporting_Clube_de_Portugal_%28Logo%29.svg.png"
+      Logo: "https://i.ibb.co/549rTQN/Sporting-Logo.png"
     },
     {
       tname: "Porto",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/FC_Porto.svg/255px-FC_Porto.svg.png"
+      Logo: "https://i.ibb.co/NpQcy31/Porto-Logo.png"
     },
     {
       tname: "Benfica",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/SL_Benfica_logo.svg/315px-SL_Benfica_logo.svg.png"
+      Logo: "https://i.ibb.co/H2v6dLP/Benfica-Logo.png"
     },
     {
       tname: "Ajax",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/Ajax_Amsterdam.svg/200px-Ajax_Amsterdam.svg.png"
+      Logo: "https://i.ibb.co/88029wg/Ajax-Logo.png"
     },
     {
       tname: "PSV",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/PSV_Eindhoven_-_Philips_Stadion_-_Kleedkamer_Welkom_-_Cropped_Logo.jpg/210px-PSV_Eindhoven_-_Philips_Stadion_-_Kleedkamer_Welkom_-_Cropped_Logo.jpg"
+      Logo: "https://i.ibb.co/wg35Gfw/PSV-Logo.jpg"
     },
     {
       tname: "Feyenoord",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Feyenoord_logo.svg/180px-Feyenoord_logo.svg.png"
+      Logo: "https://i.ibb.co/rdxYBPD/Feyenoord-Logo.png"
     },
     {
       tname: "Bayern",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/240px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png"
+      Logo: "https://i.ibb.co/P1LPPSX/Bayern-Logo.png"
     },
     {
       tname: "Stuttgart",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/147px-VfB_Stuttgart_1893_Logo.svg.png"
+      Logo: "https://i.ibb.co/ssp7CTK/Stuttgart-Logo.png"
     },
     {
       tname: "Leverkusen",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Bayer_04_Leverkusen_logo.svg/230px-Bayer_04_Leverkusen_logo.svg.png"
+      Logo: "https://i.ibb.co/TWgrcxc/Leverkusen-Logo.png"
     },
     {
       tname: "Borussia",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/768px-Borussia_Dortmund_logo.svg.png"
+      Logo: "https://i.ibb.co/mDNDvKS/Borussia-Logo.png"
     },
     {
       tname: "Wolfsburg",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/VfL_Wolfsburg_Logo.svg/160px-VfL_Wolfsburg_Logo.svg.png"
+      Logo: "https://i.ibb.co/D1dkjTy/Wolfsburg-Logo.png"
     },
     {
       tname: "Olympiakos",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Olympiacos_FC_logo.svg/190px-Olympiacos_FC_logo.svg.png"
+      Logo: "https://i.ibb.co/SRP2Yv5/Olympiakos-Logo.png"
     },
     {
       tname: "Arsenal",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/270px-Arsenal_FC.svg.png"
+      Logo: "https://i.ibb.co/mchQ7yS/Arsenal-Logo.png"
     },
     {
       tname: "Chelsea",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/285px-Chelsea_FC.svg.png"
+      Logo: "https://i.ibb.co/zJMGM91/Chelsea-Logo.png"
     },
     {
       tname: "Leicester",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/190px-Leicester_City_crest.svg.png"
+      Logo: "https://i.ibb.co/dQ1Jxx6/Leicester-Logo.png"
     },
     {
       tname: "Man City",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/285px-Manchester_City_FC_badge.svg.png"
+      Logo: "https://i.ibb.co/02GVj4D/Man-City-Logo.png"
     },
     {
       tname: "Tottenham",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/1200px-Tottenham_Hotspur.svg.png"
+      Logo: "https://i.ibb.co/kccX0Ln/Tottenham-Logo.webp"
     },
     {
       tname: "Man Utd",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/285px-Manchester_United_FC_crest.svg.png"
+      Logo: "https://i.ibb.co/vsX5Jd7/Man-Utd-Logo.png"
     },
     {
       tname: "Liverpool",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/270px-Liverpool_FC.svg.png"
+      Logo: "https://i.ibb.co/HVZPdkD/Liverpool-Logo.png"
     },
     {
       tname: "Schalke",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FC_Schalke_04_Logo.svg/293px-FC_Schalke_04_Logo.svg.png"
+      Logo: "https://i.ibb.co/YWmBTGs/Schalke-Logo.png"
     },
     {
       tname: "Galatasaray",
-      Logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Galatasaray_Sports_Club_Logo.svg/225px-Galatasaray_Sports_Club_Logo.svg.png"
+      Logo: "https://i.ibb.co/2sPRTJy/Galatasaray-Logo.png"
     },
     {
       tname: "Celtic",
-      Logo: "https://upload.wikimedia.org/wikipedia/sco/thumb/a/a8/Celtic_FC.png/270px-Celtic_FC.png"
+      Logo: "https://i.ibb.co/YbGhP8H/Celtic-Logo.png"
     },
     {
       tname: "Everton",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/300px-Everton_FC_logo.svg.png"
+      Logo: "https://i.ibb.co/HT6s16s/Everton-Logo.png"
     },
 
     {
       tname: "Girona",
-      Logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Girona_FC_Logo.svg/309px-Girona_FC_Logo.svg.png"
+      Logo: "https://i.ibb.co/ydmHjBD/Girona-Logo.png"
     },
 
   ];
@@ -11423,10 +11405,9 @@
 
 
 
-  let guessedWordCount = 0;
   let currentPuzzle = todayPuzzle()[0].order;
   let currentGrid=[]
-  let currentPlayers=[];
+ 
   initLocalStorage();
   let puzzleGrid = {
     order: currentPuzzle,
@@ -11446,7 +11427,6 @@
      puzzleGrid = currentGrid.find(item => item.order === currentPuzzle);
    }
 
-
     //loadLocalStorage();
   initHelpModal();
   initHelpModal2();
@@ -11455,9 +11435,9 @@
   //createGrid(manyRandomPuzzle());
 
  
-  puzzle1 = getRandomItem(puzzleselection)
-
+  //puzzle1 = getRandomItem(puzzleselection)
   puzzle1=getItemByOrder(currentPuzzle);
+  console.log(puzzle1)
   
   createGrid(puzzle1);
    const scorestotal = countWStatsForOrder(currentGrid, currentPuzzle, "w") + countWStatsForOrder(currentGrid, currentPuzzle, "r") + countWStatsForOrder(currentGrid, currentPuzzle, "e")
@@ -11471,44 +11451,23 @@
 
 //This function starts the parameters of Local Storage
 
-  function initLocalStorage(){
-    const storedcurrentPuzzle = window.localStorage.getItem('currentPuzzle')
-    if (!storedcurrentPuzzle){
-      window.localStorage.setItem('currentPuzzle', currentPuzzle)
-    }  else {
-  currentPuzzle = storedcurrentPuzzle
-    }
+   function initLocalStorage() {
+     const storedcurrentPuzzle = window.localStorage.getItem('currentPuzzle');
+     if (!storedcurrentPuzzle) {
+       window.localStorage.setItem('currentPuzzle', currentPuzzle);
+     } else {
+       currentPuzzle = storedcurrentPuzzle;
+     }
 
+     const storedcurrentGrid = window.localStorage.getItem('current3Grid');
+     if (!storedcurrentGrid) {
+       window.localStorage.setItem('current3Grid', currentGrid);
+     } else {
+       currentGrid = JSON.parse(storedcurrentGrid);
+     }
 
-
-    const storedcurrentGrid = window.localStorage.getItem('current3Grid');
- 
-    if (!storedcurrentGrid) {
-
-      window.localStorage.setItem('current3Grid', currentGrid);
-    } else {
-
-      currentGrid = JSON.parse(storedcurrentGrid);
-
-    }
-
-    const storedPlayers = window.localStorage.getItem('currentPlayers');
-
-    if (!storedPlayers) {
-
-      window.localStorage.setItem('currentPlayers', currentPlayers);
-    } else {
-
-      currentPlayers = JSON.parse(storedPlayers);
-
-    }
-
-
-
-
-  }
-
-
+  
+   }
 
 
    function removeItemByOrder(arr, order) {
@@ -12117,20 +12076,6 @@ function createDisclaimer() {
   }
 
 
-
-
-   function isStringPresentWithDifferentOrderAndStat(array, searchString, orderToAvoid) {
-     for (let i = 0; i < array.length; i++) {
-       for (let j = 0; j < array[i].length; j++) {
-         const element = array[i][j];
-         if (typeof element === 'object' && element.order !== orderToAvoid && element.row1col1 && element.row1col1.name === searchString && element.row1col1.stat === 'w') {
-           return true;
-         }
-       }
-     }
-     return false;
-   }
-
    function countWStatsForOrder(data, order, letterstat) {
      // Iterate over the array
 
@@ -12501,12 +12446,21 @@ function resetBt(){
   }
 
 
+   function todayPuzzle() {
+     let puzzle1;
+     let currentDate = new Date();
+     limit = getTheDate(currentDate);
+     for (var i = 0; i < puzzleselection.length; i++) {
+       if (limit - puzzleselection[i][0].order === 0) {
+         puzzle1 = puzzleselection[i];
+         break;
+       }
+     }
+     return puzzle1;
+   }
 
 
   function getTheDate(whatdate) {
-    // puzzle1 = [{ prow: ["PO", "BRA", "Played WC 2022"], pcolumn: ["Real Madrid", "Liverpool", "ChampionsWin"], category: "Champions" }],
-
-
 
     // Create the originalDate with Spanish locale
     let originalDate = new Date(2023, 11, 6); // Month is 0-indexed, so 2 represents March
@@ -12670,32 +12624,26 @@ function resetBt(){
 
 
 
-  function todayPuzzle() {
-    let puzzle1;
-    let currentDate = new Date();
-    limit = getTheDate(currentDate);
-    for (var i = 0; i < puzzleselection.length; i++) {
-      if (limit - puzzleselection[i][0].order === 0) {
-        puzzle1 = puzzleselection[i];
-        break;
-      }
-    }
-    return puzzle1;
-  }
-
+ 
 
 
    function solved() {
      const gridCellssolved = document.querySelectorAll('.grid-cellsolved');
      const gridCellsunsolved = document.querySelectorAll('.grid-cellunsolved');
-
+    console.log(answers)
      if (answers.length === 9 && !answers.includes("ERROR")) {
-       const addFluorescentBorder = (cells, delay) => {
+       const addFluorescentBorder = (cells, delay, ) => {
          setTimeout(() => {
            cells.forEach(cell => {
              cell.classList.add('fluorescent-border');
            });
          }, delay);
+         setTimeout(() => {
+           cells.forEach(cell => {
+             cell.classList.remove('fluorescent-border');
+             cell.classList.add('unfluorescent-border');
+           });
+         }, delay * 3);
        };
 
        if (gridCellssolved.length === 9) {
@@ -12708,7 +12656,7 @@ function resetBt(){
 
      setTimeout(function () {
        showModal5();
-     }, 800); // 1500 milliseconds = 1.5 seconds
+     }, 2500); // 1500 milliseconds = 1.5 seconds
    }
 
 
@@ -12744,16 +12692,14 @@ function resetBt(){
      if (scoresrep ===0 && scores === 9){
        start = "⭐"
      } 
-
-
-   const foundItem = currentGrid.find(item => item.order === currentPuzzle);
+     const foundItem = currentGrid.find(item => item.order === currentPuzzle);
 
      if (foundItem) {
        foundItem.rarity = ((scores + scoresrep / 2) * 100 / 9);
      } 
 
      window.localStorage.setItem('current3Grid', JSON.stringify(currentGrid));
-    console.log(currentPuzzle)
+
 
      let sum = 0;
      let count = 0;
@@ -12776,7 +12722,7 @@ function resetBt(){
        { text: "", className: "" },
        { text: "RARITY: " + ((scores + scoresrep / 2)*100 / 9).toFixed(2) + "%" + "  " + start, className: "format1" },
        { text: "", className: "" },
-       { text: "AVG. RARITY: " + averageRarity.toFixed(2) + "%" + "  " + start, className: "format1" },
+       { text: "AVG. RARITY: " + averageRarity.toFixed(2) + "%" , className: "format1" },
        { text: "", className: "" },
        { text: "Match on Youtube", className: "format2" },
        { text: "▶️", className: "format3", href: (puzzleselection.flat().find(item => item.order === currentPuzzle).ylink)}
@@ -12846,6 +12792,8 @@ function resetBt(){
 }
  }
 );
+
+
 
 
 
