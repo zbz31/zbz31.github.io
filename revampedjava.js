@@ -2639,7 +2639,7 @@ function resetBt(){
        row.style.fontFamily = "'Roboto', sans-serif";
        row.style.fontSize = "12px"; // Making font size smaller
 
-       row.style.boxShadow = "0px 0px 2px rgba(0, 0, 255, 0.5)"; // Adding a blue shadow
+       row.style.boxShadow = "1px 1px 5px rgba(0, 0, 255, 0.5)"; // Adding a blue shadow
        
        
        
