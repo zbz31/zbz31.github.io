@@ -12593,7 +12593,11 @@ function resetBt(){
 
 
        row.addEventListener('click', function () {
-         modal.style.display = 'none';
+         setTimeout(function () {
+
+           modal.style.display = 'none';
+         }, 200); // Change delay time as needed
+        
 
          limit = getTheDate(dateStringToDate(dateString));
 
@@ -12606,7 +12610,7 @@ function resetBt(){
 
          currentPuzzle = puzzle1[0].order;
          window.localStorage.setItem('currentPuzzle', currentPuzzle);
-
+         row.style.backgroundColor = "rgb(200, 200, 255)";
          // Adding a delay of 1 second (1000 milliseconds) before refreshing the page
          setTimeout(function () {
 
