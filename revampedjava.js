@@ -2600,7 +2600,7 @@ function resetBt(){
      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
      const startDate = new Date('2023-12-7');
-
+     alert(startDate); // Display the value of dateString in a message box
      // Set the end date to March 7, 2024
      const today = new Date();
      const endDate = new Date(today);
@@ -2613,7 +2613,6 @@ function resetBt(){
        // Create the first table data cell for the date
 
        const dateString = `${date.getDate()}/${months[date.getMonth()]}/${date.getFullYear()}`;
-  
 
        // Create the second table data cell for dateString2
        const infoCell = document.createElement('td');
@@ -2625,8 +2624,7 @@ function resetBt(){
        const scores = countWStatsForOrder(currentGrid, limit2.toString(), "w");
        const scoresrep = countWStatsForOrder(currentGrid, limit2.toString(), "r");
        const scoreserr = countWStatsForOrder(currentGrid, limit2.toString(), "e");
-       const dateString2 = `[${limit2}] - ${getItemByOrder(limit2.toString()).result} (${getItemByOrder(limit2.toString()).year}) [${scores + scoresrep}/9]`;
-
+      
        matchCell.textContent = getItemByOrder(limit2.toString()).result
        dateCell.textContent = getItemByOrder(limit2.toString()).year
        scoreCell.textContent = `[${scores + scoresrep}/9]`
