@@ -2599,8 +2599,8 @@ function resetBt(){
      // Array of month names for better readability
      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-     const startDate = new Date('2023-12-7');
-     alert(startDate); // Display the value of dateString in a message box
+     const startDate = new Date('2023-12-07');
+
      // Set the end date to March 7, 2024
      const today = new Date();
      const endDate = new Date(today);
