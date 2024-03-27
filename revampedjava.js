@@ -2639,10 +2639,19 @@ function resetBt(){
        row.style.fontFamily = "'Roboto', sans-serif";
        row.style.fontSize = "12px"; // Making font size smaller
 
-       row.style.boxShadow = "1px 1px 5px rgba(0, 0, 255, 0.5)"; // Adding a blue shadow
+       row.style.boxShadow = "1px 1px 13px rgba(0, 0, 255, 0.5)"; // Adding a blue shadow
        
        
-       
+       row.style.borderStyle = "solid"; // Setting border style to solid
+       row.style.borderWidth = "10px"; // Setting border width
+
+
+
+
+       row.style.borderStyle = "dashed"; // Setting border style to dashed
+       row.style.borderWidth = "2px"; // Increasing border width for iPhones
+       row.style.borderColor = "rgba(255, 0, 0, 0.7)"; // Setting border color to red with transparency
+       row.style.borderColor = "black"; // Setting border color
        row.addEventListener('click', function () {
          modal.style.display = 'none';
 
