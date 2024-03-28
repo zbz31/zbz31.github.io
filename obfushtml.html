@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Futdoku - A Football Sudoku</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Strait:wght@400;700&display=swap">
+	<link rel="stylesheet" href="obfuscs.css">
+</head>
+
+<body>
+	<header class="headline">
+		<a href="sub2.html">
+			<button id="random-button">⚽</button>
+		</a>
+		<button id="archive-button">🔎</button>
+		<span class="headline-text">FUTDOKU</span>
+		<button id="reset-button">⚙️</button>
+		<button id="help-button">❔</button>
+	</header>
+
+	<div class="grid-container" id="gridContainer">
+
+		<div id="modal" class="modal">
+			<header class="modal-header">
+				<span class="close" id="close-ans">&times;</span>
+				<h2 id="modal-headline">Modal Headline</h2>
+			</header>
+			<input type="text" id="textInput" placeholder="Search player...">
+			<ul id="nameList"></ul>
+
+		</div>
+
+		<div id="modal2" class="modal">
+			<ul id="nameElement"></ul>
+
+		</div>
+
+
+
+		<div id="modalarchive" class="modal">
+			<header class="modal-header">
+				<span class="close" id="close-archive">&times;</span>
+				<h2 id="modal-headline-arc">Modal Headline</h2>
+			</header>
+
+			<ul id="nameElementarc"></ul>
+		</div>
+
+
+
+		<div id="modalsolved" class="modal-solved">
+			<header class="modal-headline-solved">
+				<span class="close" id="close-solved">&times;</span>
+				<h2 id="modal-solved-arc">Modal Headline</h2>
+			</header>
+
+			<ul id="totalSolved"></ul>
+		</div>
+
+
+
+
+		<div id="help-modal" class="modalhelp">
+			<!-- Modal content -->
+			<div class="modalhelp-content">
+				<span class="close" id="close-help">&times;</span>
+				<p>Guess 9 players that fill the FUTDOKU</p>
+
+				<p>Players must meet the criteria of both the row and column corresponding to their cell</p>
+				<p> 🔴 Wrong players do not give any point</p>
+				<p> 🟢 Each guess gives 1 point, maximum score is 9</p>
+				<p>⭐ Get a perfect score by not using previous answers </p>
+
+
+				<p></p>
+				<p>Data is from 1998-2024</p>
+				<hr />
+				<p>A new FUTDOKU will be available each day!</p>
+				<p> </p>
+				<p>🔎 Play previous games by clicking the archive button</p>
+				<p>⚽ Try the random mode for extra difficulty </p>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="obfusjava.js"></script>
+</body>
+
+</html>
