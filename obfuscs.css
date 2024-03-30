@@ -1,6 +1,6 @@
 /* Style for the headline bar */
 .headline {
-    background-color: rgb(64, 107, 62); /* Dark background color for the headline bar */
+    background-color: rgb(45, 107, 42); /* Dark background color for the headline bar */
     color: #fff; /* White text color for better contrast */
     padding: 10px 20px; /* Padding for better spacing */
     font-family: 'Strait', sans-serif; /* Use Roboto font for the text */
@@ -278,7 +278,7 @@ body {
   margin-left: 3px;
 }
 
-.grid-cellalreadyused {
+.grid-cellsolved {
   width: 70px;
   height: 70px;
   display: flex;
@@ -303,7 +303,7 @@ body {
 }
 
 
-.grid-cellsolved {
+.grid-cellalreadyused {
   width: 70px;
   height: 70px;
   display: flex;
