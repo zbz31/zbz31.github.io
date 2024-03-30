@@ -1,10 +1,11 @@
 /* Style for the headline bar */
-.headline { 
-    background-color: #333; /* Dark background color for the headline bar */
+.headline {
+    background-color: rgb(64, 107, 62); /* Dark background color for the headline bar */
     color: #fff; /* White text color for better contrast */
     padding: 10px 20px; /* Padding for better spacing */
-    font-family: 'Roboto', sans-serif; /* Use Roboto font for the text */
+    font-family: 'Strait', sans-serif; /* Use Roboto font for the text */
     font-weight: 600; /* Medium font weight for a professional look */
+ 
     position: fixed; /* Keep the header fixed at the top of the page */
     top: 0; /* Positioned at the very top of the page */
     left: 0; /* Aligned to the left side of the page */
@@ -146,7 +147,7 @@ body {
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(188, 186, 192); 
+    background-color:  rgb(187, 204, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -166,7 +167,7 @@ body {
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(188, 186, 192); 
+    background-color:  rgb(187, 204, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -185,7 +186,7 @@ body {
 
     margin-left: 10px;
     padding: 5px 8px;
-    background-color: rgb(188, 186, 192); 
+    background-color:    rgb(187, 204, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -205,7 +206,7 @@ body {
      font-size: 12px; /* Change the font size */
      font-weight: normal; /* Change the font weight */
     padding: 5px 8px;
-    background-color: rgb(188, 186, 192); 
+    background-color:   rgb(187, 204, 192); 
     color: white;
     border: none;
     border-radius: 5px;
@@ -277,7 +278,7 @@ body {
   margin-left: 3px;
 }
 
-.grid-cellsolved {
+.grid-cellalreadyused {
   width: 70px;
   height: 70px;
   display: flex;
@@ -302,7 +303,7 @@ body {
 }
 
 
-.grid-cellalreadyused {
+.grid-cellsolved {
   width: 70px;
   height: 70px;
   display: flex;
