@@ -1,0 +1,34 @@
+[
+    {
+        "couname": "[TUV] Funafuti",
+        "year": "???",
+        "region": "rgn_Oceania",
+        "Colors": ["cl_WHI", "cl_RED", "cl_GRE", "cl_BLU", "cl_BLA"],
+        "Items": [
+            "4+Colo", "startF", "3Bands", "Vertic", "Animal", "Bird",
+            "Plants", "Texted", "Unequa", "Center", "staBLU", "001RED",
+            "002WHI", "003RED", "myrWHI", "HasSta", "3+Star"
+        ],
+        "Flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Funafuti.svg/648px-Flag_of_Funafuti.svg.png",
+        "HDFlag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Funafuti.svg/648px-Flag_of_Funafuti.svg.png",
+        "type": "City",
+        "describe": "",
+        "links": "https://en.wikipedia.org/wiki/Funafuti"
+    },
+    {
+        "couname": "[UK] Forvik",
+        "year": "2008",
+        "region": "rgn_Europe",
+        "Colors": ["cl_BLU", "cl_WHI", "cl_YEL", "cl_ORA", "cl_BLA"],
+        "Items": [
+            "4+Colo", "startF", "year00", "2Bands", "Crosse", "Horizo",
+            "Vertic", "Animal", "Texted", "Nordic", "ntWHYE", "NO_RED",
+            "myrBLU", "NoStar"
+        ],
+        "Flag": "https://micronations.wiki/images/en/images/images/5/56/Forvik_Flag.jpg",
+        "HDFlag": "https://micronations.wiki/images/en/images/images/5/56/Forvik_Flag.jpg",
+        "type": "Micronation",
+        "describe": "",
+        "links": "https://en.wikipedia.org/wiki/Forewick_Holm"
+    }
+]
