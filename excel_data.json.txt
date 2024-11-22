@@ -1,0 +1,42 @@
+[
+  {
+    "Employee ID": "1001",
+    "Name": "John Smith",
+    "Department": "HR",
+    "Position": "Manager",
+    "Salary": "75000",
+    "Hire Date": "3/15/2015"
+  },
+  {
+    "Employee ID": "1002",
+    "Name": "Jane Doe",
+    "Department": "IT",
+    "Position": "Developer",
+    "Salary": "82000",
+    "Hire Date": "6/1/2016"
+  },
+  {
+    "Employee ID": "1003",
+    "Name": "Mark Taylor",
+    "Department": "Finance",
+    "Position": "Analyst",
+    "Salary": "69000",
+    "Hire Date": "11/23/2017"
+  },
+  {
+    "Employee ID": "1004",
+    "Name": "Emma Brown",
+    "Department": "Sales",
+    "Position": "Sales Rep",
+    "Salary": "55000",
+    "Hire Date": "1/14/2018"
+  },
+  {
+    "Employee ID": "1005",
+    "Name": "Lucas White",
+    "Department": "Marketing",
+    "Position": "Director",
+    "Salary": "90000",
+    "Hire Date": "9/30/2020"
+  }
+]
